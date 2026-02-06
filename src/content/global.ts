@@ -35,6 +35,15 @@ export const siteContent: Record<
             viewApartments: string;
             contactUs: string;
         };
+        footer: {
+            contactTitle: string;
+            paragraph: string;
+            address: string;
+            phone: string;
+            email: string;
+            followUs: string;
+            quickLinks: string;
+        };
     }
 > = {
     en: {
@@ -70,6 +79,15 @@ export const siteContent: Record<
             viewApartments: "Browse Apartments",
             contactUs: "Get in Touch",
         },
+        footer: {
+            contactTitle: "Contact Us",
+            address: "Address",
+            phone: "Phone",
+            email: "Email",
+            followUs: "Follow Us",
+            paragraph: "Providing exceptional short-term apartment rentals in Rome since 2020. Your comfort and satisfaction are our top priorities.",
+            quickLinks: "Quick Links",
+        },
     },
     it: {
         home: {
@@ -104,5 +122,14 @@ export const siteContent: Record<
             viewApartments: "Prenota un appartamento",
             contactUs: "Contattaci",
         },
-    },
+        footer: {
+            contactTitle: "Contatti",
+            address: "Indirizzo",
+            phone: "Telefono",
+            email: "Email",
+            followUs: "Seguici",
+            paragraph: "Fornendo eccezionali affitti di appartamenti a breve termine a Roma dal 2020. Il tuo comfort e la tua soddisfazione sono le nostre massime priorità.",
+            quickLinks: "Link",
+        },
+    }
 };

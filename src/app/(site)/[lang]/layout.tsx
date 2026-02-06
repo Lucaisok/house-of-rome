@@ -1,5 +1,5 @@
+import { Footer } from "@/components/footer/Footer";
 import { Header } from "@/components/header/Header";
-import { siteContent } from "@/content/global";
 import { assertLocale } from "@/lib/i18n";
 import { siteLayoutMetadata } from "@/lib/seo/siteLayout.ts/metadata";
 
@@ -23,6 +23,7 @@ export default async function LangLayout({
     <>
       <Header locale={locale} />
       {children}
+      <Footer locale={locale} />
     </>
   );
 }

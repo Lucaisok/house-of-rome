@@ -1,0 +1,146 @@
+.footer {
+  background: #ffffff;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.container {
+  max-width: none;
+  width: 100%;
+  margin: 0;
+  padding: 3rem 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  text-align: center;
+  justify-items: center;
+}
+
+
+
+.brandTitle {
+  font-size: 1.5rem;
+  color: #111111;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
+}
+
+.brandDescription {
+  color: #666666;
+  margin-bottom: 1.5rem;
+}
+
+.socials {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.socialLink {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #d4d4d4;
+  color: #666666;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  text-decoration: none;
+}
+
+.socialLink:hover {
+  background: #111111;
+  color: #ffffff;
+  border-color: #111111;
+}
+
+.sectionTitle {
+  color: #111111;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.link {
+  color: #666666;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.link:hover {
+  color: #111111;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #666666;
+  justify-content: center;
+}
+
+.icon {
+  flex-shrink: 0;
+}
+
+.iconTop {
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.bottom {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e5e5;
+  text-align: center;
+  color: #666666;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    text-align: left;
+    justify-items: start;
+  }
+
+  .brand {
+    grid-column: span 2;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+
+  .list {
+    align-items: flex-start;
+  }
+
+  .contactItem {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 640px) {
+  .container {
+    padding: 4rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 4rem 2rem;
+  }
+}

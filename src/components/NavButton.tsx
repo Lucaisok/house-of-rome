@@ -3,7 +3,7 @@ import type { ComponentProps } from "react";
 
 type NavButtonProps = Omit<ComponentProps<typeof Link>, "href"> & {
     href: string;
-    className?: string;
+    className?: string | undefined;
 };
 
 export const NavButton = ({ href, className, children, ...props }: NavButtonProps) => {

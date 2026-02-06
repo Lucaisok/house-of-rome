@@ -3,6 +3,7 @@ import { assertLocale } from "@/lib/i18n";
 import { homeMetadata } from "@/lib/seo/home/metadata";
 import { Hero } from "@/components/Hero";
 import { Welcome } from "@/components/Welcome";
+import { FeaturedApartments } from "@/components/featuredApartments/FeaturedApartments";
 
 export const generateMetadata = homeMetadata;
 
@@ -17,8 +18,9 @@ export const Home = async ({
   return (
     <main className={styles.page}>
       <div>
-         <Hero locale={locale} />
-         <Welcome locale={locale}/>
+        <Hero locale={locale} />
+        <Welcome locale={locale} />
+        <FeaturedApartments locale={locale} />
       </div>
     </main>
   );

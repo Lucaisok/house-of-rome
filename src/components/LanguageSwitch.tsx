@@ -1,35 +1,9 @@
 "use client";
 
 import { usePathname, useRouter } from "next/navigation";
-
-type Locale = "en" | "it";
-
-function setLangCookie(lang: Locale) {
-  // 1 year
-  document.cookie = `hor_lang=${lang}; path=/; max-age=31536000; samesite=lax`;
-}
-
-function otherLocale(current: Locale): Locale {
-  return current === "en" ? "it" : "en";
-}
-
-function getCurrentLocaleFromPath(pathname: string): Locale {
-  // our URLs always start with /en or /it
-  if (pathname === "/it" || pathname.startsWith("/it/")) return "it";
-  return "en";
-}
-
-function replaceLocaleInPath(pathname: string, next: Locale) {
-  // Normalize: ensure pathname starts with /en or /it
-  const current = getCurrentLocaleFromPath(pathname);
-
-  // Strip current locale prefix
-  const without =
-    pathname === `/${current}` ? "/" : pathname.replace(new RegExp(`^/${current}`), "");
-
-  // Build next path
-  return without === "/" ? `/${next}` : `/${next}${without}`;
-}
+import styles from "./LanguageSwitch.module.css";
+import type { Locale } from "@/lib/i18n";
+import { getCurrentLocaleFromPath, replaceLocaleInPath, setLangCookie } from "@/lib/locale";
 
 export function LanguageSwitch() {
   const pathname = usePathname();
@@ -38,19 +12,32 @@ export function LanguageSwitch() {
   if (!pathname) return null;
 
   const current = getCurrentLocaleFromPath(pathname);
-  const next = otherLocale(current);
+
+  const goTo = (next: Locale) => {
+    if (next === current) return;
+    setLangCookie(next);
+    const nextPath = replaceLocaleInPath(pathname, next);
+    router.push(nextPath);
+  };
 
   return (
-    <button
-      type="button"
-      onClick={() => {
-        setLangCookie(next);
-        const nextPath = replaceLocaleInPath(pathname, next);
-        router.push(nextPath);
-      }}
-      aria-label={`Switch language to ${next}`}
-    >
-      {next.toUpperCase()}
-    </button>
+    <div className={styles.switch} role="group" aria-label="Language switch">
+      <button
+        type="button"
+        onClick={() => goTo("en")}
+        className={current === "en" ? styles.optionActive : styles.option}
+        aria-pressed={current === "en"}
+      >
+        EN
+      </button>
+      <button
+        type="button"
+        onClick={() => goTo("it")}
+        className={current === "it" ? styles.optionActive : styles.option}
+        aria-pressed={current === "it"}
+      >
+        IT
+      </button>
+    </div>
   );
 }

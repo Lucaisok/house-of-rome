@@ -1,0 +1,33 @@
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.2rem;
+  border-radius: 999px;
+  border: 1px solid #e6e6e6;
+  background: #fafafa;
+  width: fit-content;
+}
+
+.option,
+.optionActive {
+  border: none;
+  background: transparent;
+  color: #4a4a4a;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+
+.option:hover {
+  color: #111111;
+  background: #f0f0f0;
+}
+
+.optionActive {
+  color: #ffffff;
+  background: #111111;
+}

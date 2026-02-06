@@ -1,4 +1,4 @@
-/* src/app/globals.css */
+@import "tailwindcss";
 
 /* 1. CSS reset (minimal) */
 *,
@@ -40,4 +40,11 @@ canvas {
 :focus-visible {
   outline: 2px solid #000;
   outline-offset: 2px;
+}
+
+.header {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

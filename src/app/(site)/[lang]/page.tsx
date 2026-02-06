@@ -2,6 +2,7 @@ import styles from "../page.module.css";
 import { assertLocale } from "@/lib/i18n";
 import { homeMetadata } from "@/lib/seo/home/metadata";
 import { Hero } from "@/components/Hero";
+import { Welcome } from "@/components/Welcome";
 
 export const generateMetadata = homeMetadata;
 
@@ -15,7 +16,10 @@ export const Home = async ({
 
   return (
     <main className={styles.page}>
-      <Hero locale={locale} />
+      <div>
+         <Hero locale={locale} />
+         <Welcome locale={locale}/>
+      </div>
     </main>
   );
 };

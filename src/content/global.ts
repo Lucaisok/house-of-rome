@@ -19,6 +19,11 @@ export const siteContent: Record<
             viewApartments: string;
             contactUs: string;
         };
+        welcome: {
+            title: string;
+            description: string;
+            secondDescription: string;
+        };
     }
 > = {
     en: {
@@ -38,6 +43,11 @@ export const siteContent: Record<
             viewApartments: "View Apartments",
             contactUs: "Contact Us",
         },
+        welcome: {
+            title: "Welcome to House of Rome",
+            description: "We offer a curated selection of four exceptional apartments in the heart of Rome. Each property has been thoughtfully designed to provide the perfect blend of modern comfort and timeless Italian elegance.",
+            secondDescription: "Whether you're here for a romantic getaway, a family vacation, or exploring the city's rich history, our apartments offer the ideal base for your Roman adventure.",
+        }, 
     },
     it: {
         home: {
@@ -55,6 +65,11 @@ export const siteContent: Record<
             thirdLine: "Vivi l'autentica esperienza romana nella nostra collezione accuratamente selezionata di eleganti appartamenti",
             viewApartments: "Vedi Appartamenti",
             contactUs: "Contattaci",
+        },
+        welcome: {
+            title: "Benvenuto a Roma",
+            description: "Offriamo una selezione curata di quattro appartamenti eccezionali nel cuore di Roma. Ogni struttura è stata progettata con attenzione per offrire il perfetto equilibrio tra comfort moderno ed eleganza italiana senza tempo.",
+            secondDescription: "Che tu sia qui per una fuga romantica, una vacanza in famiglia o per esplorare la ricca storia della città, i nostri appartamenti offrono la base ideale per la tua avventura romana.",
         },
     },
 };

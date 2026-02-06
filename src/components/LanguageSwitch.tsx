@@ -17,7 +17,7 @@ export function LanguageSwitch() {
     if (next === current) return;
     setLangCookie(next);
     const nextPath = replaceLocaleInPath(pathname, next);
-    router.push(nextPath);
+    router.push(nextPath, { scroll: false });
   };
 
   return (

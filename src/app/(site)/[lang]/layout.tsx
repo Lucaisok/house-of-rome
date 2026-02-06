@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { assertLocale } from "@/lib/i18n";
-import { getSiteUrl, toPublicPath, buildLanguageAlternates, ogLocale } from "@/lib/seo/metadata";
+import {
+  getSiteUrl,
+  toPublicPath,
+  buildLanguageAlternates,
+  ogLocale,
+} from "@/lib/seo/metadata";
 import { LanguageSwitch } from "@/components/LanguageSwitch";
 
 export function generateStaticParams() {
@@ -10,7 +15,7 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ lang: string; }>;
+  params: Promise<{ lang: string }>;
 }): Promise<Metadata> {
   const { lang: raw } = await params;
   const lang = assertLocale(raw); // returns "en" | "it"
@@ -18,7 +23,9 @@ export async function generateMetadata({
   const siteUrl = getSiteUrl();
 
   const title =
-    lang === "it" ? "House of Rome – Appartamenti a Roma" : "House of Rome – Apartments in Rome";
+    lang === "it"
+      ? "House of Rome – Appartamenti a Roma"
+      : "House of Rome – Apartments in Rome";
 
   const description =
     lang === "it"
@@ -49,7 +56,7 @@ export default async function LangLayout({
   children,
 }: {
   children: React.ReactNode;
-  params: Promise<{ lang: string; }>;
+  params: Promise<{ lang: string }>;
 }) {
   return (
     <>

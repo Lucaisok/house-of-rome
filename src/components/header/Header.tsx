@@ -7,6 +7,7 @@ import styles from "./Header.module.css";
 import { siteContent } from "@/content/global";
 import { Locale } from "@/lib/i18n";
 import { NavButton } from "../navButton/NavButton";
+import { routes } from "@/lib/routes";
 
 interface HeaderProps {
     locale: Locale;
@@ -35,7 +36,7 @@ export const Header = ({ locale }: HeaderProps) => {
                 <div className={styles.row}>
                     {/* Logo */}
                     <div className={styles.logoWrap}>
-                        <Link href="/" className={styles.logo}>
+                        <Link href={routes.home} className={styles.logo}>
                             {t.home.title}
                         </Link>
                     </div>
@@ -43,13 +44,13 @@ export const Header = ({ locale }: HeaderProps) => {
                     {/* Desktop Navigation */}
                     <div className={styles.desktopNav}>
                         <LanguageSwitch />
-                        <Link href="/apartments" className={styles.link}>
+                        <Link href={routes.apartments} className={styles.link}>
                             {t.nav.apartments}
                         </Link>
-                        <Link href="/about" className={styles.link}>
+                        <Link href={routes.about} className={styles.link}>
                             {t.nav.about}
                         </Link>
-                        <NavButton href="/about" className={styles.cta}>
+                        <NavButton href={routes.about} className={styles.cta}>
                             {t.nav.book}
                         </NavButton>
                     </div>
@@ -73,13 +74,13 @@ export const Header = ({ locale }: HeaderProps) => {
                             <div className={styles.mobileLangWrap}>
                                 <LanguageSwitch />
                             </div>
-                            <Link href="/apartments" className={styles.link}>
+                            <Link href={routes.apartments} className={styles.link}>
                                 {t.nav.apartments}
                             </Link>
-                            <Link href="/about" className={styles.link}>
+                            <Link href={routes.about} className={styles.link}>
                                 {t.nav.about}
                             </Link>
-                            <NavButton href="/about" className={styles.mobileCta}>
+                            <NavButton href={routes.about} className={styles.mobileCta}>
                                 {t.nav.book}
                             </NavButton>
                         </div>

@@ -29,6 +29,12 @@ export const siteContent: Record<
             description: string;
             cta: string;
         };
+        callToAction: {
+            title: string;
+            description: string;
+            viewApartments: string;
+            contactUs: string;
+        };
     }
 > = {
     en: {
@@ -58,6 +64,12 @@ export const siteContent: Record<
             description: "Each apartment has been carefully selected and designed to offer you an unforgettable stay in Rome",
             cta: "View All Apartments",
         },
+        callToAction: {
+            title: "Ready to Experience Rome?",
+            description: "Book your stay with us and discover the beauty of the Eternal City from the comfort of your own elegant apartment.",
+            viewApartments: "Browse Apartments",
+            contactUs: "Get in Touch",
+        },
     },
     it: {
         home: {
@@ -85,6 +97,12 @@ export const siteContent: Record<
             title: "I nostri appartamenti",
             description: "Ogni appartamento è stato accuratamente selezionato e progettato per offrirti un soggiorno indimenticabile a Roma",
             cta: "Vedi gli appartamenti",
+        },
+        callToAction: {
+            title: "Pronto a vivere Roma?",
+            description: "Prenota il tuo soggiorno con noi e scopri la bellezza della Città Eterna dal comfort del tuo elegante appartamento.",
+            viewApartments: "Prenota un appartamento",
+            contactUs: "Contattaci",
         },
     },
 };

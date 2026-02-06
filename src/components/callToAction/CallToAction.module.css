@@ -1,0 +1,85 @@
+.section {
+  padding: 6rem 1rem;
+  background: #111111;
+  color: #ffffff;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.container {
+  max-width: 64rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 auto 2.5rem;
+  max-width: 42rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.primaryButton {
+  background: #ffffff;
+  color: #1f1f1f;
+}
+
+.primaryButton:hover {
+  background: #f2f2f2;
+}
+
+.secondaryButton {
+  background: transparent;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.secondaryButton:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+@media (min-width: 640px) {
+  .section {
+    padding: 6rem 1.5rem;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .actions {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 6rem 2rem;
+  }
+}

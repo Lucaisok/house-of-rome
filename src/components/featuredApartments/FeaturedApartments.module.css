@@ -1,11 +1,15 @@
 .section {
   padding: 6rem 1rem;
   background: #fafafa;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .container {
-  max-width: 80rem;
-  margin: 0 auto;
+  max-width: none;
+  width: 100%;
+  margin: 0;
 }
 
 .header {
@@ -27,6 +31,12 @@
   color: #666666;
   max-width: 42rem;
   margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 }
 
 .ctaWrap {

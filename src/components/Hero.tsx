@@ -1,10 +1,14 @@
 import styles from "./Hero.module.css";
 import { siteContent } from "@/content/global";
-import { NavButton } from "../navButton/NavButton";
+import { Locale } from "@/lib/i18n";
+import { NavButton } from "./navButton/NavButton";
 import { routes } from "@/lib/routes";
-import { LocaleProp } from "@/app/(site)/[lang]/page";
 
-export function Hero({ locale }: LocaleProp) {
+interface HeroProps {
+    locale: Locale;
+}
+
+export function Hero({ locale }: HeroProps) {
     const content = siteContent[locale].hero;
 
     return (

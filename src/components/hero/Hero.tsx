@@ -1,7 +1,7 @@
 import styles from "./Hero.module.css";
 import { siteContent } from "@/content/global";
 import { Locale } from "@/lib/i18n";
-import { NavButton } from "./NavButton";
+import { NavButton } from "../navButton/NavButton";
 
 interface HeroProps {
     locale: Locale;

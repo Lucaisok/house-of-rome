@@ -1,4 +1,4 @@
-import { NavButton } from "../NavButton";
+import { NavButton } from "../navButton/NavButton";
 import styles from "./FeaturedApartments.module.css";
 import { Locale } from "@/lib/i18n";
 import { siteContent } from "@/content/global";

@@ -1,8 +1,8 @@
 import styles from "../page.module.css";
 import { assertLocale } from "@/lib/i18n";
 import { homeMetadata } from "@/lib/seo/home/metadata";
-import { Hero } from "@/components/Hero";
-import { Welcome } from "@/components/Welcome";
+import { Hero } from "@/components/hero/Hero";
+import { Welcome } from "@/components/welcome/Welcome";
 import { FeaturedApartments } from "@/components/featuredApartments/FeaturedApartments";
 
 export const generateMetadata = homeMetadata;

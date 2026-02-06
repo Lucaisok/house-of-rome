@@ -1,4 +1,4 @@
-import { Header } from "@/components/Header";
+import { Header } from "@/components/header/Header";
 import { siteContent } from "@/content/global";
 import { assertLocale } from "@/lib/i18n";
 import { siteLayoutMetadata } from "@/lib/seo/siteLayout.ts/metadata";

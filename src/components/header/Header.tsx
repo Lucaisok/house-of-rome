@@ -2,11 +2,11 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from 'lucide-react';
 import Link from "next/link";
-import { LanguageSwitch } from "./LanguageSwitch";
+import { LanguageSwitch } from "../languageSwitch/LanguageSwitch";
 import styles from "./Header.module.css";
 import { siteContent } from "@/content/global";
 import { Locale } from "@/lib/i18n";
-import { NavButton } from "./NavButton";
+import { NavButton } from "../navButton/NavButton";
 
 interface HeaderProps {
     locale: Locale;

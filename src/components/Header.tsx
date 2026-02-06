@@ -6,6 +6,7 @@ import { LanguageSwitch } from "./LanguageSwitch";
 import styles from "./Header.module.css";
 import { siteContent } from "@/content/global";
 import { Locale } from "@/lib/i18n";
+import { NavButton } from "./NavButton";
 
 interface HeaderProps {
     locale: Locale;
@@ -48,9 +49,9 @@ export const Header = ({ locale }: HeaderProps) => {
                         <Link href="/about" className={styles.link}>
                             {t.nav.about}
                         </Link>
-                        <Link href="/about" className={styles.cta}>
+                        <NavButton href="/about" className={styles.cta}>
                             {t.nav.book}
-                        </Link>
+                        </NavButton>
                     </div>
 
                     {/* Mobile menu button */}
@@ -78,9 +79,9 @@ export const Header = ({ locale }: HeaderProps) => {
                             <Link href="/about" className={styles.link}>
                                 {t.nav.about}
                             </Link>
-                            <Link href="/about" className={styles.mobileCta}>
+                            <NavButton href="/about" className={styles.mobileCta}>
                                 {t.nav.book}
-                            </Link>
+                            </NavButton>
                         </div>
                     </div>
                 )}

@@ -12,6 +12,13 @@ export const siteContent: Record<
             about: string;
             book: string;
         };
+        hero: {
+            firstLine: string;
+            secondLine: string;
+            thirdLine: string;
+            viewApartments: string;
+            contactUs: string;
+        };
     }
 > = {
     en: {
@@ -24,6 +31,13 @@ export const siteContent: Record<
             about: "Contacts",
             book: "Book Now",
         },
+        hero: {
+            firstLine: "Your Home in the",
+            secondLine: "Eternal City",
+            thirdLine: "Experience authentic Roman living in our carefully curated collection of elegant apartments",
+            viewApartments: "View Apartments",
+            contactUs: "Contact Us",
+        },
     },
     it: {
         home: {
@@ -34,6 +48,13 @@ export const siteContent: Record<
             apartments: "Appartamenti",
             about: "Contatti",
             book: "Prenota Ora",
+        },
+        hero: {
+            firstLine: "La tua casa nella",
+            secondLine: "Città Eterna",
+            thirdLine: "Vivi l'autentica esperienza romana nella nostra collezione accuratamente selezionata di eleganti appartamenti",
+            viewApartments: "Vedi Appartamenti",
+            contactUs: "Contattaci",
         },
     },
 };

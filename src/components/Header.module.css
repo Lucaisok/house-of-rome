@@ -27,7 +27,7 @@
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   letter-spacing: -0.02em;
   color: #111111;
   text-decoration: none;
@@ -43,6 +43,7 @@
   color: #4a4a4a;
   text-decoration: none;
   transition: color 0.2s ease;
+  font-size: 1.05rem;
 }
 
 .link:hover {
@@ -50,11 +51,12 @@
 }
 
 .cta {
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 1.6rem;
   background: #111111;
   color: #ffffff;
   text-decoration: none;
   transition: background 0.2s ease;
+  font-size: 1.05rem;
 }
 
 .cta:hover {
@@ -93,12 +95,13 @@
 }
 
 .mobileCta {
-  padding: 0.5rem 1.5rem;
+  padding: 0.6rem 1.6rem;
   background: #111111;
   color: #ffffff;
   text-decoration: none;
   transition: background 0.2s ease;
   text-align: center;
+  font-size: 1.05rem;
 }
 
 .mobileCta:hover {

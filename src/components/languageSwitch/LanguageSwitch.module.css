@@ -23,11 +23,11 @@
 }
 
 .option:hover {
-  color: #111111;
+  color: #171717;
   background: #f0f0f0;
 }
 
 .optionActive {
   color: #ffffff;
-  background: #111111;
+  background: #171717;
 }

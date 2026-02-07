@@ -29,7 +29,7 @@
 .logo {
   font-size: 1.6rem;
   letter-spacing: -0.02em;
-  color: #111111;
+  color: #171717;
   text-decoration: none;
 }
 
@@ -47,12 +47,12 @@
 }
 
 .link:hover {
-  color: #111111;
+  color: #171717;
 }
 
 .cta {
   padding: 0.6rem 1.6rem;
-  background: #111111;
+  background: #171717;
   color: #ffffff;
   text-decoration: none;
   transition: background 0.2s ease;
@@ -76,7 +76,7 @@
 }
 
 .mobileButton:hover {
-  color: #111111;
+  color: #171717;
 }
 
 .mobileNav {
@@ -96,7 +96,7 @@
 
 .mobileCta {
   padding: 0.6rem 1.6rem;
-  background: #111111;
+  background: #171717;
   color: #ffffff;
   text-decoration: none;
   transition: background 0.2s ease;

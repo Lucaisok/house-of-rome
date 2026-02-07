@@ -10,8 +10,14 @@
 
 .media {
   position: relative;
-  height: 20rem;
   overflow: hidden;
+  background: #f4f4f4;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .body {
@@ -20,7 +26,7 @@
 
 .title {
   font-size: 1.5rem;
-  color: #111111;
+  color: #171717;
   margin-bottom: 0.75rem;
 }
 
@@ -32,8 +38,9 @@
 
 .meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem 1.5rem;
   margin-bottom: 1.5rem;
   color: #777777;
   font-size: 0.9rem;
@@ -49,7 +56,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: #111111;
+  color: #171717;
   text-decoration: none;
   transition: gap 0.2s ease;
 }

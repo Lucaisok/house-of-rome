@@ -14,7 +14,7 @@ export const BasicInfo = ({ apartment, locale }: ApartmentPageParams) => {
                 </h1>
                 <div className={styles.location}>
                     <MapPin size={18} />
-                    <span>{apartment.location}, {g.rome}</span>
+                    <span>{apartment.address}</span>
                 </div>
                 <div className={styles.meta}>
                     <div className={styles.metaItem}>

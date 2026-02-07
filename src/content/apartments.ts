@@ -1,3 +1,5 @@
+export type Amenity = "Wifi" | "Air Conditioning" | "TV" | "Full Kitchen" | "Coffee Maker" | "Dryer" | "Washer";
+
 export type Apartment = {
   slug: string;
   name: string;
@@ -12,13 +14,13 @@ export type Apartment = {
   };
   guests: number;
   bedrooms: number;
-  beds: number; // Optional number of beds in the apartment
-  bathrooms: number; // Optional number of bathrooms in the apartment
-  size: number; // Optional square meters of the apartment
+  beds: number;
+  bathrooms: number;
+  size: number;
   location: string;
-  images: string[]; // Optional array of additional images for the apartment;
-  address: string; // Optional address of the apartment;
-  amenities: string[];
+  images: string[];
+  address: string;
+  amenities: Amenity[];
   //lat: number;
   //lng: number;
 };
@@ -50,7 +52,7 @@ Sarà un piacere accogliervi e farvi sentire come a casa!`,
     location: "",
     bathrooms: 0,
     address: "",
-    amenities: []
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"]
   },
   {
     slug: "spanish-steps-apartment-terrace",
@@ -88,7 +90,7 @@ An elegant and welcoming home designed for those who want a refined, central, an
     location: "Via Veneto",
     bathrooms: 1,
     address: "Via Francesco Crispi 64, 00187 Roma, Italia",
-    amenities: []
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"]
   },
   {
     slug: "trastevere-experience",
@@ -118,7 +120,7 @@ A modern and welcoming home designed for those who want an authentic, comfortabl
     location: "Trastevere",
     bathrooms: 2,
     address: "Via dei Fienaroli 15, Trastevere, 00153 Roma, Italia",
-    amenities: []
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"]
   },
   {
     slug: "appartamento-trastevere",
@@ -149,7 +151,7 @@ A cozy and romantic little home designed for those who want an authentic, intima
     location: "",
     bathrooms: 0,
     address: "",
-    amenities: []
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"]
   },
 ];
 

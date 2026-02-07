@@ -8,6 +8,7 @@ export const siteContent: Record<
             sqm: string;
             aboutThisPlace: string;
             amenities: string;
+            location: string;
         },
         home: {
             title: string;
@@ -70,6 +71,7 @@ export const siteContent: Record<
             sqm: "sqm",
             aboutThisPlace: "About this place",
             amenities: "Amenities",
+            location: "Location",
         },
         home: {
             title: "House of Rome",
@@ -131,6 +133,7 @@ export const siteContent: Record<
             sqm: "mq",
             aboutThisPlace: "Informazioni",
             amenities: "Servizi",
+            location: "Posizione",
         },
         home: {
             title: "House of Rome",

@@ -3,6 +3,12 @@ import type { Locale } from "@/lib/i18n";
 export const siteContent: Record<
     Locale,
     {
+        global: {
+            rome: string;
+            sqm: string;
+            aboutThisPlace: string;
+            amenities: string;
+        },
         home: {
             title: string;
             subtitle: string;
@@ -42,6 +48,8 @@ export const siteContent: Record<
             Bed: string;
             Bedroom: string;
             Bedrooms: string;
+            Bathroom: string;
+            Bathrooms: string;
             Beds: string;
             sqm: string;
         };
@@ -57,6 +65,12 @@ export const siteContent: Record<
     }
 > = {
     en: {
+        global: {
+            rome: "Rome",
+            sqm: "sqm",
+            aboutThisPlace: "About this place",
+            amenities: "Amenities",
+        },
         home: {
             title: "House of Rome",
             subtitle: "Carefully selected apartments in the heart of Rome",
@@ -104,12 +118,20 @@ export const siteContent: Record<
             Guest: "Guest",
             Bedrooms: "Bedrooms",
             Bedroom: "Bedroom",
+            Bathrooms: "Bathrooms",
+            Bathroom: "Bathroom",
             Beds: "Beds",
             Bed: "Bed",
             sqm: "sqm",
         },
     },
     it: {
+        global: {
+            rome: "Roma",
+            sqm: "mq",
+            aboutThisPlace: "Informazioni",
+            amenities: "Servizi",
+        },
         home: {
             title: "House of Rome",
             subtitle: "Appartamenti selezionati con cura nel cuore di Roma",
@@ -156,6 +178,8 @@ export const siteContent: Record<
             Guests: "Ospiti",
             Guest: "Ospite",
             Bedrooms: "Camere da letto",
+            Bathrooms: "Bagni",
+            Bathroom: "Bagno",
             Bedroom: "Camera da letto",
             Beds: "Letti",
             Bed: "Letto",

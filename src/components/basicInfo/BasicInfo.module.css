@@ -1,0 +1,55 @@
+.section {
+    padding: 2rem 1rem 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .section {
+        padding: 2rem 1.5rem 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding: 2rem 2rem 1.5rem;
+    }
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: clamp(2.25rem, 2vw + 1.5rem, 3rem);
+    color: #171717;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #525252;
+    margin-bottom: 1.5rem;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    color: #525252;
+}
+
+@media (min-width: 640px) {
+    .meta {
+        gap: 2rem;
+    }
+}
+
+.metaItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

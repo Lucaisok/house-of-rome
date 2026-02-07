@@ -1,0 +1,88 @@
+.section {
+    padding: 3rem 1rem;
+}
+
+@media (min-width: 640px) {
+    .section {
+        padding: 3rem 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding: 3rem 2rem;
+    }
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.leftColumn {
+    grid-column: span 2;
+}
+
+@media (max-width: 1023px) {
+    .leftColumn {
+        grid-column: auto;
+    }
+}
+
+.sectionBlock {
+    margin-bottom: 3rem;
+}
+
+.heading {
+    font-size: 1.5rem;
+    color: #171717;
+    margin-bottom: 1rem;
+}
+
+.headingLargeSpacing {
+    margin-bottom: 1.5rem;
+}
+
+.paragraph {
+    color: #525252;
+    line-height: 1.7;
+}
+
+.paragraphSpacing {
+    margin-bottom: 1rem;
+}
+
+.amenitiesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .amenitiesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.amenityItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #404040;
+}
+
+.amenityIcon {
+    color: #737373;
+}

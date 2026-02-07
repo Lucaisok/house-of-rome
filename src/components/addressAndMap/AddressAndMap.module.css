@@ -1,0 +1,31 @@
+.section {
+    padding: 0 1rem 3rem;
+}
+
+@media (min-width: 640px) {
+    .section {
+        padding: 0 1.5rem 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding: 0 2rem 3rem;
+    }
+}
+
+.container {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.heading {
+    font-size: 1.5rem;
+    color: #171717;
+    margin-bottom: 1rem;
+}
+
+.address {
+    color: #525252;
+    margin-bottom: 1.5rem;
+}

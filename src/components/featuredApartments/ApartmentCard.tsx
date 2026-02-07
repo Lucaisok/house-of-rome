@@ -1,6 +1,6 @@
 import { Apartment } from "@/content/apartments";
 import type { Locale } from "@/lib/i18n";
-import { ArrowRight, Home, Users, BedDouble, Square, MapPin } from "lucide-react";
+import { ArrowRight, Home, Users, BedDouble, Square, MapPin, Bath } from "lucide-react";
 import styles from "./ApartmentCard.module.css";
 import { routes } from "@/lib/routes";
 import Link from "next/link";
@@ -13,8 +13,7 @@ interface ApartmentCardProps {
 
 export const ApartmentCard = ({ apartment, locale }: ApartmentCardProps) => {
     const t = siteContent[locale].apartmentCard;
-    const shortDescription =
-        locale === "en" ? apartment.shortDescriptionEn || apartment.shortDescription : apartment.shortDescription;
+    const shortDescription = apartment.shortDescription[locale];
 
     return (
         <Link href={routes.apartment(apartment.slug)} className={styles.card}>
@@ -50,8 +49,14 @@ export const ApartmentCard = ({ apartment, locale }: ApartmentCardProps) => {
                         </span>
                     </div>
                     <div className={styles.metaItem}>
+                        <Bath size={18} />
+                        <span>
+                            {apartment.bathrooms} {apartment.bathrooms < 2 ? t.Bathroom : t.Bathrooms}
+                        </span>
+                    </div>
+                    <div className={styles.metaItem}>
                         <Square size={18} />
-                        <span>{apartment.sqm} {t.sqm}</span>
+                        <span>{apartment.size} {t.sqm}</span>
                     </div>
                 </div>
                 <div className={styles.link}>

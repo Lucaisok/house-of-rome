@@ -19,7 +19,7 @@ export function FeaturedApartments({ locale }: LocaleProp) {
                 </div>
                 <div className={styles.grid}>
                     {apartments.map((apartment) => (
-                        <ApartmentCard key={apartment.slug} apartment={apartment} />
+                        <ApartmentCard key={apartment.slug} apartment={apartment} locale={locale} />
                     ))}
                 </div>
                 <div className={styles.ctaWrap}>

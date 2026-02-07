@@ -1,15 +1,23 @@
 import { Apartment } from "@/content/apartments";
+import type { Locale } from "@/lib/i18n";
 import { ArrowRight, Home, Users, BedDouble, Square, MapPin } from "lucide-react";
 import styles from "./ApartmentCard.module.css";
 import { routes } from "@/lib/routes";
+import Link from "next/link";
+import { siteContent } from "@/content/global";
 
 interface ApartmentCardProps {
     apartment: Apartment;
+    locale: Locale;
 }
 
-export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
+export const ApartmentCard = ({ apartment, locale }: ApartmentCardProps) => {
+    const t = siteContent[locale].apartmentCard;
+    const shortDescription =
+        locale === "en" ? apartment.shortDescriptionEn || apartment.shortDescription : apartment.shortDescription;
+
     return (
-        <div key={apartment.slug} className={styles.card}>
+        <Link href={routes.apartment(apartment.slug)} className={styles.card}>
             <div className={styles.media}>
                 <img
                     src={apartment.img_preview}
@@ -19,40 +27,38 @@ export const ApartmentCard = ({ apartment }: ApartmentCardProps) => {
             </div>
             <div className={styles.body}>
                 <h3 className={styles.title}>{apartment.name}</h3>
-                <p className={styles.description}>{apartment.shortDescription}</p>
+                <p className={styles.description}>{shortDescription}</p>
                 <div className={styles.meta}>
-                    {"location" in apartment && (
-                        <div className={styles.metaItem}>
-                            <MapPin size={18} />
-                            <span>{(apartment as { location?: string }).location}</span>
-                        </div>
-                    )}
+                    <div className={styles.metaItem}>
+                        <MapPin size={18} />
+                        <span>{apartment.location}</span>
+                    </div>
                     <div className={styles.metaItem}>
                         <Users size={18} />
-                        <span>{apartment.guests} Guests</span>
+                        <span>{apartment.guests} {apartment.guests < 2 ? t.Guest : t.Guests}</span>
                     </div>
                     <div className={styles.metaItem}>
                         <Home size={18} />
                         <span>
-                            {apartment.bedrooms} Bedroom{apartment.bedrooms > 1 ? "s" : ""}
+                            {apartment.bedrooms} {apartment.bedrooms < 2 ? t.Bedroom : t.Bedrooms}
                         </span>
                     </div>
                     <div className={styles.metaItem}>
                         <BedDouble size={18} />
                         <span>
-                            {apartment.beds} Bed{apartment.beds > 1 ? "s" : ""}
+                            {apartment.beds} {apartment.beds < 2 ? t.Bed : t.Beds}
                         </span>
                     </div>
                     <div className={styles.metaItem}>
                         <Square size={18} />
-                        <span>{apartment.sqm} sqm</span>
+                        <span>{apartment.sqm} {t.sqm}</span>
                     </div>
                 </div>
-                <a href={routes.apartment(apartment.slug)} className={styles.link}>
-                    <span>View Details</span>
+                <div className={styles.link}>
+                    <span>{t.viewDetails}</span>
                     <ArrowRight size={18} className={styles.linkIcon} />
-                </a>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 };

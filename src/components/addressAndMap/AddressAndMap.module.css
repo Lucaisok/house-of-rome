@@ -29,3 +29,28 @@
     color: #525252;
     margin-bottom: 1.5rem;
 }
+
+.mapWrap {
+    height: 340px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+    background: #f7f7f7;
+}
+
+@media (min-width: 768px) {
+    .mapWrap {
+        height: 380px;
+    }
+}
+
+.mapPlaceholder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #737373;
+    font-size: 0.95rem;
+    text-align: center;
+    padding: 0 1.5rem;
+}

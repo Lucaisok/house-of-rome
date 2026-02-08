@@ -21,8 +21,8 @@ export type Apartment = {
   images: string[];
   address: string;
   amenities: Amenity[];
-  //lat: number;
-  //lng: number;
+  lat: number;
+  lng: number;
 };
 
 export const apartments: Apartment[] = [
@@ -52,7 +52,9 @@ Sarà un piacere accogliervi e farvi sentire come a casa!`,
     location: "",
     bathrooms: 0,
     address: "",
-    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"]
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
+    lat: 0,
+    lng: 0,
   },
   {
     slug: "spanish-steps-apartment-terrace",
@@ -90,7 +92,9 @@ An elegant and welcoming home designed for those who want a refined, central, an
     location: "Via Veneto",
     bathrooms: 1,
     address: "Via Francesco Crispi 64, 00187 Roma, Italia",
-    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"]
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
+    lat: 41.90488,
+    lng: 12.48624,
   },
   {
     slug: "trastevere-experience",
@@ -120,7 +124,9 @@ A modern and welcoming home designed for those who want an authentic, comfortabl
     location: "Trastevere",
     bathrooms: 2,
     address: "Via dei Fienaroli 15, Trastevere, 00153 Roma, Italia",
-    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"]
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
+    lat: 41.88934,
+    lng: 12.47228,
   },
   {
     slug: "appartamento-trastevere",
@@ -151,7 +157,9 @@ A cozy and romantic little home designed for those who want an authentic, intima
     location: "",
     bathrooms: 0,
     address: "",
-    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"]
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
+    lat: 0,
+    lng: 0,
   },
 ];
 

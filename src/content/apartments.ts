@@ -88,7 +88,7 @@ An elegant and welcoming home designed for those who want a refined, central, an
     beds: 2,
     size: 60,
     img_preview: "./spanish_steps/preview.jpg",
-    images: ["./spanish_steps/preview.jpg", "./spanish_steps/span_1.jpg", "./spanish_steps/span_2.jpg", "./spanish_steps/span_3.jpg", "./spanish_steps/span_4.jpg", "./spanish_steps/span_5.jpg"],
+    images: ["./spanish_steps/preview.jpg", "./spanish_steps/span_1.jpg", "./spanish_steps/span_2.jpg", "./spanish_steps/span_3.jpg", "./spanish_steps/span_4.jpg", "./spanish_steps/span_5.jpg", "./spanish_steps/span_6.jpg", "./spanish_steps/span_7.jpg", "./spanish_steps/span_8.jpg", "./spanish_steps/span_9.jpg"],
     location: "Via Veneto",
     bathrooms: 1,
     address: "Via Francesco Crispi 64, 00187 Roma, Italia",

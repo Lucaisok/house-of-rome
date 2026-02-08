@@ -9,6 +9,9 @@ export const siteContent: Record<
             aboutThisPlace: string;
             amenities: string;
             location: string;
+            see: string;
+            photo: string;
+            photos: string;
         },
         home: {
             title: string;
@@ -72,6 +75,9 @@ export const siteContent: Record<
             aboutThisPlace: "About this place",
             amenities: "Amenities",
             location: "Location",
+            see: "See",
+            photo: "photo",
+            photos: "photos",
         },
         home: {
             title: "House of Rome",
@@ -134,6 +140,9 @@ export const siteContent: Record<
             aboutThisPlace: "Informazioni",
             amenities: "Servizi",
             location: "Posizione",
+            see: "Vedi",
+            photo: "foto",
+            photos: "foto",
         },
         home: {
             title: "House of Rome",

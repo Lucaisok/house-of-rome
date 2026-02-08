@@ -2,13 +2,13 @@
 import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import styles from "./ApartmentGallery.module.css";
+import { ApartmentPageParams } from "@/app/(site)/[lang]/apartments/[slug]/page";
+import { siteContent } from "@/content/global";
 
-interface ApartmentGalleryProps {
-  images: string[];
-  apartmentName: string;
-}
-
-export function ApartmentGallery({ images, apartmentName }: ApartmentGalleryProps) {
+export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
+  const images = apartment.images;
+  const apartmentName = apartment.name;
+  const t = siteContent[locale].global;
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const galleryImages = images
     .filter(Boolean)
@@ -18,7 +18,8 @@ export function ApartmentGallery({ images, apartmentName }: ApartmentGalleryProp
     ));
   const hasImages = galleryImages.length > 0;
 
-  const galleryLength = galleryImages.length - 1;
+  const galleryLength = galleryImages.length;
+  const remainingCount = Math.max(galleryLength - 10, 0);
 
   const openLightbox = (index: number) => {
     setSelectedImage(index);
@@ -90,11 +91,36 @@ export function ApartmentGallery({ images, apartmentName }: ApartmentGalleryProp
           >
             <img
               src={image}
-              alt={`${apartmentName} - View ${index + 2}`}
+              alt={`${apartmentName} - ${t.photo} ${index + 2}`}
               className={styles.image}
             />
           </div>
         ))}
+      </div>
+      {/* Thumbnails */}
+      <div className={styles.thumbnailRow}>
+        {galleryImages.slice(5, 10).map((image, index) => {
+          const imageIndex = index + 5;
+          const isLast = index === 4;
+          return (
+            <div
+              key={imageIndex}
+              className={`${styles.thumbnailSmall} ${styles.imageWrap}`}
+              onClick={() => openLightbox(imageIndex)}
+            >
+              <img
+                src={image}
+                alt={`${apartmentName} - ${t.photo} ${imageIndex + 1}`}
+                className={styles.image}
+              />
+              {isLast && remainingCount > 0 && (
+                <div className={styles.moreOverlay}>
+                  <span>{t.see} {remainingCount} {t.photos}</span>
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
 
       {/* Lightbox */}

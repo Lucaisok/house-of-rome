@@ -1,16 +1,16 @@
 .section {
-    padding: 3rem 1rem;
+    padding: 0rem 1rem;
 }
 
 @media (min-width: 640px) {
     .section {
-        padding: 3rem 1.5rem;
+        padding: 1rem 1.5rem;
     }
 }
 
 @media (min-width: 1024px) {
     .section {
-        padding: 3rem 2rem;
+        padding: 1rem 2rem;
     }
 }
 
@@ -58,6 +58,16 @@
 .paragraph {
     color: #525252;
     line-height: 1.7;
+}
+
+.shortDescription {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #171717;
+}
+
+.description {
+    white-space: pre-line;
 }
 
 .paragraphSpacing {

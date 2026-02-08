@@ -1,11 +1,13 @@
-// import { ApartmentGallery } from './ApartmentGallery'; //to be copied from figma
+import { ApartmentPageParams } from "@/app/(site)/[lang]/apartments/[slug]/page";
+import { ApartmentGallery } from "./ApartmentGallery";
+import styles from "./ImageGallery.module.css";
 
-const ImageGallery = () => {
-    return;
-    //  <section className="px-4 sm:px-6 lg:px-8 py-8">
-    //   <div className="max-w-7xl mx-auto">
-    //     <ApartmentGallery images={apartment.images} apartmentName={apartment.name} />
-    //   </div>
-    // </section> 
-
+export const ImageGallery = ({ apartment }: ApartmentPageParams) => {
+    return (
+        <section className={styles.section}>
+            <div className={styles.container}>
+                <ApartmentGallery images={apartment.images} apartmentName={apartment.name} />
+            </div>
+        </section>
+    );
 };

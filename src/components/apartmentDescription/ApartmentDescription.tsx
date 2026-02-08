@@ -30,11 +30,11 @@ export const ApartmentDescription = ({ apartment, locale }: ApartmentPageParams)
                 <div className={styles.grid}>
                     <div className={styles.leftColumn}>
                         <div className={styles.sectionBlock}>
-                            <h2 className={styles.heading}>{t.aboutThisPlace}</h2>
-                            <p className={`${styles.paragraph} ${styles.paragraphSpacing}`}>
+                            {/* <h2 className={styles.heading}>{t.aboutThisPlace}</h2> */}
+                            <p className={`${styles.paragraph} ${styles.paragraphSpacing} ${styles.shortDescription}`}>
                                 {shortDescription}
                             </p>
-                            <p className={styles.paragraph}>
+                            <p className={`${styles.paragraph} ${styles.description}`}>
                                 {description}
                             </p>
                         </div>

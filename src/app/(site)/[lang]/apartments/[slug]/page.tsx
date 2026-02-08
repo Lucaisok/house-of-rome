@@ -5,6 +5,7 @@ import { assertLocale, Locale } from "@/lib/i18n";
 import { BasicInfo } from "@/components/basicInfo/BasicInfo";
 import { ApartmentDescription } from "@/components/apartmentDescription/ApartmentDescription";
 import { AddressAndMapSection } from "@/components/addressAndMap/AddressAndMap";
+import { ImageGallery } from "@/components/imageGallery/ImageGallery";
 
 export const generateMetadata = apartmentMetadata;
 
@@ -28,7 +29,7 @@ const ApartmentPage = async ({
   return (
     <main className={styles.page}>
       <BasicInfo apartment={apartment} locale={locale} />
-      {/* <ImageGallery /> here */}
+      <ImageGallery apartment={apartment} locale={locale} />
       <ApartmentDescription apartment={apartment} locale={locale} />
       <AddressAndMapSection apartment={apartment} locale={locale} />
     </main>

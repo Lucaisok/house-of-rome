@@ -1,95 +1,29 @@
-.galleryGrid {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-    height: 600px;
+.gallerySingle {
+    width: 100%;
 }
 
 .mainImage {
-    grid-column: span 4;
-    grid-row: span 2;
     cursor: pointer;
     overflow: hidden;
-    border-radius: 14px;
-}
-
-@media (min-width: 768px) {
-    .mainImage {
-        grid-column: span 2;
-    }
-}
-
-.thumbnail {
-    grid-column: span 2;
-    cursor: pointer;
-    overflow: hidden;
-    border-radius: 14px;
+    height: 55vh;
+    min-height: 240px;
 }
 
 .imageWrap {
     position: relative;
 }
 
-.galleryMobile {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0.75rem;
-}
-
-.mobileItem {
-    cursor: pointer;
-    overflow: hidden;
-    aspect-ratio: 4 / 3;
-    border-radius: 14px;
-}
-
-.mobileItemFull {
-    grid-column: span 2;
-    aspect-ratio: 16 / 9;
-}
-
-.galleryDesktop {
-    display: none;
-}
-
-.thumbnailRow {
-    margin-top: 1rem;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1rem;
-}
-
-@media (min-width: 640px) {
-    .galleryMobile {
-        display: none;
-    }
-
-    .galleryDesktop {
-        display: block;
-    }
-
-    .thumbnailRow {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
-@media (min-width: 1024px) {
-    .thumbnailRow {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-}
-
-.thumbnailSmall {
-    cursor: pointer;
-    overflow: hidden;
-    aspect-ratio: 4 / 3;
-    border-radius: 14px;
-}
-
-@media (min-width: 768px) {
-    .thumbnail {
-        grid-column: span 1;
-    }
+.viewPill {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    background: rgba(255, 255, 255, 0.9);
+    color: #171717;
+    border: 1px solid #e5e5e5;
+    border-radius: 999px;
+    padding: 0.4rem 0.85rem;
+    font-size: 0.9rem;
+    font-weight: 600;
 }
 
 .image {
@@ -103,19 +37,6 @@
     transform: scale(1.05);
 }
 
-.moreOverlay {
-    position: absolute;
-    inset: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.45);
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 600;
-    text-align: center;
-    padding: 0 1rem;
-}
 
 .lightbox {
     position: fixed;
@@ -125,6 +46,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .lightboxButton {
@@ -148,22 +70,82 @@
 
 .prevButton {
     left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .nextButton {
     right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .lightboxImageWrap {
     max-width: 80rem;
-    max-height: 90vh;
+    max-height: 70vh;
     padding: 0 4rem;
+    width: 100%;
 }
 
 .lightboxImage {
     max-width: 100%;
-    max-height: 90vh;
+    max-height: 70vh;
     object-fit: contain;
+}
+
+@media (max-width: 639px) {
+    .lightboxImageWrap {
+        max-width: 100vw;
+        padding: 0;
+    }
+
+    .lightboxImage {
+        width: 100vw;
+        max-height: 70vh;
+    }
+
+    .prevButton,
+    .nextButton {
+        display: none;
+    }
+}
+
+.lightboxThumbs {
+    margin-top: 5rem;
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    padding: 1rem 2rem 0.5rem;
+    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.lightboxThumbs::-webkit-scrollbar {
+    display: none;
+}
+
+.thumbButton {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    cursor: pointer;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    opacity: 0.7;
+    outline: none;
+    flex: 0 0 auto;
+}
+
+.thumbButtonActive {
+    opacity: 1;
+    box-shadow: 0 0 0 2px #ffffff;
+}
+
+.thumbImage {
+    width: 100px;
+    height: 90px;
+    object-fit: cover;
+    display: block;
 }
 
 .counter {

@@ -1,4 +1,16 @@
 .page {
   min-height: 100vh;
-  padding-top: calc(5rem + 6px);
+  padding-top: 0;
+}
+
+:global(.header) {
+  background: transparent !important;
+  border-bottom: none !important;
+  backdrop-filter: none !important;
+}
+
+:global(.transparent-header) header {
+  background: transparent !important;
+  border-bottom: none !important;
+  backdrop-filter: none !important;
 }

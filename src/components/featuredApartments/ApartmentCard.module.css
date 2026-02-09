@@ -4,6 +4,7 @@
   transition: box-shadow 0.3s ease;
   display: block;
   text-decoration: none;
+  border-radius: 14px;
 }
 
 .card:hover {

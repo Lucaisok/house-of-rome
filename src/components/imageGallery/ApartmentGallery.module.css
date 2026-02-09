@@ -10,6 +10,7 @@
     grid-row: span 2;
     cursor: pointer;
     overflow: hidden;
+    border-radius: 14px;
 }
 
 @media (min-width: 768px) {
@@ -22,6 +23,7 @@
     grid-column: span 2;
     cursor: pointer;
     overflow: hidden;
+    border-radius: 14px;
 }
 
 .imageWrap {
@@ -38,6 +40,7 @@
     cursor: pointer;
     overflow: hidden;
     aspect-ratio: 4 / 3;
+    border-radius: 14px;
 }
 
 .mobileItemFull {
@@ -80,7 +83,7 @@
     cursor: pointer;
     overflow: hidden;
     aspect-ratio: 4 / 3;
-    /* border-radius: 12px; */
+    border-radius: 14px;
 }
 
 @media (min-width: 768px) {

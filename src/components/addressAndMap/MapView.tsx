@@ -1,7 +1,8 @@
 "use client";
 
 import "leaflet/dist/leaflet.css";
-import L from "leaflet";
+import L, { type Map as LeafletMap } from "leaflet";
+import { useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
 import markerIcon from "leaflet/dist/images/marker-icon.png";
@@ -31,15 +32,24 @@ interface MapViewProps {
 }
 
 const MapView = ({ center, markers, zoom = 14 }: MapViewProps) => {
+    const mapRef = useRef<LeafletMap | null>(null);
+
+    useEffect(() => {
+        if (!mapRef.current) return;
+        const container = mapRef.current.getContainer();
+        L.DomEvent.disableScrollPropagation(container);
+    }, []);
+
     return (
         <MapContainer
             center={center}
             zoom={zoom}
-            scrollWheelZoom={false}
+            scrollWheelZoom={true}
             touchZoom={true}
             dragging={true}
             doubleClickZoom={true}
             className={styles.map ?? ""}
+            ref={mapRef}
         >
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

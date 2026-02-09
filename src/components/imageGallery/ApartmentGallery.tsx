@@ -20,6 +20,8 @@ export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
 
   const galleryLength = galleryImages.length;
   const remainingCount = Math.max(galleryLength - 10, 0);
+  const mobileImages = galleryImages.slice(0, 3);
+  const remainingCountMobile = Math.max(galleryLength - 3, 0);
 
   const openLightbox = (index: number) => {
     setSelectedImage(index);
@@ -69,58 +71,81 @@ export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
 
   return (
     <>
-      <div className={styles.galleryGrid}>
-        {/* Main large image */}
-        <div
-          className={`${styles.mainImage} ${styles.imageWrap}`}
-          onClick={() => openLightbox(0)}
-        >
-          <img
-            src={galleryImages[0]}
-            alt={`${apartmentName} - Main view`}
-            className={styles.image}
-          />
-        </div>
-
-        {/* Grid of smaller images */}
-        {galleryImages.slice(1, 5).map((image, index) => (
+      <div className={styles.galleryMobile}>
+        {mobileImages.map((image, index) => (
           <div
             key={index}
-            className={`${styles.thumbnail} ${styles.imageWrap}`}
-            onClick={() => openLightbox(index + 1)}
+            className={`${styles.mobileItem} ${styles.imageWrap} ${index === 0 ? styles.mobileItemFull : ""}`}
+            onClick={() => openLightbox(index)}
           >
             <img
               src={image}
-              alt={`${apartmentName} - ${t.photo} ${index + 2}`}
+              alt={`${apartmentName} - ${t.photo} ${index + 1}`}
               className={styles.image}
             />
+            {index === 2 && remainingCountMobile > 0 && (
+              <div className={styles.moreOverlay}>
+                <span>{t.see} {remainingCountMobile} {t.photos}</span>
+              </div>
+            )}
           </div>
         ))}
       </div>
-      {/* Thumbnails */}
-      <div className={styles.thumbnailRow}>
-        {galleryImages.slice(5, 10).map((image, index) => {
-          const imageIndex = index + 5;
-          const isLast = index === 4;
-          return (
+
+      <div className={styles.galleryDesktop}>
+        <div className={styles.galleryGrid}>
+          {/* Main large image */}
+          <div
+            className={`${styles.mainImage} ${styles.imageWrap}`}
+            onClick={() => openLightbox(0)}
+          >
+            <img
+              src={galleryImages[0]}
+              alt={`${apartmentName} - Main view`}
+              className={styles.image}
+            />
+          </div>
+
+          {/* Grid of smaller images */}
+          {galleryImages.slice(1, 5).map((image, index) => (
             <div
-              key={imageIndex}
-              className={`${styles.thumbnailSmall} ${styles.imageWrap}`}
-              onClick={() => openLightbox(imageIndex)}
+              key={index}
+              className={`${styles.thumbnail} ${styles.imageWrap}`}
+              onClick={() => openLightbox(index + 1)}
             >
               <img
                 src={image}
-                alt={`${apartmentName} - ${t.photo} ${imageIndex + 1}`}
+                alt={`${apartmentName} - ${t.photo} ${index + 2}`}
                 className={styles.image}
               />
-              {isLast && remainingCount > 0 && (
-                <div className={styles.moreOverlay}>
-                  <span>{t.see} {remainingCount} {t.photos}</span>
-                </div>
-              )}
             </div>
-          );
-        })}
+          ))}
+        </div>
+        {/* Thumbnails */}
+        <div className={styles.thumbnailRow}>
+          {galleryImages.slice(5, 10).map((image, index) => {
+            const imageIndex = index + 5;
+            const isLast = index === 4;
+            return (
+              <div
+                key={imageIndex}
+                className={`${styles.thumbnailSmall} ${styles.imageWrap}`}
+                onClick={() => openLightbox(imageIndex)}
+              >
+                <img
+                  src={image}
+                  alt={`${apartmentName} - ${t.photo} ${imageIndex + 1}`}
+                  className={styles.image}
+                />
+                {isLast && remainingCount > 0 && (
+                  <div className={styles.moreOverlay}>
+                    <span>{t.see} {remainingCount} {t.photos}</span>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
 
       {/* Lightbox */}

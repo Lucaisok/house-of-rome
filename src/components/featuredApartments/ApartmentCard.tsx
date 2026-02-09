@@ -1,6 +1,6 @@
 import { Apartment } from "@/content/apartments";
 import type { Locale } from "@/lib/i18n";
-import { ArrowRight, Home, Users, BedDouble, Square, MapPin, Bath } from "lucide-react";
+import { ArrowRight, Home, Users, BedDouble, Square, Landmark, Bath } from "lucide-react";
 import styles from "./ApartmentCard.module.css";
 import { routes } from "@/lib/routes";
 import Link from "next/link";
@@ -29,7 +29,7 @@ export const ApartmentCard = ({ apartment, locale }: ApartmentCardProps) => {
                 <p className={styles.description}>{shortDescription}</p>
                 <div className={styles.meta}>
                     <div className={styles.metaItem}>
-                        <MapPin size={18} />
+                        <Landmark size={18} />
                         <span>{apartment.location}</span>
                     </div>
                     <div className={styles.metaItem}>

@@ -1,4 +1,5 @@
 export type Amenity = "Wifi" | "Air Conditioning" | "TV" | "Full Kitchen" | "Coffee Maker" | "Dryer" | "Washer";
+export type Highlight = "City Views" | "Historic Building" | "Recently Renovated" | "Terrace";
 
 export type Apartment = {
   slug: string;
@@ -21,6 +22,7 @@ export type Apartment = {
   images: string[];
   address: string;
   amenities: Amenity[];
+  highlights: Highlight[];
   lat: number;
   lng: number;
 };
@@ -55,6 +57,7 @@ Sarà un piacere accogliervi e farvi sentire come a casa!`,
     amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
     lat: 0,
     lng: 0,
+    highlights: [],
   },
   {
     slug: "spanish-steps-apartment-terrace",
@@ -88,13 +91,14 @@ An elegant and welcoming home designed for those who want a refined, central, an
     beds: 2,
     size: 60,
     img_preview: "./spanish_steps/preview.jpg",
-    images: ["./spanish_steps/preview.jpg", "./spanish_steps/span_1.jpg", "./spanish_steps/span_2.jpg", "./spanish_steps/span_3.jpg", "./spanish_steps/span_4.jpg", "./spanish_steps/span_5.jpg", "./spanish_steps/span_6.jpg", "./spanish_steps/span_7.jpg", "./spanish_steps/span_8.jpg", "./spanish_steps/span_9.jpg"],
+    images: ["./spanish_steps/preview.jpg", "./spanish_steps/span_1.jpg", "./spanish_steps/span_2.jpg", "./spanish_steps/span_3.jpg", "./spanish_steps/span_4.jpg", "./spanish_steps/span_5.jpg", "./spanish_steps/span_6.jpg", "./spanish_steps/span_7.jpg", "./spanish_steps/span_8.jpg", "./spanish_steps/span_9.jpg", "./spanish_steps/span_10.jpg"],
     location: "Via Veneto",
     bathrooms: 1,
     address: "Via Francesco Crispi 64, 00187 Roma, Italia",
     amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
     lat: 41.90488,
     lng: 12.48624,
+    highlights: ["Terrace", "Historic Building", "City Views"],
   },
   {
     slug: "trastevere-experience",
@@ -127,6 +131,7 @@ A modern and welcoming home designed for those who want an authentic, comfortabl
     amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
     lat: 41.88934,
     lng: 12.47228,
+    highlights: []
   },
   {
     slug: "appartamento-trastevere",
@@ -160,6 +165,7 @@ A cozy and romantic little home designed for those who want an authentic, intima
     amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
     lat: 0,
     lng: 0,
+    highlights: [],
   },
 ];
 

@@ -51,9 +51,6 @@
     margin-bottom: 1rem;
 }
 
-.headingLargeSpacing {
-    margin-bottom: 1.5rem;
-}
 
 .paragraph {
     color: #525252;
@@ -62,8 +59,9 @@
 
 .shortDescription {
     font-size: 1.2rem;
-    font-weight: 700;
+    font-weight: 500;
     color: #171717;
+    font-style: italic;
 }
 
 .description {
@@ -74,25 +72,3 @@
     margin-bottom: 1rem;
 }
 
-.amenitiesGrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
-@media (min-width: 640px) {
-    .amenitiesGrid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-.amenityItem {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    color: #404040;
-}
-
-.amenityIcon {
-    color: #737373;
-}

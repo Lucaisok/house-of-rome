@@ -1,0 +1,32 @@
+.sectionBlock {
+    margin-bottom: 3rem;
+}
+
+.heading {
+    font-size: 1.5rem;
+    color: #171717;
+    margin-bottom: 1.5rem;
+}
+
+.amenitiesGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 640px) {
+    .amenitiesGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.amenityItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #404040;
+}
+
+.amenityIcon {
+    color: #737373;
+}

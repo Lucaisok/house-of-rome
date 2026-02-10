@@ -2,6 +2,15 @@
     width: 100%;
 }
 
+@media (max-width: 639px) {
+    .gallerySingle {
+        flex: 1 1 auto;
+        display: flex;
+        min-height: 0;
+    }
+}
+
+
 .mainImage {
     cursor: pointer;
     overflow: hidden;
@@ -11,8 +20,9 @@
 
 @media (max-width: 639px) {
     .mainImage {
-        height: 60vh;
-        min-height: 240px;
+        height: 100%;
+        max-height: 100%;
+        min-height: 0;
     }
 }
 
@@ -24,11 +34,11 @@
     position: absolute;
     bottom: 1rem;
     left: 1rem;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 1);
     color: #171717;
-    border: 1px solid #e5e5e5;
+    /* border: 1px solid #e5e5e5; */
     border-radius: 999px;
-    padding: 0.4rem 0.85rem;
+    padding: 0.4rem 0.9rem;
     font-size: 0.9rem;
     font-weight: 600;
 }

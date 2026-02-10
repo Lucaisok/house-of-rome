@@ -32,6 +32,9 @@
 	-webkit-overflow-scrolling: touch;
 	padding-bottom: 0.25rem;
 }
+.list::-webkit-scrollbar {
+	display: none;
+}
 
 .list::before {
 	content: "";
@@ -43,9 +46,6 @@
 	flex: 0 0 calc(var(--edge-pad) - var(--pill-gap));
 }
 
-.list::-webkit-scrollbar {
-	display: none;
-}
 
 @media (min-width: 640px) {
 	.list {

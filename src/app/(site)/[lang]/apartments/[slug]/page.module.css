@@ -10,7 +10,10 @@
 
 @media (max-width: 639px) {
   .heroStack {
-    min-height: 100vh;
+    --header-height: 5rem;
+    height: calc(100dvh - var(--header-height));
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto auto auto;
   }
 }
 

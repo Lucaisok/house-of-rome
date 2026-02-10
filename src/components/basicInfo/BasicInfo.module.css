@@ -20,8 +20,8 @@
 }
 
 .title {
-    font-size: clamp(1.5rem, 1.3vw + 1.3rem, 2.3rem);
-    /* font-family:Verdana, Geneva, Tahoma, sans-serif; */
+    font-size: clamp(1.3rem, 1.2vw + 1.2rem, 2.2rem);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     color: #171717;
     margin-bottom: 0;
     letter-spacing: -0.02em;

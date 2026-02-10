@@ -27,6 +27,8 @@ body {
 :root {
   --font-body: var(--font-nunito);
   --font-display: var(--font-playfair);
+  --accent-color: #50c88a;
+  --accent-color-soft: #e6f6ef;
   /* Examples:
      --font-body: var(--font-playfair);
      --font-display: var(--font-nunito);

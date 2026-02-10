@@ -3,6 +3,17 @@
   padding-top: 0;
 }
 
+.heroStack {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 639px) {
+  .heroStack {
+    min-height: 100vh;
+  }
+}
+
 :global(.header) {
   background: transparent !important;
   border-bottom: none !important;
@@ -13,4 +24,8 @@
   background: transparent !important;
   border-bottom: none !important;
   backdrop-filter: none !important;
+}
+
+:global(footer) {
+  margin-bottom: 2rem;
 }

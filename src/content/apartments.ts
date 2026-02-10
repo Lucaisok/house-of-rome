@@ -98,7 +98,7 @@ An elegant and welcoming home designed for those who want a refined, central, an
     amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
     lat: 41.90488,
     lng: 12.48624,
-    highlights: ["Terrace", "Historic Building", "City Views"],
+    highlights: ["Terrace", "City center"],
   },
   {
     slug: "trastevere-experience",

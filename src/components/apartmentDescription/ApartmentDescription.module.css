@@ -61,7 +61,6 @@
     font-size: 1.2rem;
     font-weight: 500;
     color: #171717;
-    font-style: italic;
 }
 
 .description {
@@ -75,6 +74,7 @@
 .descriptionClamp {
     display: -webkit-box;
     -webkit-line-clamp: 10;
+    line-clamp: 10;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }

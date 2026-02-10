@@ -43,6 +43,7 @@ export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
 
   const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     const touch = event.touches[0];
+    if (!touch) return;
     (event.currentTarget as HTMLDivElement).dataset.touchStartX = `${touch.clientX}`;
   };
 

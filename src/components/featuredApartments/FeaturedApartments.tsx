@@ -1,10 +1,10 @@
 import { NavButton } from "../navButton/NavButton";
 import styles from "./FeaturedApartments.module.css";
 import { siteContent } from "@/content/global";
-import { ApartmentCard } from "./ApartmentCard";
 import { apartments } from "@/content/apartments";
 import { routes } from "@/lib/routes";
 import { LocaleProp } from "@/app/(site)/[lang]/page";
+import { Card } from "../apartments/card/Card";
 
 export function FeaturedApartments({ locale }: LocaleProp) {
     const t = siteContent[locale].featuredApartments;
@@ -19,7 +19,9 @@ export function FeaturedApartments({ locale }: LocaleProp) {
                 </div>
                 <div className={styles.grid}>
                     {apartments.map((apartment) => (
-                        <ApartmentCard key={apartment.slug} apartment={apartment} locale={locale} />
+                        <div key={apartment.slug}>
+                            <Card apartment={apartment} locale={locale} />
+                        </div>
                     ))}
                 </div>
                 <div className={styles.ctaWrap}>

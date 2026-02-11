@@ -8,6 +8,7 @@ import { siteContent } from "@/content/global";
 import { highlightIcons } from "@/components/highlights/Highlights";
 import type { Highlight } from "@/content/apartments";
 import { formatPrice } from "@/lib/format";
+import { normalizeImagePath } from "@/lib/utils/utils";
 
 interface ApartmentCardProps {
     apartment: Apartment;
@@ -23,7 +24,7 @@ export const ApartmentCard = ({ apartment, locale }: ApartmentCardProps) => {
         <Link href={routes.apartment(apartment.slug)} className={styles.card}>
             <div className={styles.media}>
                 <img
-                    src={apartment.img_preview}
+                    src={normalizeImagePath(apartment.img_preview)}
                     alt={apartment.name}
                     className={styles.image}
                 />

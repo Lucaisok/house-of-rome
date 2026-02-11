@@ -1,0 +1,159 @@
+.card {
+  background: #fff;
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.cardImageWrapper {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+
+@media (min-width: 1024px) {
+  .cardImageWrapper {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cardImageWrapper {
+    height: 250px;
+  }
+}
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+  border-radius: 0;
+}
+.card:hover .cardImage {
+  transform: scale(1.05);
+}
+
+.cardContent {
+  padding: 2rem;
+}
+
+@media (max-width: 600px) {
+  .cardContent {
+    padding: 1.3rem;
+  }
+}
+  .cardHeader {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    /* margin-bottom: 0.75rem; */
+    flex-direction: row;
+  }
+
+  @media (max-width: 600px) {
+    .cardHeader {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+    .cardTitle {
+      text-align: left;
+      width: 100%;
+    }
+    .cardPriceBlock {
+      text-align: right;
+      justify-content: flex-end;
+    }
+  }
+  .cardTitle {
+    font-size: 1.25rem;
+    color: #18181b;
+    margin: 0;
+  }
+.cardPriceBlock {
+  text-align: right;
+  flex-direction: row;
+}
+  .cardPrice {
+    font-size: 1.25rem;
+    color: #18181b;
+  }
+.cardPriceNote {
+  font-size: 0.75rem;
+  color: #737373;
+}
+.cardPriceBlockDesktop {
+  display: block;
+}
+@media (max-width: 1124px) {
+  .cardPriceBlockDesktop {
+    display: none;
+  }
+}
+.cardLocationRow {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #737373;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+.cardLocation {
+  font-size: 1rem;
+}
+.cardDescription {
+  color: #52525b;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+.cardDetailsRow {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #737373;
+}
+.cardDetailsItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.cardDetailsText {
+  font-size: 1rem;
+}
+.cardSize {
+  font-size: 1rem;
+}
+.cardButton {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  padding: 0.75rem 1.5rem;
+  background: #18181b;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  text-decoration: none;
+}
+.cardButton:hover {
+  background: #27272a;
+}
+
+.cardPriceBlockDesktop {
+  text-align: right;
+      justify-content: flex-end;}

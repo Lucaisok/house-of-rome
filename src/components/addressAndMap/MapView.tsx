@@ -4,20 +4,19 @@ import "leaflet/dist/leaflet.css";
 import L, { type Map as LeafletMap } from "leaflet";
 import { useEffect, useRef } from "react";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
+import ReactDOMServer from "react-dom/server";
+import CustomPin from "./CustomPin";
 import styles from "./MapView.module.css";
 
-const DefaultIcon = L.icon({
-    iconRetinaUrl: markerIcon2x.src ?? markerIcon2x,
-    iconUrl: markerIcon.src ?? markerIcon,
-    shadowUrl: markerShadow.src ?? markerShadow,
-    iconSize: [25, 41],
-    iconAnchor: [12, 41],
-});
-
-L.Marker.prototype.options.icon = DefaultIcon;
+function getDivIcon(label: string) {
+    return L.divIcon({
+        className: '', // Prevent default styles
+        html: ReactDOMServer.renderToString(<CustomPin name={label} />),
+        iconSize: [90, 48],
+        iconAnchor: [45, 48],
+        popupAnchor: [0, -48],
+    });
+}
 
 export type MapMarker = {
     lat: number;
@@ -56,9 +55,12 @@ const MapView = ({ center, markers, zoom = 14 }: MapViewProps) => {
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
             {markers.map((marker) => (
-                <Marker key={`${marker.lat}-${marker.lng}`} position={[marker.lat, marker.lng]}>
-                    {marker.label ? <Popup>{marker.label}</Popup> : null}
-                </Marker>
+                <Marker
+                    key={`${marker.lat}-${marker.lng}`}
+                    position={[marker.lat, marker.lng]}
+                    icon={getDivIcon(marker.label || "")}
+                    interactive={false}
+                />
             ))}
         </MapContainer>
     );

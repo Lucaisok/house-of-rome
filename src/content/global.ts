@@ -61,6 +61,12 @@ export const siteContent: Record<
             Beds: string;
             sqm: string;
         };
+        apartments: {
+            title: string;
+            description: string;
+            exploreLocationsTitle: string;
+            exploreLocationsDescription: string;
+        };
         footer: {
             contactTitle: string;
             paragraph: string;
@@ -140,6 +146,12 @@ export const siteContent: Record<
             Bed: "Bed",
             sqm: "sqm",
         },
+        apartments: {
+            exploreLocationsTitle: "Explore Our Locations",
+            exploreLocationsDescription: "All of our apartments are strategically located throughout Rome's most iconic neighborhoods, ensuring you're never far from the city's treasures.",
+            title: "Our Apartments",
+            description: "Discover our carefully curated collection of four exceptional apartments in Rome's most desirable neighborhoods. Each residence offers a unique blend of authentic Roman charm and modern comfort, perfectly positioned to explore the eternal city.",
+        }
     },
     it: {
         global: {
@@ -209,5 +221,11 @@ export const siteContent: Record<
             Bed: "Letto",
             sqm: "mq",
         },
+        apartments: {
+            exploreLocationsTitle: "Esplora le nostre location",
+            exploreLocationsDescription: "Tutti i nostri appartamenti sono strategicamente situati nei quartieri più iconici di Roma, assicurandoti di essere sempre vicino ai tesori della città.",
+            title: "I nostri appartamenti",
+            description: "Scopri la nostra collezione accuratamente selezionata di quattro appartamenti eccezionali nei quartieri più desiderabili di Roma. Ogni residenza offre un mix unico di autentico fascino romano e comfort moderno, perfettamente posizionata per esplorare la città eterna.",
+        }
     }
 };

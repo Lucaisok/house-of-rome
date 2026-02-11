@@ -1,0 +1,46 @@
+.welcomeSection {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background: #fff;
+}
+@media (min-width: 640px) {
+  .welcomeSection {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .welcomeSection {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+.welcomeContainer {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.welcomeTitle {
+  font-size: 3rem;
+  color: #171717;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+@media (min-width: 640px) {
+  .welcomeTitle {
+    font-size: 3.3rem;
+  }
+}
+.welcomeDescription {
+  font-size: 1.25rem;
+  color: #666;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}

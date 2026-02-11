@@ -101,13 +101,27 @@ export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
           className={`${styles.mainImage} ${styles.imageWrap}`}
           onClick={() => openLightbox(0)}
         >
+          <div className={styles.heroArrowLeft} aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M15.5 19l-7-7 7-7" stroke="rgba(255,255,255,0.62)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+          <div className={styles.heroArrowRight} aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8.5 5l7 7-7 7" stroke="rgba(255,255,255,0.62)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
           <img
             src={galleryImages[0]}
             alt={`${apartmentName} - Main view`}
             className={styles.image}
           />
           <div className={styles.viewPill}>
-            View gallery
+            <svg className={styles.viewPillIcon} width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 12C3.5 7 8 4 12 4s8.5 3 11 8c-2.5 5-7 8-11 8s-8.5-3-11-8z" stroke="currentColor" strokeWidth="1.7" fill="none" />
+              <circle cx="12" cy="12" r="3.2" stroke="currentColor" strokeWidth="1.7" fill="none" />
+            </svg>
+            {t.viewGallery}
           </div>
         </div>
       </div>

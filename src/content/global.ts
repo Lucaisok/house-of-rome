@@ -12,6 +12,7 @@ export const siteContent: Record<
             see: string;
             photo: string;
             photos: string;
+            viewGallery: string;
         },
         home: {
             title: string;
@@ -47,6 +48,9 @@ export const siteContent: Record<
         };
         apartmentCard: {
             viewDetails: string;
+            startingFrom: string;
+            night: string;
+            bookNow: string;
             Guests: string;
             Guest: string;
             Bed: string;
@@ -78,6 +82,7 @@ export const siteContent: Record<
             see: "See",
             photo: "photo",
             photos: "photos",
+            viewGallery: "View gallery",
         },
         home: {
             title: "House of Rome",
@@ -122,6 +127,9 @@ export const siteContent: Record<
         },
         apartmentCard: {
             viewDetails: "View Details",
+            startingFrom: "Starting from",
+            night: "night",
+            bookNow: "Book now",
             Guests: "Guests",
             Guest: "Guest",
             Bedrooms: "Bedrooms",
@@ -143,6 +151,7 @@ export const siteContent: Record<
             see: "Vedi",
             photo: "foto",
             photos: "foto",
+            viewGallery: "Galleria immagini",
         },
         home: {
             title: "House of Rome",
@@ -187,6 +196,9 @@ export const siteContent: Record<
         },
         apartmentCard: {
             viewDetails: "Vedi Dettagli",
+            startingFrom: "A partire da",
+            night: "notte",
+            bookNow: "Prenota ora",
             Guests: "Ospiti",
             Guest: "Ospite",
             Bedrooms: "Camere da letto",

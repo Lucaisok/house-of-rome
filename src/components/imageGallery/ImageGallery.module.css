@@ -1,20 +1,43 @@
 .section {
-    padding: 0.5rem 1rem 1rem;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
 }
+
+@media (max-width: 639px) {
+    .section {
+        flex: 1 1 auto;
+        display: flex;
+        min-height: 0;
+        height: 100%;
+    }
+}
+
 
 @media (min-width: 640px) {
     .section {
-        padding: 0.5rem 1.5rem 1rem;
+        padding: 0 0 1rem;
     }
 }
 
 @media (min-width: 1024px) {
     .section {
-        padding: 0.5rem 2rem 1rem;
+        padding: 0 0 1rem;
     }
 }
 
 .container {
-    max-width: 80rem;
-    margin: 0 auto;
+    max-width: none;
+    width: 100%;
+    margin: 0;
 }
+
+@media (max-width: 639px) {
+    .container {
+        flex: 1 1 auto;
+        display: flex;
+        min-height: 0;
+        height: 100%;
+    }
+}
+

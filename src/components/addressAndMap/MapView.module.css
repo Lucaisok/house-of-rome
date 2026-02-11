@@ -4,3 +4,13 @@
     touch-action: none;
     -ms-touch-action: none;
 }
+
+:global(.leaflet-container) {
+    z-index: 0;
+}
+
+:global(.leaflet-pane),
+:global(.leaflet-top),
+:global(.leaflet-bottom) {
+    z-index: 0;
+}

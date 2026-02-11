@@ -1,5 +1,5 @@
 export type Amenity = "Wifi" | "Air Conditioning" | "TV" | "Full Kitchen" | "Coffee Maker" | "Dryer" | "Washer";
-export type Highlight = "City Views" | "Historic Building" | "Recently Renovated" | "Terrace";
+export type Highlight = "City Center" | "Historic Building" | "Recently Renovated" | "Terrace";
 
 export type Apartment = {
   slug: string;
@@ -25,6 +25,7 @@ export type Apartment = {
   highlights: Highlight[];
   lat: number;
   lng: number;
+  startingPrice: number;
 };
 
 export const apartments: Apartment[] = [
@@ -58,6 +59,7 @@ Sarà un piacere accogliervi e farvi sentire come a casa!`,
     lat: 0,
     lng: 0,
     highlights: [],
+    startingPrice: 0,
   },
   {
     slug: "spanish-steps-apartment-terrace",
@@ -98,7 +100,8 @@ An elegant and welcoming home designed for those who want a refined, central, an
     amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
     lat: 41.90488,
     lng: 12.48624,
-    highlights: ["Terrace", "Historic Building", "City Views"],
+    highlights: ["Terrace", "City Center"],
+    startingPrice: 120,
   },
   {
     slug: "trastevere-experience",
@@ -131,7 +134,8 @@ A modern and welcoming home designed for those who want an authentic, comfortabl
     amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
     lat: 41.88934,
     lng: 12.47228,
-    highlights: []
+    highlights: [],
+    startingPrice: 0,
   },
   {
     slug: "appartamento-trastevere",
@@ -166,6 +170,7 @@ A cozy and romantic little home designed for those who want an authentic, intima
     lat: 0,
     lng: 0,
     highlights: [],
+    startingPrice: 0,
   },
 ];
 

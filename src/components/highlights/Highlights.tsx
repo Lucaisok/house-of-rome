@@ -9,8 +9,8 @@ import type { Highlight } from "@/content/apartments";
 import styles from "./Highlights.module.css";
 import { Pill } from "@/components/pills/Pill";
 
-const highlightIcons: Record<Highlight, LucideIcon> = {
-    "City Views": Eye,
+export const highlightIcons: Record<Highlight, LucideIcon> = {
+    "City Center": Eye,
     "Historic Building": Building2,
     "Recently Renovated": Sparkles,
     "Terrace": TreePine,

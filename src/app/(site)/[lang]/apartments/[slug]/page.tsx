@@ -8,7 +8,6 @@ import { AddressAndMapSection } from "@/components/addressAndMap/AddressAndMap";
 import { ImageGallery } from "@/components/imageGallery/ImageGallery";
 import { Highlights } from "@/components/highlights/Highlights";
 import { InfoPills } from "@/components/infoPills/InfoPills";
-import { TransparentHeader } from "@/components/header/TransparentHeader";
 import { BookingHelper } from "@/components/bookingHelper/BookingHelper";
 
 export const generateMetadata = apartmentMetadata;
@@ -32,14 +31,13 @@ const ApartmentPage = async ({
   }
   return (
     <main className={styles.page}>
-      {/* <TransparentHeader /> */}
       <section className={styles.heroStack}>
         <ImageGallery apartment={apartment} locale={locale} />
         <BasicInfo apartment={apartment} locale={locale} />
         <Highlights highlights={apartment.highlights} />
         <InfoPills apartment={apartment} locale={locale} />
       </section>
-      <BookingHelper />
+      <BookingHelper startingPrice={apartment.startingPrice} locale={locale} />
       <ApartmentDescription apartment={apartment} locale={locale} />
       <AddressAndMapSection apartment={apartment} locale={locale} />
     </main>

@@ -47,6 +47,9 @@ export const siteContent: Record<
         };
         apartmentCard: {
             viewDetails: string;
+            startingFrom: string;
+            night: string;
+            bookNow: string;
             Guests: string;
             Guest: string;
             Bed: string;
@@ -122,6 +125,9 @@ export const siteContent: Record<
         },
         apartmentCard: {
             viewDetails: "View Details",
+            startingFrom: "Starting from",
+            night: "night",
+            bookNow: "Book now",
             Guests: "Guests",
             Guest: "Guest",
             Bedrooms: "Bedrooms",
@@ -187,6 +193,9 @@ export const siteContent: Record<
         },
         apartmentCard: {
             viewDetails: "Vedi Dettagli",
+            startingFrom: "A partire da",
+            night: "notte",
+            bookNow: "Prenota ora",
             Guests: "Ospiti",
             Guest: "Ospite",
             Bedrooms: "Camere da letto",

@@ -1,5 +1,5 @@
 export type Amenity = "Wifi" | "Air Conditioning" | "TV" | "Full Kitchen" | "Coffee Maker" | "Dryer" | "Washer";
-export type Highlight = "City Views" | "Historic Building" | "Recently Renovated" | "Terrace";
+export type Highlight = "City Center" | "Historic Building" | "Recently Renovated" | "Terrace";
 
 export type Apartment = {
   slug: string;
@@ -98,7 +98,7 @@ An elegant and welcoming home designed for those who want a refined, central, an
     amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
     lat: 41.90488,
     lng: 12.48624,
-    highlights: ["Terrace", "City center"],
+    highlights: ["Terrace", "City Center"],
   },
   {
     slug: "trastevere-experience",

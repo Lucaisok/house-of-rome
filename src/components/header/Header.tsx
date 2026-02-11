@@ -38,7 +38,7 @@ export const Header = ({ locale }: HeaderProps) => {
                     <div className={styles.logoWrap}>
                         <Link href={routes.home} className={styles.logo}>
                             <Home className={styles.logoIcon} aria-hidden="true" />
-                            <span className={styles.logoText} aria-label={t.home.title} />
+                            <span className={styles.logoText}>{t.home.title}</span>
                         </Link>
                     </div>
 
@@ -63,7 +63,7 @@ export const Header = ({ locale }: HeaderProps) => {
                             className={styles.mobileButton}
                             aria-label="Toggle menu"
                         >
-                            {mobileMenuOpen ? <X size={24} strokeWidth={2.6} /> : <Menu size={24} strokeWidth={2.6} />}
+                            {mobileMenuOpen ? <X size={24} strokeWidth={2.3} /> : <Menu size={24} strokeWidth={2.3} />}
                         </button>
                     </div>
                 </div>

@@ -7,6 +7,8 @@
     background: #ffffff;
     border-top: 1px solid #e5e5e5;
     padding: 0.75rem 1.25rem;
+    display: visible;
+    /* justify-content: space-between; */
 }
 
 .container {
@@ -55,6 +57,7 @@
 @media (min-width: 640px) {
     .bar {
         padding: 1rem 1.5rem;
+        display: none;
     }
 
     .priceLabel {

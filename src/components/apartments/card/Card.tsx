@@ -1,5 +1,5 @@
 import { ApartmentPageParams } from "@/app/(site)/[lang]/apartments/[slug]/page";
-import { Home, MapPin, Users, Ruler } from "lucide-react";
+import { Home, MapPin, Users, Ruler, BedDouble } from "lucide-react";
 import styles from "./Card.module.css";
 import { siteContent } from "@/content/global";
 import { routes } from "@/lib/routes";
@@ -37,6 +37,12 @@ export const Card = ({ apartment, locale }: ApartmentPageParams) => {
                     <div className={styles.cardDetailsItem}>
                         <Users size={18} />
                         <span className={styles.cardDetailsText}>{apartment.guests} {t.Guests}</span>
+                    </div>
+                    <div className={styles.cardDetailsItem}>
+                        <BedDouble size={18} />
+                        <span className={styles.cardSize}>
+                            {apartment.beds} {apartment.beds < 2 ? t.Bed : t.Beds}
+                        </span>
                     </div>
                     <div className={styles.cardDetailsItem}>
                         <Home size={18} />

@@ -62,16 +62,6 @@
   }
 }
 
-
-.meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 0.7rem 1.2rem;
-  margin-bottom: 1.5rem;
-  color: #777777;
-  font-size: 0.9rem;
-}
 .meta {
   display: grid;
   grid-template-columns: 1fr 1fr;

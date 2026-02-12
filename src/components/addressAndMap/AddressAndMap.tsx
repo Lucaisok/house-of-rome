@@ -1,15 +1,13 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import { ApartmentPageParams } from "@/app/(site)/[lang]/apartments/[slug]/page";
 import styles from "./AddressAndMap.module.css";
 import { siteContent } from "@/content/global";
-
-const MapView = dynamic(() => import("./MapView"), { ssr: false });
+import MapView from "./MapView";
 
 export const AddressAndMapSection = ({ apartment, locale }: ApartmentPageParams) => {
     const t = siteContent[locale].global;
-    const markers = [{ lat: apartment.lat as number, lng: apartment.lng as number, label: apartment.name }];
+    const markers = [{ lat: apartment.lat as number, lng: apartment.lng as number, label: apartment.name === "Spanish Steps Apartment & Terrace" ? "Spanish Steps" : apartment.name }];
     const center: [number, number] = [apartment.lat as number, apartment.lng as number];
 
     return (

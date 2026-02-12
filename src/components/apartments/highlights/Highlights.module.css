@@ -34,5 +34,5 @@
 	.list > * {
 		flex: 1 1 0;
 		justify-content: center;
-	}
+    }
 }

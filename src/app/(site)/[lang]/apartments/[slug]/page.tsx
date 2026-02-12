@@ -6,9 +6,9 @@ import { BasicInfo } from "@/components/basicInfo/BasicInfo";
 import { ApartmentDescription } from "@/components/apartmentDescription/ApartmentDescription";
 import { AddressAndMapSection } from "@/components/addressAndMap/AddressAndMap";
 import { ImageGallery } from "@/components/imageGallery/ImageGallery";
-import { Highlights } from "@/components/highlights/Highlights";
 import { InfoPills } from "@/components/infoPills/InfoPills";
 import { BookingHelper } from "@/components/bookingHelper/BookingHelper";
+import { Highlights } from "@/components/apartments/highlights/Highlights";
 
 export const generateMetadata = apartmentMetadata;
 

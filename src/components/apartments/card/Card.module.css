@@ -22,6 +22,7 @@
   overflow: hidden;
 }
 
+
 @media (min-width: 1024px) {
   .cardImageWrapper {
     height: 400px;
@@ -45,7 +46,7 @@
 }
 
 .cardContent {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 @media (max-width: 1100px) {
@@ -125,7 +126,7 @@
 .cardDetailsRow {
     display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.7rem 1.2rem;
+  gap: 0.7rem 0rem;
   margin-bottom: 1.5rem;
   color: #777777;
   font-size: 0.9rem;
@@ -156,9 +157,7 @@
 
 @media (max-width: 1060px) and (min-width: 900px) {
 .cardDetailsRow {
-    display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.7rem 1.2rem;
+    display: flex;
   margin-bottom: 1.5rem;
   color: #777777;
   font-size: 0.9rem;
@@ -216,4 +215,6 @@
 
 .cardPriceBlockDesktop {
   text-align: right;
-      justify-content: flex-end;}
+      justify-content: flex-end;
+    }
+

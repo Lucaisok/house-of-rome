@@ -3,17 +3,19 @@ import {
     Building2,
     Sparkles,
     TreePine,
+    MapPin,
     type LucideIcon
 } from "lucide-react";
 import type { Highlight } from "@/content/apartments";
 import styles from "./Highlights.module.css";
-import { Pill } from "@/components/pills/Pill";
+import { Pill } from "./Pill";
 
 export const highlightIcons: Record<Highlight, LucideIcon> = {
-    "City Center": Eye,
+    "City Center": MapPin,
     "Historic Building": Building2,
     "Recently Renovated": Sparkles,
     "Terrace": TreePine,
+    "Vibrant Neighborhood": MapPin
 };
 
 export const Highlights = ({ highlights }: { highlights: Highlight[]; }) => {
@@ -28,7 +30,7 @@ export const Highlights = ({ highlights }: { highlights: Highlight[]; }) => {
                             key={highlight}
                             icon={highlightIcons[highlight] || Sparkles}
                             label={highlight}
-                            variant="highlight"
+                            variant="default"
                             iconStrokeWidth={1.5}
                         />
                     ))}

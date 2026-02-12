@@ -9,16 +9,20 @@ interface PillProps {
 }
 
 export const Pill = ({ icon: Icon, label, variant = "default", iconStrokeWidth = 2 }: PillProps) => {
-    const itemClass = variant === "highlight" ? `${styles.pill} ${styles.pillHighlight}` : styles.pill;
-    const iconClass = variant === "highlight" ? `${styles.icon} ${styles.iconHighlight}` : styles.icon;
+    const pillStyle =
+    {
+        itemClass: variant === "highlight" ? `${styles.pill} ${styles.pillHighlight}` : styles.pill,
+        iconClass: variant === "highlight" ? `${styles.icon} ${styles.iconHighlight}` : styles.icon,
+        textColor: variant === "highlight" ? "#ffe343" : "#525252",
+        iconSize: 18,
+        stroke: variant === "highlight" ? Math.max(iconStrokeWidth, 2.5) : iconStrokeWidth
+    };
 
-    const iconSize = variant === "highlight" ? 22 : 20;
-    const stroke = variant === "highlight" ? Math.max(iconStrokeWidth, 2.5) : iconStrokeWidth;
 
     return (
-        <div className={itemClass}>
-            <Icon size={iconSize} className={iconClass} strokeWidth={stroke} />
-            <span style={{ color: variant === "highlight" ? "var(--accent-color)" : "#525252" }}>{label}</span>
+        <div className={pillStyle.itemClass}>
+            <Icon size={pillStyle.iconSize} className={pillStyle.iconClass} strokeWidth={pillStyle.stroke} />
+            <span style={{ color: pillStyle.textColor }}>{label}</span>
         </div>
     );
 };

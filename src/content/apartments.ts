@@ -1,5 +1,5 @@
 export type Amenity = "Wifi" | "Air Conditioning" | "TV" | "Full Kitchen" | "Coffee Maker" | "Dryer" | "Washer";
-export type Highlight = "City Center" | "Historic Building" | "Recently Renovated" | "Terrace";
+export type Highlight = "City Center" | "Historic Building" | "Recently Renovated" | "Terrace" | "Vibrant Neighborhood";
 
 export type Apartment = {
   slug: string;
@@ -58,7 +58,7 @@ Sarà un piacere accogliervi e farvi sentire come a casa!`,
     amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
     lat: 0,
     lng: 0,
-    highlights: [],
+    highlights: ["City Center"],
     startingPrice: 0,
   },
   {
@@ -134,7 +134,7 @@ A modern and welcoming home designed for those who want an authentic, comfortabl
     amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
     lat: 41.88934,
     lng: 12.47228,
-    highlights: [],
+    highlights: ["Historic Building", "Vibrant Neighborhood"],
     startingPrice: 0,
   },
   {

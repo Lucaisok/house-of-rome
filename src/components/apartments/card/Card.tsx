@@ -1,9 +1,10 @@
 import { ApartmentPageParams } from "@/app/(site)/[lang]/apartments/[slug]/page";
-import { Home, MapPin, Users, Ruler, BedDouble } from "lucide-react";
+import { Bath, MapPin, Users, Ruler, BedDouble } from "lucide-react";
 import styles from "./Card.module.css";
 import { siteContent } from "@/content/global";
 import { routes } from "@/lib/routes";
 import { normalizeImagePath } from "@/lib/utils/utils";
+import { Highlights } from "@/components/highlights_new/Higlights";
 
 export const Card = ({ apartment, locale }: ApartmentPageParams) => {
     const shortDescription = apartment.shortDescription[locale];
@@ -17,6 +18,11 @@ export const Card = ({ apartment, locale }: ApartmentPageParams) => {
                     alt={apartment.name}
                     className={styles.cardImage}
                 />
+                {/* {apartment.highlights && apartment.highlights.length > 0 && (
+                    <div className={styles.highlightsTopRight}>
+                        <Highlights highlights={apartment.highlights} />
+                    </div>
+                )} */}
             </div>
             <div className={styles.cardContent}>
                 <div className={styles.cardHeader}>
@@ -32,7 +38,9 @@ export const Card = ({ apartment, locale }: ApartmentPageParams) => {
                         <div className={styles.cardPriceNote}>{(t.startingFrom).toUpperCase()}</div>
                     </div>
                 </div>
+                <Highlights highlights={apartment.highlights} />
                 <p className={styles.cardDescription}>{shortDescription}</p>
+
                 <div className={styles.cardDetailsRow}>
                     <div className={styles.cardDetailsItem}>
                         <Users size={18} />
@@ -45,8 +53,10 @@ export const Card = ({ apartment, locale }: ApartmentPageParams) => {
                         </span>
                     </div>
                     <div className={styles.cardDetailsItem}>
-                        <Home size={18} />
-                        <span className={styles.cardDetailsText}>{apartment.bedrooms} {t.Bedroom}{apartment.bedrooms > 1 ? 's' : ''}</span>
+                        <Bath size={18} />
+                        <span className={styles.cardSize}>
+                            {apartment.bathrooms} {apartment.bathrooms < 2 ? t.Bathroom : t.Bathrooms}
+                        </span>
                     </div>
                     <div className={styles.cardDetailsItem}>
                         <Ruler size={18} />

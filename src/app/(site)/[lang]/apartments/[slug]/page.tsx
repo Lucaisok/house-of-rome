@@ -8,6 +8,7 @@ import { AddressAndMapSection } from "@/components/addressAndMap/AddressAndMap";
 import { ImageGallery } from "@/components/imageGallery/ImageGallery";
 import { InfoPills } from "@/components/infoPills/InfoPills";
 import { BookingHelper } from "@/components/bookingHelper/BookingHelper";
+// import { Highlights } from "@/components/cardHighlights/Higlights";
 import { Highlights } from "@/components/apartments/highlights/Highlights";
 
 export const generateMetadata = apartmentMetadata;

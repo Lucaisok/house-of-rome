@@ -13,9 +13,9 @@ export const Pill = ({ icon: Icon, label, variant = "default", iconStrokeWidth =
     {
         itemClass: variant === "highlight" ? `${styles.pill} ${styles.pillHighlight}` : styles.pill,
         iconClass: variant === "highlight" ? `${styles.icon} ${styles.iconHighlight}` : styles.icon,
-        textColor: variant === "highlight" ? "#ffe343" : "#525252",
+        textColor: "#525252",
         iconSize: 18,
-        stroke: variant === "highlight" ? Math.max(iconStrokeWidth, 2.5) : iconStrokeWidth
+        stroke: iconStrokeWidth
     };
 
 

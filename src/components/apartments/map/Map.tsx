@@ -1,10 +1,10 @@
 import { LocaleProp } from "@/app/(site)/[lang]/page";
-import styles from "./mapSection.module.css";
+import styles from "./Map.module.css";
 
 import { siteContent } from "@/content/global";
-import { ApartmentsMap } from "./ApartmentsMap";
+import { GeneralMap } from "./GeneralMap";
 
-export const MapSection = ({ locale }: LocaleProp) => {
+export const Map = ({ locale }: LocaleProp) => {
     const { exploreLocationsTitle, exploreLocationsDescription } = siteContent[locale].apartments;
 
     return (
@@ -20,7 +20,7 @@ export const MapSection = ({ locale }: LocaleProp) => {
                 </div>
                 <div className={styles.mapBox}>
                     {/* Map with apartment pins */}
-                    <ApartmentsMap />
+                    <GeneralMap />
                 </div>
             </div>
         </section>

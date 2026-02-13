@@ -1,8 +1,8 @@
-import styles from "./Welcome.module.css";
+import styles from "./Intro.module.css";
 import { LocaleProp } from "@/app/(site)/[lang]/page";
 import { siteContent } from "@/content/global";
 
-export const Welcome = ({ locale }: LocaleProp) => {
+export const Intro = ({ locale }: LocaleProp) => {
     const t = siteContent[locale].apartments;
     return (
         <section className={styles.welcomeSection}>

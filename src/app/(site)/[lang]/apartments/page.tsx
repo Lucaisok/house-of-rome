@@ -1,8 +1,8 @@
 import { FeaturedApartments } from "@/components/apartments/showcase/FeaturedApartments";
-import { Welcome } from "@/components/apartments/welcome/Welcome";
 import { assertLocale } from "@/lib/i18n";
 import { apartmentsMetadata } from "@/lib/seo/apartments/metadata";
-import { MapSection } from "@/components/apartments/mapSection/MapSection";
+import { Intro } from "@/components/apartments/intro/Intro";
+import { Map } from "@/components/apartments/map/Map";
 
 export const generateMetadata = apartmentsMetadata;
 
@@ -15,9 +15,9 @@ const Apartments = async ({
   const locale = assertLocale(lang);
   return (
     <main>
-      <Welcome locale={locale} />
+      <Intro locale={locale} />
       <FeaturedApartments locale={locale} />
-      <MapSection locale={locale} />
+      <Map locale={locale} />
     </main>
   );
 };

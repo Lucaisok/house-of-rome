@@ -1,7 +1,7 @@
 import { apartments } from "@/content/apartments";
 import MapView from "@/components/addressAndMap/MapView";
 
-export const ApartmentsMap = () => {
+export const GeneralMap = () => {
     // Filter apartments with valid coordinates
     const markers = apartments
         .filter((apt) => apt.lat && apt.lng)
@@ -22,3 +22,5 @@ export const ApartmentsMap = () => {
 
     return <MapView center={center as [number, number]} markers={markers} zoom={13} />;
 };
+
+

@@ -1,4 +1,3 @@
-import { ApartmentPageParams } from "@/app/(site)/[lang]/apartments/[slug]/page";
 import styles from "./Welcome.module.css";
 import { LocaleProp } from "@/app/(site)/[lang]/page";
 import { siteContent } from "@/content/global";

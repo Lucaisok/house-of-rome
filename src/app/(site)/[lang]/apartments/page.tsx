@@ -1,12 +1,12 @@
-import { MapSection } from "@/components/apartments/mapSection/mapSection";
 import { FeaturedApartments } from "@/components/apartments/showcase/FeaturedApartments";
 import { Welcome } from "@/components/apartments/welcome/Welcome";
 import { assertLocale } from "@/lib/i18n";
 import { apartmentsMetadata } from "@/lib/seo/apartments/metadata";
+import { MapSection } from "@/components/apartments/mapSection/MapSection";
 
 export const generateMetadata = apartmentsMetadata;
 
-export const Apartments = async ({
+const Apartments = async ({
   params,
 }: {
   params: { lang: string; } | Promise<{ lang: string; }>;

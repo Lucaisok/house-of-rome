@@ -9,9 +9,10 @@ export const Highlights = ({ highlights }: { highlights: Highlight[]; }) => {
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.list}>
-                    {highlights.map((highlight) => {
+                    {highlights.map((highlight, index) => {
                         return (
                             <Pill
+                                key={`${highlight}-${index}`}
                                 icon={Users}
                                 label={highlight}
                                 variant="highlight"

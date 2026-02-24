@@ -47,7 +47,7 @@ export const Header = ({ locale }: HeaderProps) => {
                     {/* Desktop Layout */}
                     <div className={styles.logoWrap}>
                         <Link href={routes.home} className={styles.logo}>
-                            <Home className={styles.logoIcon} aria-hidden="true" style={{ color: isHome ? '#fff' : '#171717' }} />
+                            <Home className={styles.logoIcon} aria-hidden="true" style={{ color: '#171717' }} />
                             <span className={styles.logoText}>{t.home.title}</span>
                         </Link>
                     </div>

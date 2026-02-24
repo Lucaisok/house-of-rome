@@ -146,6 +146,7 @@
   text-decoration: none;
   transition: background 0.2s ease;
   font-size: 1.05rem;
+  white-space: nowrap;
 }
 
 .cta:hover {
@@ -176,7 +177,7 @@
   background: rgba(255, 255, 255, 0.28);
 }
 
-@media (min-width: 640px) {
+@media (min-width: 767px) {
   .row {
     height: 4.5rem;
   }

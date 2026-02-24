@@ -24,11 +24,6 @@ export function FeaturedApartments({ locale }: LocaleProp) {
                         </div>
                     ))}
                 </div>
-                <div className={styles.ctaWrap}>
-                    <NavButton href={routes.apartments} className={styles.cta}>
-                        {t.cta}
-                    </NavButton>
-                </div>
             </div>
         </section>
     );

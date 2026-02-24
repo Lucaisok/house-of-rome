@@ -4,9 +4,12 @@ import styles from './Form.module.css';
 import { siteContent } from '@/content/global';
 import { LocaleProp } from '@/app/(site)/[lang]/page';
 import { useState } from 'react';
+import { FORMSPREE_ENDPOINT } from './formspree';
 
 export const Form = ({ locale }: LocaleProp) => {
     const t = siteContent[locale].contact.form;
+    const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle');
+    const [error, setError] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -21,16 +24,51 @@ export const Form = ({ locale }: LocaleProp) => {
         });
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    // Clear status and error on focus
+    const handleFocus = () => {
+        if (status !== 'idle') {
+            setStatus('idle');
+            setError(null);
+        }
+    };
+
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Handle form submission (currently just a placeholder)
-        alert('Thank you for your message! We will get back to you soon.');
+        setStatus('submitting');
+        setError(null);
+        try {
+            const response = await fetch(FORMSPREE_ENDPOINT, {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+            const data = await response.json();
+            if (response.ok) {
+                setStatus('success');
+                setFormData({ name: '', email: '', phone: '', message: '' });
+            } else {
+                setStatus('error');
+                setError(data?.error || 'Something went wrong.');
+            }
+        } catch (err: any) {
+            setStatus('error');
+            setError(err?.message || 'Something went wrong.');
+        }
     };
 
     return (
         <div>
             <div className={styles.wrapper}>
                 <h2 className={styles.heading}>{t.title}</h2>
+                {status === 'success' && (
+                    <div className={styles.success}>{t.success}</div>
+                )}
+                {status === 'error' && (
+                    <div className={styles.error}>{error || t.error}</div>
+                )}
                 <form
                     onSubmit={handleSubmit}
                     className={styles.form}
@@ -48,6 +86,8 @@ export const Form = ({ locale }: LocaleProp) => {
                             onChange={handleChange}
                             className={styles.input}
                             placeholder={t.nameLabel}
+                            disabled={status === 'submitting'}
+                            onFocus={handleFocus}
                         />
                     </div>
                     <div>
@@ -63,6 +103,8 @@ export const Form = ({ locale }: LocaleProp) => {
                             onChange={handleChange}
                             className={styles.input}
                             placeholder="your@email.com"
+                            disabled={status === 'submitting'}
+                            onFocus={handleFocus}
                         />
                     </div>
                     <div>
@@ -77,6 +119,8 @@ export const Form = ({ locale }: LocaleProp) => {
                             onChange={handleChange}
                             className={styles.input}
                             placeholder="+39 06 1234 5678"
+                            disabled={status === 'submitting'}
+                            onFocus={handleFocus}
                         />
                     </div>
                     <div>
@@ -92,13 +136,16 @@ export const Form = ({ locale }: LocaleProp) => {
                             rows={6}
                             className={styles.textarea}
                             placeholder={t.messagePlaceholder}
+                            disabled={status === 'submitting'}
+                            onFocus={handleFocus}
                         />
                     </div>
                     <button
                         type="submit"
                         className={styles.button}
+                        disabled={status === 'submitting'}
                     >
-                        <span>{t.submitButton}</span>
+                        <span>{status === 'submitting' ? 'Sending...' : t.submitButton}</span>
                         <Send size={18} />
                     </button>
                 </form>

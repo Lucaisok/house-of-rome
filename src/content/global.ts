@@ -104,6 +104,8 @@ export const siteContent: Record<
                 messageLabel: string;
                 messagePlaceholder: string;
                 submitButton: string;
+                success: string;
+                error: string;
             };
         };
         privacy: {
@@ -226,6 +228,8 @@ export const siteContent: Record<
                 messageLabel: "Message",
                 messagePlaceholder: "Tell us about your travel plans or ask any questions...",
                 submitButton: "Send Message",
+                success: "Thank you for your message! We will get back to you soon.",
+                error: "An error occurred. Please try again.",
             }
         },
         privacy: {
@@ -347,6 +351,8 @@ export const siteContent: Record<
                 messageLabel: "Messaggio",
                 messagePlaceholder: "Raccontaci i tuoi piani di viaggio o fai qualsiasi domanda...",
                 submitButton: "Invia",
+                success: "Grazie per il tuo messaggio! Ti ricontatteremo presto.",
+                error: "Si è verificato un errore. Riprova.",
             }
         },
         privacy: {

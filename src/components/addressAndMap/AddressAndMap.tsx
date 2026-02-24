@@ -3,7 +3,9 @@
 import { ApartmentPageParams } from "@/app/(site)/[lang]/apartments/[slug]/page";
 import styles from "./AddressAndMap.module.css";
 import { siteContent } from "@/content/global";
-import MapView from "./MapView";
+import dynamic from "next/dynamic";
+
+const MapView = dynamic(() => import("./MapView"), { ssr: false });
 
 export const AddressAndMapSection = ({ apartment, locale }: ApartmentPageParams) => {
     const t = siteContent[locale].global;

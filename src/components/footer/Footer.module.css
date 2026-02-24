@@ -4,6 +4,16 @@
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding: 1rem 1rem;
+  margin-top: 2.5rem;
+  /* Add more space above footer on mobile */
+}
+
+@media (min-width: 640px) {
+  .footer {
+    padding: 4rem 1.5rem;
+    margin-top: 0;
+    /* Remove extra margin on tablet and up */
+  }
 }
 
 .container {

@@ -1,0 +1,11 @@
+.rootLoading {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fafafa;
+    padding: 0;
+    margin: 0;
+}

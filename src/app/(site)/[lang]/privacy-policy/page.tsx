@@ -1,6 +1,7 @@
 import { siteContent } from "@/content/global";
 import styles from "./privacy-policy.module.css";
 import { assertLocale } from "@/lib/i18n";
+import { email } from "@/components/contact/contacts/Contacts";
 
 export const PrivacyPolicy = async ({
   params,
@@ -27,7 +28,7 @@ export const PrivacyPolicy = async ({
       </p>
       <h2 className={styles.sectionTitle}>{t.contactTitle}</h2>
       <p className={styles.text}>
-        {t.contact} <a href="mailto:houseofrome2024@gmail.com" className={styles.link}>houseofrome2024@gmail.com</a>.
+        {t.contact} <a href={`mailto:${email}`} className={styles.link}>{email}</a>.
       </p>
     </main>
   );

@@ -5,14 +5,17 @@ import { siteContent } from '@/content/global';
 import { LocaleProp } from '@/app/(site)/[lang]/page';
 import { InfoBox } from '../infoBox/InfoBox';
 
+export const phoneNumber = '+39 391 2345678'; // to be finalized with actual number (format: country code + number, no + or spaces)
+export const email = 'houseofrome2024@gmail.com';
+
 export const Contacts = ({ locale }: LocaleProp) => {
     const t = siteContent[locale].contact.contacts;
 
     const handleWhatsApp = () => {
         // Replace with actual WhatsApp number
-        const phoneNumber = '393912345678'; // Format: country code + number (no + or spaces)
+        const whatsappFormattedPhoneNumber = '393912345678'; // Format: country code + number (no + or spaces) - to be finalized with actual number
         const message = t.whatsApp.message;
-        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        window.open(`https://wa.me/${whatsappFormattedPhoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
     };
 
     return (
@@ -44,10 +47,10 @@ export const Contacts = ({ locale }: LocaleProp) => {
                     <div>
                         <h3 className={styles.sectionTitle}>Email</h3>
                         <a
-                            href="mailto:houseofrome2024@gmail.com"
+                            href={`mailto:${email}`}
                             className={styles.link}
                         >
-                            houseofrome2024@gmail.com
+                            {email}
                         </a>
                     </div>
                 </div>
@@ -58,10 +61,10 @@ export const Contacts = ({ locale }: LocaleProp) => {
                     <div>
                         <h3 className={styles.sectionTitle}>{t.phone}</h3>
                         <a
-                            href="tel:+390612345678"
+                            href={`tel:${phoneNumber}`}
                             className={styles.link}
                         >
-                            +39 06 1234 5678
+                            {phoneNumber}
                         </a>
                     </div>
                 </div>

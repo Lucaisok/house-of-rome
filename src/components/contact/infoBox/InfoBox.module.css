@@ -1,0 +1,22 @@
+.infoBox {
+    margin-top: 3rem;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.title {
+    font-size: 1.25rem;
+    color: #171717;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.text {
+    color: #525252;
+    line-height: 1.75;
+    margin-bottom: 1rem;
+}
+
+.text:last-child {
+    margin-bottom: 0;
+}

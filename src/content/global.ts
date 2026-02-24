@@ -76,6 +76,35 @@ export const siteContent: Record<
             followUs: string;
             quickLinks: string;
         };
+        contact: {
+            header: {
+                title: string,
+                description: string;
+            };
+            infoBox: {
+                title: string;
+                firstParagraph: string;
+                secondParagraph: string;
+            };
+            contacts: {
+                title: string;
+                whatsApp: {
+                    description: string;
+                    buttonText: string;
+                    message: string;
+                },
+                phone: string;
+            },
+            form: {
+                title: string;
+                nameLabel: string;
+                emailLabel: string;
+                phoneLabel: string;
+                messageLabel: string;
+                messagePlaceholder: string;
+                submitButton: string;
+            };
+        };
     }
 > = {
     en: {
@@ -151,6 +180,35 @@ export const siteContent: Record<
             exploreLocationsDescription: "All of our apartments are strategically located throughout Rome's most iconic neighborhoods, ensuring you're never far from the city's treasures.",
             title: "Our Apartments",
             description: "Discover our carefully curated collection of four exceptional apartments in Rome's most desirable neighborhoods. Each residence offers a unique blend of authentic Roman charm and modern comfort, perfectly positioned to explore the eternal city.",
+        },
+        contact: {
+            header: {
+                title: "Get in Touch",
+                description: "We're here to help you plan your perfect stay in Rome. Reach out to us with any questions about our apartments or to make a reservation."
+            },
+            infoBox: {
+                title: "Planning Your Visit?",
+                firstParagraph: "Our team is dedicated to making your Roman holiday unforgettable. Whether you need recommendations for restaurants, help with transportation, or have questions about our apartments, we're here to assist.",
+                secondParagraph: "For the fastest response, we recommend contacting us via WhatsApp. We're available 7 days a week to answer your questions."
+            },
+            contacts: {
+                title: "Contact Information",
+                whatsApp: {
+                    description: "Get instant responses to your questions",
+                    buttonText: "Chat on WhatsApp",
+                    message: "Hello! I would like to inquire about your apartments in Rome.",
+                },
+                phone: "Phone",
+            },
+            form: {
+                title: "Send Us a Message",
+                nameLabel: "Full Name",
+                emailLabel: "Email Address",
+                phoneLabel: "Phone Number",
+                messageLabel: "Message",
+                messagePlaceholder: "Tell us about your travel plans or ask any questions...",
+                submitButton: "Send Message",
+            }
         }
     },
     it: {
@@ -226,6 +284,35 @@ export const siteContent: Record<
             exploreLocationsDescription: "Tutti i nostri appartamenti sono strategicamente situati nei quartieri più iconici di Roma, assicurandoti di essere sempre vicino ai tesori della città.",
             title: "I nostri appartamenti",
             description: "Scopri la nostra collezione accuratamente selezionata di quattro appartamenti eccezionali nei quartieri più desiderabili di Roma. Ogni residenza offre un mix unico di autentico fascino romano e comfort moderno, perfettamente posizionata per esplorare la città eterna.",
+        },
+        contact: {
+            header: {
+                title: "Contattaci",
+                description: "Siamo qui per aiutarti a pianificare il tuo soggiorno perfetto a Roma. Contattaci per qualsiasi domanda sui nostri appartamenti o per effettuare una prenotazione."
+            },
+            infoBox: {
+                title: "Pianificando la tua visita?",
+                firstParagraph: "Il nostro team è dedicato a rendere indimenticabile la tua vacanza romana. Che tu abbia bisogno di consigli sui ristoranti, aiuto con i trasporti o domande sui nostri appartamenti, siamo qui per assisterti.",
+                secondParagraph: "Per una risposta più rapida, ti consigliamo di contattarci tramite WhatsApp. Siamo disponibili 7 giorni su 7 per rispondere alle tue domande."
+            },
+            contacts: {
+                title: "Informazioni di contatto",
+                whatsApp: {
+                    description: "Ricevi risposte istantanee alle tue domande",
+                    buttonText: "Chatta su WhatsApp",
+                    message: "Ciao! Vorrei avere informazioni sui vostri appartamenti a Roma.",
+                },
+                phone: "Telefono",
+            },
+            form: {
+                title: "Inviaci un messaggio",
+                nameLabel: "Nome",
+                emailLabel: "Indirizzo email",
+                phoneLabel: "Numero di telefono",
+                messageLabel: "Messaggio",
+                messagePlaceholder: "Raccontaci i tuoi piani di viaggio o fai qualsiasi domanda...",
+                submitButton: "Invia",
+            }
         }
     }
 };

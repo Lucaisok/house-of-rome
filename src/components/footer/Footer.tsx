@@ -15,8 +15,6 @@ export function Footer({ locale }: LocaleProp) {
     const isApartmentPage = /^\/(|[a-zA-Z-]{2,5})\/apartments\/[\w-]+$/.test(pathname);
     const isMobile = useIsMobile();
 
-    // Now you can use isMobile in your component logic
-
     return (
         <footer className={styles.footer}
             style={{ paddingBottom: isMobile && isApartmentPage ? '5rem' : '2rem' }}

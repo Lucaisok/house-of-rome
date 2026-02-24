@@ -29,10 +29,10 @@
     .grid {
         grid-template-columns: repeat(3, 1fr);
     }
-}
 
-.leftColumn {
-    grid-column: span 2;
+    .leftColumn {
+        grid-column: 1 / span 3;
+    }
 }
 
 @media (max-width: 1023px) {
@@ -106,4 +106,3 @@
 .paragraphSpacing {
     margin-bottom: 1rem;
 }
-

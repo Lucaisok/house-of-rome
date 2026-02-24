@@ -2,7 +2,7 @@
 	width: 100vw;
 	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
-	padding: 0 0 0.5rem;
+	padding: 0 0.7rem 0.5rem;
 }
 
 @media (min-width: 640px) {
@@ -43,6 +43,7 @@
 	-webkit-overflow-scrolling: touch;
 	padding-bottom: 0.25rem;
 }
+
 .list::-webkit-scrollbar {
 	display: none;
 }

@@ -1,0 +1,20 @@
+.widgetIframe {
+    flex-basis: 600px;
+    max-width: 900px;
+    min-width: 400px;
+    height: 800px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12);
+    border-radius: 1rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #e5e5e5;
+    position: relative;
+    margin-right: 2.5rem;
+}
+
+.widgetIframe iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}

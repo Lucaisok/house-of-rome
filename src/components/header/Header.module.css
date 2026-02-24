@@ -174,7 +174,7 @@
 
 .mobileButton:hover {
   color: #f5f5f5;
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.278);
 }
 
 @media (min-width: 767px) {

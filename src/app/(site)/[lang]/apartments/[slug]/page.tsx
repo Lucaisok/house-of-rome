@@ -8,8 +8,9 @@ import { AddressAndMapSection } from "@/components/addressAndMap/AddressAndMap";
 import { ImageGallery } from "@/components/imageGallery/ImageGallery";
 import { InfoPills } from "@/components/infoPills/InfoPills";
 import { BookingHelper } from "@/components/bookingHelper/BookingHelper";
-// import { Highlights } from "@/components/cardHighlights/Higlights";
 import { Highlights } from "@/components/apartments/highlights/Highlights";
+import WidgetIframe from "@/components/WidgetIframe";
+import widgetStyles from "./widgetIframe.module.css";
 
 export const generateMetadata = apartmentMetadata;
 
@@ -34,12 +35,21 @@ const ApartmentPage = async ({
     <main className={styles.page}>
       <section className={styles.heroStack}>
         <ImageGallery apartment={apartment} locale={locale} />
-        <BasicInfo apartment={apartment} locale={locale} />
-        <Highlights highlights={apartment.highlights} />
-        <InfoPills apartment={apartment} locale={locale} />
       </section>
+      <div className={widgetStyles.widgetIframeContainer}>
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <section>
+            <BasicInfo apartment={apartment} locale={locale} />
+            <Highlights highlights={apartment.highlights} />
+            <InfoPills apartment={apartment} locale={locale} />
+            <ApartmentDescription apartment={apartment} locale={locale} />
+          </section>
+        </div>
+        <div className={widgetStyles.widgetIframe}>
+          <WidgetIframe src="https://bnbforms.com/103473/" />
+        </div>
+      </div>
       <BookingHelper startingPrice={apartment.startingPrice} locale={locale} />
-      <ApartmentDescription apartment={apartment} locale={locale} />
       <AddressAndMapSection apartment={apartment} locale={locale} />
     </main>
   );

@@ -1,0 +1,41 @@
+/* about.module.css */
+.section {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background: #fafafa;
+}
+
+@media (min-width: 640px) {
+    .section {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .section {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+.container {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 4rem;
+    }
+}

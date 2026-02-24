@@ -19,6 +19,7 @@ export const siteContent: Record<
             subtitle: string;
         };
         nav: {
+            home: string;
             apartments: string;
             about: string;
             book: string;
@@ -124,6 +125,7 @@ export const siteContent: Record<
             subtitle: "Carefully selected apartments in the heart of Rome",
         },
         nav: {
+            home: "Home",
             apartments: "Apartments",
             about: "Contacts",
             book: "Book Now",
@@ -228,6 +230,7 @@ export const siteContent: Record<
             subtitle: "Appartamenti selezionati con cura nel cuore di Roma",
         },
         nav: {
+            home: "Home",
             apartments: "Appartamenti",
             about: "Contatti",
             book: "Prenota Ora",

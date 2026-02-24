@@ -106,6 +106,22 @@ export const siteContent: Record<
                 submitButton: string;
             };
         };
+        privacy: {
+            title: string;
+            intro: string;
+            cookiesTitle: string;
+            cookies: string;
+            rightsTitle: string;
+            rights: string;
+            contactTitle: string;
+            contact: string;
+        };
+        cookieBanner: {
+            message: string;
+            accept: string;
+            decline: string;
+            learnMore: string;
+        };
     }
 > = {
     en: {
@@ -211,6 +227,22 @@ export const siteContent: Record<
                 messagePlaceholder: "Tell us about your travel plans or ask any questions...",
                 submitButton: "Send Message",
             }
+        },
+        privacy: {
+            title: "Privacy Policy",
+            intro: "We value your privacy. This website uses cookies only for essential functionality and analytics. No personal data is sold or shared with third parties",
+            cookiesTitle: "Cookies",
+            cookies: "Cookies are small text files stored on your device. We use them to remember your preferences and to understand how our site is used.",
+            rightsTitle: "Your Choices",
+            rights: "You can accept or decline cookies using the banner. Most browsers also allow you to control cookies via settings.",
+            contactTitle: "Contact",
+            contact: "For questions about this privacy policy, please contact us at ",
+        },
+        cookieBanner: {
+            message: "This website uses cookies to ensure you get the best experience.",
+            accept: "Accept",
+            decline: "Decline",
+            learnMore: "Learn more",
         }
     },
     it: {
@@ -316,6 +348,22 @@ export const siteContent: Record<
                 messagePlaceholder: "Raccontaci i tuoi piani di viaggio o fai qualsiasi domanda...",
                 submitButton: "Invia",
             }
+        },
+        privacy: {
+            title: "Informativa sulla privacy",
+            intro: "Teniamo alla tua privacy. Questo sito utilizza solo cookie essenziali e di analisi. Nessun dato personale viene venduto o condiviso con terze parti.",
+            cookiesTitle: "Cookie",
+            cookies: "I cookie sono piccoli file di testo memorizzati sul tuo dispositivo. Li utilizziamo per ricordare le tue preferenze e per capire come viene utilizzato il nostro sito.",
+            rightsTitle: "Le tue scelte",
+            rights: "Puoi accettare o rifiutare i cookie tramite il banner. La maggior parte dei browser consente anche di gestire i cookie dalle impostazioni.",
+            contactTitle: "Contatti",
+            contact: "Per domande su questa informativa sulla privacy, contattaci a ",
+        },
+        cookieBanner: {
+            message: "Questo sito utilizza cookie per garantirti la migliore esperienza.",
+            accept: "Accetta",
+            decline: "Rifiuta",
+            learnMore: "Scopri di più",
         }
     }
 };

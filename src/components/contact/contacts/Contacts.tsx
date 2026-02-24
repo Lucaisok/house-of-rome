@@ -44,10 +44,10 @@ export const Contacts = ({ locale }: LocaleProp) => {
                     <div>
                         <h3 className={styles.sectionTitle}>Email</h3>
                         <a
-                            href="mailto:info@houseofrome.com"
+                            href="mailto:houseofrome2024@gmail.com"
                             className={styles.link}
                         >
-                            info@houseofrome.com
+                            houseofrome2024@gmail.com
                         </a>
                     </div>
                 </div>

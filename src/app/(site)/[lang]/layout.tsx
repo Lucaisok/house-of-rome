@@ -1,3 +1,4 @@
+import { CookieBanner } from "@/components/CookieBanner";
 import { Footer } from "@/components/footer/Footer";
 import { Header } from "@/components/header/Header";
 import { assertLocale } from "@/lib/i18n";
@@ -22,7 +23,11 @@ export default async function LangLayout({
   return (
     <>
       <Header locale={locale} />
-      {children}
+      <>
+        {children}
+        <CookieBanner locale={locale} />
+      </>
+
       <Footer locale={locale} />
     </>
   );

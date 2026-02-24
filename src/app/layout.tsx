@@ -1,3 +1,4 @@
+import CookieBanner from "@/components/CookieBanner";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Nunito, Playfair_Display } from "next/font/google";

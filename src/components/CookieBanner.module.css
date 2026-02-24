@@ -1,0 +1,48 @@
+.banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: #222;
+    color: #fff;
+    padding: 1.2rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08);
+}
+
+@media (min-width: 600px) {
+    .banner {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.text {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.link {
+    color: #ffd700;
+    text-decoration: underline;
+}
+
+.button {
+    background: #ffd700;
+    color: #222;
+    border: none;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.18s;
+}
+
+.button:hover {
+    background: #ffe066;
+}

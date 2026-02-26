@@ -106,6 +106,14 @@
     .viewPill {
         left: max(2rem, calc(50% - 38rem));
     }
+
+    .heroArrowLeft {
+        left: 2.2rem;
+    }
+
+    .heroArrowRight {
+        right: 2.2rem;
+    }
 }
 
 .image {

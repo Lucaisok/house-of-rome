@@ -3,10 +3,11 @@
   overflow: hidden;
   transition: box-shadow 0.3s;
   border-radius: 16px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
 }
+
 .card:hover {
-  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.14);
 }
 
 .image {
@@ -34,6 +35,7 @@
     height: 250px;
   }
 }
+
 .cardImage {
   width: 100%;
   height: 100%;
@@ -41,6 +43,7 @@
   transition: transform 0.5s;
   border-radius: 0;
 }
+
 .card:hover .cardImage {
   transform: scale(1.05);
 }
@@ -50,9 +53,9 @@
 }
 
 @media (max-width: 1100px) {
- .cardContent {
-  padding: 1.5rem;
-}
+  .cardContent {
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 600px) {
@@ -60,142 +63,161 @@
     padding: 1.3rem;
   }
 }
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+@media (max-width: 600px) {
   .cardHeader {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
-  @media (max-width: 600px) {
-    .cardHeader {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem;
-    }
-    .cardTitle {
-      text-align: left;
-      width: 100%;
-    }
-    .cardPriceBlock {
-      text-align: right;
-      justify-content: flex-end;
-    }
-  }
   .cardTitle {
-    font-size: 1.5rem;
-    color: #18181b;
-    margin: 0;
-    font-weight: 500;
-    letter-spacing: -0.01em;
+    text-align: left;
+    width: 100%;
   }
+
+  .cardPriceBlock {
+    text-align: right;
+    justify-content: flex-end;
+  }
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  color: #18181b;
+  margin: 0;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
 .cardPriceBlock {
   text-align: right;
   flex-direction: row;
 }
-  .cardPrice {
-    font-size: 1.25rem;
-    color: #18181b;
-  }
+
+.cardPrice {
+  font-size: 1.25rem;
+  color: #18181b;
+}
+
 .cardPriceNote {
   font-size: 0.75rem;
   color: #737373;
 }
+
 .cardPriceBlockDesktop {
   display: block;
 }
+
 @media (max-width: 1124px) {
   .cardPriceBlockDesktop {
     display: none;
   }
 }
+
 .cardLocationRow {
   display: flex;
   align-items: center;
   gap: 0.5rem;
   color: #737373;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
   font-size: 1rem;
 }
+
 .cardLocation {
   font-size: 1rem;
 }
+
 .cardDescription {
   color: #52525b;
   margin-bottom: 1.5rem;
   line-height: 1.6;
 }
+
 .cardDetailsRow {
-    display: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.7rem 0rem;
   margin-bottom: 1.5rem;
   color: #777777;
   font-size: 0.9rem;
 }
+
 .cardDetailsItem {
   gap: 0.5rem;
- display: flex;
+  display: flex;
   align-items: center;
 }
 
 @media (min-width: 1060px) {
-    .cardDetailsRow {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.2rem;
-  color: #737373;
-}
-.cardDetailsItem {
-  justify-content: center;
-  gap: 0.5rem;
- display: flex;
-  align-items: center;
-}
+  .cardDetailsRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+    color: #737373;
+  }
+
+  .cardDetailsItem {
+    justify-content: center;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media (max-width: 1060px) and (min-width: 900px) {
-.cardDetailsRow {
+  .cardDetailsRow {
     display: flex;
-  margin-bottom: 1.5rem;
-  color: #777777;
-  font-size: 0.9rem;
-}
-.cardDetailsItem {
-  gap: 0.5rem;
- display: flex;
-  align-items: center;
-}
+    margin-bottom: 1.5rem;
+    color: #777777;
+    font-size: 0.9rem;
+  }
+
+  .cardDetailsItem {
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
 }
 
 @media (max-width: 900px) and (min-width: 500) {
   .cardDetailsRow {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 0.75rem;
-  margin-bottom: 1.2rem;
-  color: #737373;
-}
-.cardDetailsItem {
-  justify-content: center;
-  gap: 0.5rem;
- display: flex;
-  align-items: center;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.2rem;
+    color: #737373;
+  }
+
+  .cardDetailsItem {
+    justify-content: center;
+    gap: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
 
 }
 
 .cardDetailsText {
   font-size: 1rem;
 }
+
 .cardSize {
   font-size: 1rem;
 }
+
 .cardButton {
   display: inline-block;
   width: 100%;
@@ -211,12 +233,12 @@
   transition: background 0.2s;
   text-decoration: none;
 }
+
 .cardButton:hover {
   background: #27272a;
 }
 
 .cardPriceBlockDesktop {
   text-align: right;
-      justify-content: flex-end;
-    }
-
+  justify-content: flex-end;
+}

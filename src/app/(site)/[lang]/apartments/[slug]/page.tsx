@@ -36,19 +36,22 @@ const ApartmentPage = async ({
       <section className={styles.heroStack}>
         <ImageGallery apartment={apartment} locale={locale} />
       </section>
-      <div className={widgetStyles.widgetIframeContainer}>
-        <div style={{ flex: 1, minWidth: 0 }}>
-          <section>
-            <BasicInfo apartment={apartment} locale={locale} />
-            <Highlights highlights={apartment.highlights} />
-            <InfoPills apartment={apartment} locale={locale} />
-            <ApartmentDescription apartment={apartment} locale={locale} />
-          </section>
-        </div>
-        <div className={widgetStyles.widgetIframe}>
-          <WidgetIframe src="https://bnbforms.com/103473/" />
+      <div style={{ width: "100%", display: "flex", flexDirection: "row", justifyContent: "center" }}>
+        <div className={widgetStyles.widgetIframeContainer}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <section>
+              <BasicInfo apartment={apartment} locale={locale} />
+              <Highlights highlights={apartment.highlights} />
+              <InfoPills apartment={apartment} locale={locale} />
+              <ApartmentDescription apartment={apartment} locale={locale} />
+            </section>
+          </div>
+          <div className={widgetStyles.widgetIframe}>
+            <WidgetIframe src="https://bnbforms.com/103473/" />
+          </div>
         </div>
       </div>
+
       <BookingHelper startingPrice={apartment.startingPrice} locale={locale} />
       <AddressAndMapSection apartment={apartment} locale={locale} />
     </main>

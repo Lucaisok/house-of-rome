@@ -5,6 +5,7 @@ import { ApartmentPageParams } from "@/app/(site)/[lang]/apartments/[slug]/page"
 import styles from "./ApartmentDescription.module.css";
 import { siteContent } from "@/content/global";
 import { Amenities } from "@/components/amenities/Amenities";
+import { HomeRules } from "@/components/homeRules/HomeRules";
 
 export const ApartmentDescription = ({ apartment, locale }: ApartmentPageParams) => {
     const t = siteContent[locale].global;
@@ -37,6 +38,7 @@ export const ApartmentDescription = ({ apartment, locale }: ApartmentPageParams)
                                 {expanded ? "Read less" : "Read more"}
                             </button>
                         </div>
+                        <HomeRules homeRules={apartment.homeRules} locale={locale} />
                         <Amenities amenities={apartment.amenities} title={t.amenities} locale={locale} />
                     </div>
                 </div>

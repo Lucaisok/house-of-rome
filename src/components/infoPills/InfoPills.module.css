@@ -50,12 +50,12 @@
 
 .list::before {
 	content: "";
-	flex: 0 0 calc(var(--edge-pad) - var(--pill-gap));
+	flex: 0 0 var(--edge-pad);
 }
 
 .list::after {
 	content: "";
-	flex: 0 0 calc(var(--edge-pad) - var(--pill-gap));
+	flex: 0 0 var(--edge-pad);
 }
 
 

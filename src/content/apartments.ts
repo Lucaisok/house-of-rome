@@ -27,8 +27,14 @@ export type Apartment = {
   lat: number;
   lng: number;
   startingPrice: number;
-  checkIn?: string;
-  checkOut?: string;
+  homeRules: {
+    checkIn: string;
+    checkOut: string;
+    selfCheckin: boolean;
+    smokingAllowed: boolean;
+    petsAllowed: boolean;
+    partiesAllowed: boolean;
+  };
 };
 
 export const apartments: Apartment[] = [
@@ -64,6 +70,14 @@ Sarà un piacere accogliervi e farvi sentire come a casa!`,
     lng: 0,
     highlights: ["City Center"],
     startingPrice: 0,
+    homeRules: {
+      checkIn: "15:00",
+      checkOut: "11:00",
+      selfCheckin: true,
+      smokingAllowed: false,
+      petsAllowed: true,
+      partiesAllowed: false,
+    },
   },
   {
     slug: "spanish-steps-apartment-terrace",
@@ -107,6 +121,14 @@ An elegant and welcoming home designed for those who want a refined, central, an
     highlights: ["Terrace", "City Center"],
     startingPrice: 120,
     imagesDir: "spanish_steps",
+    homeRules: {
+      checkIn: "14:00",
+      checkOut: "10:00",
+      selfCheckin: true,
+      smokingAllowed: false,
+      petsAllowed: true,
+      partiesAllowed: false,
+    }
   },
   {
     slug: "trastevere-experience",
@@ -142,6 +164,14 @@ A modern and welcoming home designed for those who want an authentic, comfortabl
     highlights: ["Historic Building", "Vibrant Neighborhood"],
     startingPrice: 0,
     imagesDir: "trastevere_experience",
+    homeRules: {
+      checkIn: "14:00",
+      checkOut: "10:00",
+      selfCheckin: true,
+      smokingAllowed: false,
+      petsAllowed: true,
+      partiesAllowed: false,
+    }
   },
   {
     slug: "appartamento-trastevere",
@@ -212,8 +242,14 @@ A cozy and romantic little home designed for those who want an authentic, intima
     lng: 12.466727,
     highlights: ["Terrace", "Vibrant Neighborhood"],
     startingPrice: 140,
-    checkIn: "14:00",
-    checkOut: "10:00",
+    homeRules: {
+      checkIn: "14:00",
+      checkOut: "10:00",
+      selfCheckin: true,
+      smokingAllowed: false,
+      petsAllowed: true,
+      partiesAllowed: false,
+    }
   },
 ];
 

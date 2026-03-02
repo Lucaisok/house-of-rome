@@ -17,6 +17,17 @@ export const siteContent: Record<
             allServices: string;
             amenityNames: Record<string, string>;
             highlightNames: Record<string, string>;
+            homeRules: string;
+            allHomeRules: string;
+            checkIn: string;
+            checkOut: string;
+            selfCheckin: string;
+            smokingAllowed: string;
+            smokingNotAllowed: string;
+            petsAllowed: string;
+            petsNotAllowed: string;
+            partiesAllowed: string;
+            partiesNotAllowed: string;
         },
         home: {
             title: string;
@@ -191,6 +202,17 @@ export const siteContent: Record<
                 "Terrace": "Terrace",
                 "Vibrant Neighborhood": "Vibrant Neighborhood",
             },
+            homeRules: "Home Rules",
+            allHomeRules: "All Home Rules",
+            checkIn: "Check-in",
+            checkOut: "Check-out",
+            selfCheckin: "Self check-in",
+            smokingAllowed: "Smoking allowed",
+            smokingNotAllowed: "No smoking",
+            petsAllowed: "Pets allowed",
+            petsNotAllowed: "No pets",
+            partiesAllowed: "Parties allowed",
+            partiesNotAllowed: "No parties or events",
         },
         home: {
             title: "House of Rome",
@@ -364,6 +386,17 @@ export const siteContent: Record<
                 "Terrace": "Terrazza",
                 "Vibrant Neighborhood": "Quartiere vivace",
             },
+            homeRules: "Regole della casa",
+            allHomeRules: "Tutte le regole",
+            checkIn: "Check-in",
+            checkOut: "Check-out",
+            selfCheckin: "Check-in autonomo",
+            smokingAllowed: "Fumo consentito",
+            smokingNotAllowed: "Vietato fumare",
+            petsAllowed: "Animali ammessi",
+            petsNotAllowed: "Animali non ammessi",
+            partiesAllowed: "Feste consentite",
+            partiesNotAllowed: "Vietate feste ed eventi",
         },
         home: {
             title: "House of Rome",

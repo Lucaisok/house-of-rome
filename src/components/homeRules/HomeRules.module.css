@@ -9,24 +9,24 @@
     margin-bottom: 1rem;
 }
 
-.amenitiesGrid {
+.rulesGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
 }
 
-.amenityItem {
+.ruleItem {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     color: #404040;
 }
 
-.amenityIcon {
+.ruleIcon {
     color: #737373;
 }
 
-.viewServicesButton {
+.viewAllButton {
     border: none;
     background: transparent;
     padding: 0;
@@ -41,6 +41,6 @@
     cursor: pointer;
 }
 
-.viewServicesButton:hover {
+.viewAllButton:hover {
     color: #171717;
 }

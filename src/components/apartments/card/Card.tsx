@@ -34,7 +34,7 @@ export const Card = ({ apartment, locale }: ApartmentPageParams) => {
                         <div className={styles.cardPriceNote}>{(t.startingFrom).toUpperCase()}</div>
                     </div>
                 </div>
-                <Highlights highlights={apartment.highlights} />
+                <Highlights highlights={apartment.highlights} locale={locale} />
                 <p className={styles.cardDescription}>{shortDescription}</p>
 
                 <div className={styles.cardDetailsRow}>

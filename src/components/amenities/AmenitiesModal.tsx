@@ -61,10 +61,11 @@ export const AmenitiesModal = ({ isOpen, amenities, onClose, locale }: Amenities
                 <div className={styles.grid}>
                     {amenities.map((amenity) => {
                         const IconComponent = amenityIcons[amenity] || Wifi;
+                        const translatedName = t.amenityNames[amenity] || amenity;
                         return (
                             <div key={amenity} className={styles.item}>
                                 <IconComponent size={20} className={styles.icon} />
-                                <span>{amenity}</span>
+                                <span>{translatedName}</span>
                             </div>
                         );
                     })}

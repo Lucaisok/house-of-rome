@@ -29,10 +29,11 @@ export const Amenities = ({ amenities, title, locale }: AmenitiesProps) => {
             <div className={styles.amenitiesGrid}>
                 {visibleAmenities.map((amenity) => {
                     const IconComponent = amenityIcons[amenity] || Wifi;
+                    const translatedName = t.amenityNames[amenity] || amenity;
                     return (
                         <div key={amenity} className={styles.amenityItem}>
                             <IconComponent size={20} className={styles.amenityIcon} />
-                            <span>{amenity}</span>
+                            <span>{translatedName}</span>
                         </div>
                     );
                 })}

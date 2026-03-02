@@ -54,7 +54,7 @@ const ApartmentPage = async ({
           <div style={{ flex: 1, minWidth: 0 }}>
             <section>
               <BasicInfo apartment={apartment} locale={locale} />
-              <Highlights highlights={apartment.highlights} />
+              <Highlights highlights={apartment.highlights} locale={locale} />
               <InfoPills apartment={apartment} locale={locale} />
               <ApartmentDescription apartment={apartment} locale={locale} />
             </section>

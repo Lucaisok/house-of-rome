@@ -7,10 +7,9 @@ import { siteContent } from "@/content/global";
 
 export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
   const preview = apartment.img_preview;
-  const images = [preview, ...apartment.images];
+  const images = [...apartment.images];
   const apartmentName = apartment.name;
   const t = siteContent[locale].global;
-  const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const thumbRefs = useRef<Array<HTMLButtonElement | null>>([]);
   const apartmentImages = images
     .filter(Boolean)
@@ -19,9 +18,9 @@ export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
       : `/${image.replace(/^\.\/?/, "")}`
     ));
   const previewImage = apartmentImages[0];
-  const galleryImages = apartmentImages.reverse();
-
+  const galleryImages = apartmentImages;
   const galleryLength = galleryImages.length;
+  const [selectedImage, setSelectedImage] = useState<number | null>(null);
 
   const openLightbox = (index: number) => {
     setSelectedImage(index);

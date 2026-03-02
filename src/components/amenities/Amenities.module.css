@@ -24,3 +24,22 @@
 .amenityIcon {
     color: #737373;
 }
+
+.viewServicesButton {
+    border: none;
+    background: transparent;
+    padding: 0;
+    text-align: left;
+    color: #525252;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 2px;
+    font: inherit;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    cursor: pointer;
+}
+
+.viewServicesButton:hover {
+    color: #171717;
+}

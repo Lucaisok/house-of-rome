@@ -6,18 +6,20 @@ import { ApartmentPageParams } from "@/app/(site)/[lang]/apartments/[slug]/page"
 import { siteContent } from "@/content/global";
 
 export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
-  const images = apartment.images;
+  const preview = apartment.img_preview;
+  const images = [preview, ...apartment.images];
   const apartmentName = apartment.name;
   const t = siteContent[locale].global;
   const [selectedImage, setSelectedImage] = useState<number | null>(null);
   const thumbRefs = useRef<Array<HTMLButtonElement | null>>([]);
-  const galleryImages = images
+  const apartmentImages = images
     .filter(Boolean)
     .map((image) => (image.startsWith("http") || image.startsWith("/")
       ? image
       : `/${image.replace(/^\.\/?/, "")}`
     ));
-  const hasImages = galleryImages.length > 0;
+  const previewImage = apartmentImages[0];
+  const galleryImages = apartmentImages.reverse();
 
   const galleryLength = galleryImages.length;
 
@@ -90,9 +92,6 @@ export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
     target.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
   }, [selectedImage]);
 
-  if (!hasImages) {
-    return null;
-  }
 
   return (
     <>
@@ -112,7 +111,7 @@ export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
             </svg>
           </div>
           <img
-            src={galleryImages[0]}
+            src={previewImage}
             alt={`${apartmentName} - Main view`}
             className={styles.image}
           />

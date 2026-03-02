@@ -1,5 +1,6 @@
 import { ApartmentPageParams } from "@/app/(site)/[lang]/apartments/[slug]/page";
 import { Bath, MapPin, Users, Ruler, BedDouble } from "lucide-react";
+import Link from "next/link";
 import styles from "./Card.module.css";
 import { siteContent } from "@/content/global";
 import { routes } from "@/lib/routes";
@@ -11,18 +12,13 @@ export const Card = ({ apartment, locale }: ApartmentPageParams) => {
     const t = siteContent[locale].apartmentCard;
 
     return (
-        <div key={apartment.slug} className={styles.card}>
+        <Link href={routes.apartment(apartment.slug)} className={styles.card}>
             <div className={styles.cardImageWrapper}>
                 <img
                     src={normalizeImagePath(apartment.img_preview)}
                     alt={apartment.name}
                     className={styles.cardImage}
                 />
-                {/* {apartment.highlights && apartment.highlights.length > 0 && (
-                    <div className={styles.highlightsTopRight}>
-                        <Highlights highlights={apartment.highlights} />
-                    </div>
-                )} */}
             </div>
             <div className={styles.cardContent}>
                 <div className={styles.cardHeader}>
@@ -63,13 +59,13 @@ export const Card = ({ apartment, locale }: ApartmentPageParams) => {
                         <span className={styles.cardSize}>{apartment.size}{t.sqm}</span>
                     </div>
                 </div>
-                <a
-                    href={routes.apartment(apartment.slug)}
+                <div
+                    // href={routes.apartment(apartment.slug)}
                     className={styles.cardButton}
                 >
                     {t.viewDetails}
-                </a>
+                </div>
             </div>
-        </div>
+        </Link>
     );
 };

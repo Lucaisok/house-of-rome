@@ -1,38 +1,33 @@
-import {
-    Wifi,
-    Wind,
-    Tv,
-    Coffee,
-    UtensilsCrossed,
-    Shirt,
-    type LucideIcon,
-} from "lucide-react";
+"use client";
+
+import { useState } from "react";
+import { Wifi } from "lucide-react";
 import styles from "./Amenities.module.css";
 import type { Amenity } from "@/content/apartments";
-
-const amenityIcons: Record<Amenity, LucideIcon> = {
-    Wifi,
-    "Air Conditioning": Wind,
-    TV: Tv,
-    "Coffee Maker": Coffee,
-    "Full Kitchen": UtensilsCrossed,
-    Dryer: Shirt,
-    Washer: Shirt,
-};
+import { amenityIcons } from "./amenityIcons";
+import { AmenitiesModal } from "./AmenitiesModal";
+import { siteContent } from "@/content/global";
+import { Locale } from "@/lib/i18n";
 
 interface AmenitiesProps {
     amenities: Amenity[];
     title: string;
+    locale: Locale;
 }
 
-export const Amenities = ({ amenities, title }: AmenitiesProps) => {
+export const Amenities = ({ amenities, title, locale }: AmenitiesProps) => {
+    const t = siteContent[locale].global;
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
     if (!amenities.length) return null;
+
+    const visibleAmenities = amenities.slice(0, 7);
 
     return (
         <div className={styles.sectionBlock}>
             <h2 className={styles.heading}>{title}</h2>
             <div className={styles.amenitiesGrid}>
-                {amenities.map((amenity) => {
+                {visibleAmenities.map((amenity) => {
                     const IconComponent = amenityIcons[amenity] || Wifi;
                     return (
                         <div key={amenity} className={styles.amenityItem}>
@@ -41,7 +36,20 @@ export const Amenities = ({ amenities, title }: AmenitiesProps) => {
                         </div>
                     );
                 })}
+                <button
+                    type="button"
+                    className={styles.viewServicesButton}
+                    onClick={() => setIsModalOpen(true)}
+                >
+                    {t.viewAll}
+                </button>
             </div>
+            <AmenitiesModal
+                isOpen={isModalOpen}
+                amenities={amenities}
+                onClose={() => setIsModalOpen(false)}
+                locale={locale}
+            />
         </div>
     );
 };

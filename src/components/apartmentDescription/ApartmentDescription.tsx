@@ -37,7 +37,7 @@ export const ApartmentDescription = ({ apartment, locale }: ApartmentPageParams)
                                 {expanded ? "Read less" : "Read more"}
                             </button>
                         </div>
-                        <Amenities amenities={apartment.amenities} title={t.amenities} />
+                        <Amenities amenities={apartment.amenities} title={t.amenities} locale={locale} />
                     </div>
                 </div>
             </div>

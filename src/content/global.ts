@@ -13,6 +13,8 @@ export const siteContent: Record<
             photo: string;
             photos: string;
             viewGallery: string;
+            viewAll: string;
+            allServices: string;
         },
         home: {
             title: string;
@@ -137,6 +139,8 @@ export const siteContent: Record<
             photo: "photo",
             photos: "photos",
             viewGallery: "View gallery",
+            viewAll: "View all",
+            allServices: "All services",
         },
         home: {
             title: "House of Rome",
@@ -260,6 +264,8 @@ export const siteContent: Record<
             photo: "foto",
             photos: "foto",
             viewGallery: "Galleria immagini",
+            viewAll: "Vedi tutti",
+            allServices: "Tutti i servizi",
         },
         home: {
             title: "House of Rome",

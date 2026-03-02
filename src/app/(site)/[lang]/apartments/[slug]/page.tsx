@@ -11,6 +11,7 @@ import { BookingHelper } from "@/components/bookingHelper/BookingHelper";
 import { Highlights } from "@/components/apartments/highlights/Highlights";
 import WidgetIframe from "@/components/WidgetIframe";
 import widgetStyles from "./widgetIframe.module.css";
+import { getPublicImagePaths } from "@/lib/server/publicImages";
 
 export const generateMetadata = apartmentMetadata;
 
@@ -26,11 +27,23 @@ const ApartmentPage = async ({
 }) => {
   const { slug, lang } = await Promise.resolve(params);
   const locale = assertLocale(lang);
-  const apartment = getApartmentBySlug(slug);
-  if (!apartment) {
+  const apartmentData = getApartmentBySlug(slug);
+  if (!apartmentData) {
     // Optional: handle 404 later
     return null;
   }
+
+  let apartment = apartmentData;
+  if (apartment.imagesDir) {
+    const directoryImages = await getPublicImagePaths(apartment.imagesDir);
+    if (directoryImages.length > 0) {
+      apartment = {
+        ...apartment,
+        images: directoryImages,
+      };
+    }
+  }
+
   return (
     <main className={styles.page}>
       <section className={styles.heroStack}>

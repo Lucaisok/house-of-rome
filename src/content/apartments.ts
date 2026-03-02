@@ -1,4 +1,4 @@
-export type Amenity = "Wifi" | "Air Conditioning" | "TV" | "Full Kitchen" | "Coffee Maker" | "Dryer" | "Washer";
+export type Amenity = "Wifi" | "Air Conditioning" | "TV" | "Full Kitchen" | "Coffee Maker" | "Dryer" | "Washer" | "Pet Friendly";
 export type Highlight = "City Center" | "Historic Building" | "Recently Renovated" | "Terrace" | "Vibrant Neighborhood";
 
 export type Apartment = {
@@ -17,15 +17,18 @@ export type Apartment = {
   bedrooms: number;
   beds: number;
   bathrooms: number;
-  size: number;
+  size?: number;
   location: string;
   images: string[];
+  imagesDir: string;
   address: string;
   amenities: Amenity[];
   highlights: Highlight[];
   lat: number;
   lng: number;
   startingPrice: number;
+  checkIn?: string;
+  checkOut?: string;
 };
 
 export const apartments: Apartment[] = [
@@ -52,10 +55,11 @@ Sarà un piacere accogliervi e farvi sentire come a casa!`,
     beds: 0,
     size: 0,
     images: ["."],
+    imagesDir: "",
     location: "Vatican Area",
     bathrooms: 0,
     address: "",
-    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV", "Pet Friendly"],
     lat: 0,
     lng: 0,
     highlights: ["City Center"],
@@ -93,15 +97,16 @@ An elegant and welcoming home designed for those who want a refined, central, an
     beds: 2,
     size: 60,
     img_preview: "./spanish_steps/preview.jpg",
-    images: ["./spanish_steps/preview.jpg", "./spanish_steps/span_1.jpg", "./spanish_steps/span_2.jpg", "./spanish_steps/span_3.jpg", "./spanish_steps/span_4.jpg", "./spanish_steps/span_5.jpg", "./spanish_steps/span_6.jpg", "./spanish_steps/span_7.jpg", "./spanish_steps/span_8.jpg", "./spanish_steps/span_9.jpg", "./spanish_steps/span_10.jpg"],
+    images: [],
     location: "Via Veneto",
     bathrooms: 1,
     address: "Via Francesco Crispi 64, 00187 Roma, Italia",
-    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV", "Pet Friendly"],
     lat: 41.90488,
     lng: 12.48624,
     highlights: ["Terrace", "City Center"],
     startingPrice: 120,
+    imagesDir: "spanish_steps",
   },
   {
     slug: "trastevere-experience",
@@ -131,11 +136,12 @@ A modern and welcoming home designed for those who want an authentic, comfortabl
     location: "Trastevere",
     bathrooms: 2,
     address: "Via dei Fienaroli 15, Trastevere, 00153 Roma, Italia",
-    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV", "Pet Friendly"],
     lat: 41.88934,
     lng: 12.47228,
     highlights: ["Historic Building", "Vibrant Neighborhood"],
     startingPrice: 0,
+    imagesDir: "trastevere_experience",
   },
   {
     slug: "appartamento-trastevere",
@@ -157,20 +163,22 @@ The apartment is thoughtfully furnished, combining traditional elements with mod
 
 A cozy and romantic little home designed for those who want an authentic, intimate, and central stay, immersed in the magic of Trastevere.`
     },
-    guests: 0,
-    bedrooms: 0,
-    img_preview: "./temporary_preview.jpg",
-    beds: 0,
-    size: 0,
+    guests: 4,
+    bedrooms: 1,
+    img_preview: "../appartamento_trastevere/trastevere-bedroom-1.avif",
+    beds: 2,
     images: [],
+    imagesDir: "appartamento_trastevere",
     location: "Trastevere",
-    bathrooms: 0,
-    address: "",
-    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV"],
-    lat: 0,
-    lng: 0,
-    highlights: [],
-    startingPrice: 0,
+    bathrooms: 1,
+    address: "Via dei Panieri, 14/A, 00153 Roma, Italia",
+    amenities: ["Air Conditioning", "Coffee Maker", "Full Kitchen", "Washer", "Dryer", "TV", "Pet Friendly"],
+    lat: 41.889992,
+    lng: 12.466727,
+    highlights: ["Terrace", "Vibrant Neighborhood"],
+    startingPrice: 140,
+    checkIn: "14:00",
+    checkOut: "10:00",
   },
 ];
 

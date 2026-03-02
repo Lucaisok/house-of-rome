@@ -44,6 +44,32 @@
 	padding-bottom: 0.25rem;
 }
 
+.hideOnMobile {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	.hideOnMobile {
+		display: block;
+	}
+}
+
+.viewMorePillButton {
+	border: none;
+	background: transparent;
+	padding: 0;
+	cursor: pointer;
+	transition: transform 0.2s ease;
+}
+
+.viewMorePillButton:hover {
+	transform: scale(1.05);
+}
+
+.viewMorePillButton:active {
+	transform: scale(0.98);
+}
+
 .list::-webkit-scrollbar {
 	display: none;
 }

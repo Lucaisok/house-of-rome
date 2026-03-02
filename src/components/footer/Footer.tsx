@@ -43,7 +43,7 @@ export function Footer({ locale }: LocaleProp) {
                                 </Link>
                             </li>
                             <li>
-                                <Link href={routes.about} className={styles.link}>
+                                <Link href={routes.contacts} className={styles.link}>
                                     {t.nav.about}
                                 </Link>
                             </li>

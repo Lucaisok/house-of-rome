@@ -56,10 +56,10 @@ export const Header = ({ locale }: HeaderProps) => {
                         <Link href={routes.apartments} className={styles.link}>
                             {t.nav.apartments}
                         </Link>
-                        <Link href={routes.about} className={styles.link}>
+                        <Link href={routes.contacts} className={styles.link}>
                             {t.nav.about}
                         </Link>
-                        <NavButton href={routes.about} className={styles.cta}>
+                        <NavButton href={routes.contacts} className={styles.cta}>
                             {t.nav.book}
                         </NavButton>
                     </div>
@@ -93,10 +93,10 @@ export const Header = ({ locale }: HeaderProps) => {
                             <Link href={routes.apartments} className={styles.link}>
                                 {t.nav.apartments}
                             </Link>
-                            <Link href={routes.about} className={styles.link}>
+                            <Link href={routes.contacts} className={styles.link}>
                                 {t.nav.about}
                             </Link>
-                            <NavButton href={routes.about} className={styles.mobileCta}>
+                            <NavButton href={routes.contacts} className={styles.mobileCta}>
                                 {t.nav.book}
                             </NavButton>
                         </div>

@@ -3,12 +3,12 @@ import { Contacts } from "@/components/contact/contacts/Contacts";
 import { Form } from "@/components/contact/form/Form";
 import { HeaderSection } from "@/components/contact/headerSection/HeaderSection";
 import { assertLocale } from "@/lib/i18n";
-import { aboutMetadata } from "@/lib/seo/about/metadata";
-import styles from "./about.module.css";
+import { contactsMetadata } from "@/lib/seo/contacts/metadata";
+import styles from "./page.module.css";
 
-export const generateMetadata = aboutMetadata;
+export const generateMetadata = contactsMetadata;
 
-export const About = async ({
+export const ContactsPage = async ({
   params,
 }: {
   params: { lang: string; } | Promise<{ lang: string; }>;
@@ -31,4 +31,4 @@ export const About = async ({
   );
 };
 
-export default About;
+export default ContactsPage;

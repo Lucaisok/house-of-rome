@@ -37,7 +37,7 @@ export function Hero({ locale }: HeroProps) {
                             <NavButton href={routes.apartments} className={styles.primaryButton}>
                                 {content.viewApartments}
                             </NavButton>
-                            <NavButton href={routes.about} className={styles.secondaryButton}>
+                            <NavButton href={routes.contacts} className={styles.secondaryButton}>
                                 {content.contactUs}
                             </NavButton>
                         </div>

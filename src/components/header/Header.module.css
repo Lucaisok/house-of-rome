@@ -71,6 +71,18 @@
   padding: 0 1rem;
 }
 
+@media (min-width: 640px) {
+  .header {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding: 0 2rem;
+  }
+}
+
 
 .headerOpen {
   background: rgba(0, 0, 0, 0.45);
@@ -192,7 +204,11 @@
     -webkit-backdrop-filter: none;
   }
 
-  .logo,
+  .logo {
+    color: #171717;
+    padding: 0;
+  }
+
   .link {
     color: #171717;
     padding: 0.6rem 1.6rem;

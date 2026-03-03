@@ -1,22 +1,26 @@
 
-import { HeaderSection } from "@/components/contact/headerSection/HeaderSection";
 import { assertLocale } from "@/lib/i18n";
 import { bookMetadata } from "@/lib/seo/book/metadata";
 import styles from "./page.module.css";
 import { routes } from "@/lib/routes";
 import { siteContent } from "@/content/global";
 import WidgetIframe from "@/components/WidgetIframe";
+import { mapWidgetURL } from "@/lib/utils/utils";
 
 export const generateMetadata = bookMetadata;
 
 export const BookPage = async ({
     params,
+    searchParams,
 }: {
     params: { lang: string; } | Promise<{ lang: string; }>;
+    searchParams: Promise<{ apt?: string; }>;
 }) => {
     const { lang } = await params;
+    const { apt } = await searchParams;
     const locale = assertLocale(lang);
     const t = siteContent[locale];
+    const url = mapWidgetURL[apt ?? "generic"];
 
     return (
         <main>
@@ -31,7 +35,7 @@ export const BookPage = async ({
                 </div>
 
                 <div className={styles.widgetSection}>
-                    <WidgetIframe src="https://bnbforms.com/103473/" />
+                    <WidgetIframe src={url ?? ""} />
                 </div>
 
                 <div className={styles.helpSection}>

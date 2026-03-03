@@ -12,6 +12,7 @@ import { Highlights } from "@/components/apartments/highlights/Highlights";
 import WidgetIframe from "@/components/WidgetIframe";
 import widgetStyles from "./widgetIframe.module.css";
 import { getPublicImagePaths } from "@/lib/server/publicImages";
+import { mapWidgetURL } from "@/lib/utils/utils";
 
 export const generateMetadata = apartmentMetadata;
 
@@ -61,13 +62,13 @@ const ApartmentPage = async ({
               </section>
             </div>
             <div className={widgetStyles.widgetIframe}>
-              <WidgetIframe src="https://bnbforms.com/103473/" />
+              <WidgetIframe src={mapWidgetURL[apartment.slug] ?? ""} />
             </div>
           </div>
         </div>
       </div>
 
-      <BookingHelper startingPrice={apartment.startingPrice} locale={locale} />
+      <BookingHelper startingPrice={apartment.startingPrice} locale={locale} slug={apartment.slug} />
       <div className={styles.contentInset}>
         <AddressAndMapSection apartment={apartment} locale={locale} />
       </div>

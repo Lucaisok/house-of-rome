@@ -8,11 +8,13 @@ import { routes } from "@/lib/routes";
 interface BookingHelperProps {
     startingPrice: number;
     locale: Locale;
+    slug: string;
 }
 
-export const BookingHelper = ({ startingPrice, locale }: BookingHelperProps) => {
+export const BookingHelper = ({ startingPrice, locale, slug }: BookingHelperProps) => {
     const t = siteContent[locale].apartmentCard;
     const price = formatPrice(startingPrice, locale);
+    const bookingUrl = `${routes.book}?apt=${slug}`;
 
     return (
         <section className={styles.bar}>
@@ -21,7 +23,7 @@ export const BookingHelper = ({ startingPrice, locale }: BookingHelperProps) => 
                     <span className={styles.priceLabel}>{t.startingFrom}</span>
                     <span className={styles.priceValue}>{price} / {t.night}</span>
                 </div>
-                <Link href={routes.book}><div className={styles.button}>{t.bookNow}</div></Link>
+                <Link href={bookingUrl}><div className={styles.button}>{t.bookNow}</div></Link>
             </div>
         </section>
     );

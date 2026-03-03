@@ -1,5 +1,12 @@
 .sectionBlock {
     margin-bottom: 2rem;
+    padding: 0;
+}
+
+@media (min-width: 640px) {
+    .sectionBlock {
+        padding: 0;
+    }
 }
 
 .heading {
@@ -27,20 +34,27 @@
 }
 
 .viewServicesButton {
-    border: none;
-    background: transparent;
-    padding: 0;
-    text-align: left;
-    color: #525252;
+    color: #404040;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
-    font: inherit;
-    font-weight: 600;
     transition: color 0.2s ease;
     cursor: pointer;
 }
 
 .viewServicesButton:hover {
+    color: #171717;
+}
+
+.viewAllIcon {
+    color: #737373;
+    width: 20px;
+    height: 20px;
+    display: block;
+    flex-shrink: 0;
+    transition: color 0.2s ease;
+}
+
+.viewServicesButton:hover .viewAllIcon {
     color: #171717;
 }

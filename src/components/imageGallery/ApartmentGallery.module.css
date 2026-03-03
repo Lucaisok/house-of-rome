@@ -98,13 +98,14 @@
 
 @media (min-width: 640px) {
     .viewPill {
-        left: 1.5rem;
+        left: 1rem;
     }
 }
 
 @media (min-width: 1024px) {
+
     .viewPill {
-        left: max(2rem, calc(50% - 38rem));
+        left: 5rem;
     }
 
     .heroArrowLeft {

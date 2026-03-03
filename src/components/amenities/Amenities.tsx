@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Wifi } from "lucide-react";
+import { Eye, Wifi } from "lucide-react";
 import styles from "./Amenities.module.css";
 import type { Amenity } from "@/content/apartments";
 import { amenityIcons } from "./amenityIcons";
@@ -37,13 +37,22 @@ export const Amenities = ({ amenities, title, locale }: AmenitiesProps) => {
                         </div>
                     );
                 })}
-                <button
-                    type="button"
-                    className={styles.viewServicesButton}
+                <div
+                    role="button"
+                    tabIndex={0}
+                    className={`${styles.amenityItem} ${styles.viewServicesButton}`}
                     onClick={() => setIsModalOpen(true)}
+                    onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                            event.preventDefault();
+                            setIsModalOpen(true);
+                        }
+                    }}
+                    aria-label={t.viewAll}
                 >
-                    {t.viewAll}
-                </button>
+                    <Eye size={20} className={styles.viewAllIcon} />
+                    <span>{t.viewAll}</span>
+                </div>
             </div>
             <AmenitiesModal
                 isOpen={isModalOpen}

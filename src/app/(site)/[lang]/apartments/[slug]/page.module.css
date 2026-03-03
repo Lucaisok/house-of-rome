@@ -9,6 +9,24 @@
   flex-direction: column;
 }
 
+.contentInset {
+  width: 100%;
+  padding-inline: 1rem;
+  box-sizing: border-box;
+}
+
+@media (min-width: 640px) {
+  .contentInset {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .contentInset {
+    padding-inline: 2rem;
+  }
+}
+
 @media (max-width: 639px) {
   .heroStack {
     --header-height: 4rem;

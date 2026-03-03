@@ -1,21 +1,17 @@
 .section {
-	width: 100vw;
-	margin-left: calc(50% - 50vw);
-	margin-right: calc(50% - 50vw);
+	width: 100%;
+	padding: 0 1rem 0;
 }
 
 @media (min-width: 640px) {
 	.section {
-		width: 100%;
-		margin-left: 0;
-		margin-right: 0;
-		padding: 0 1.5rem 0.5rem;
+		padding: 0 0 0.5rem;
 	}
 }
 
 @media (min-width: 1024px) {
 	.section {
-		padding: 0 2rem 0.5rem;
+		padding: 0 0 0.5rem;
 	}
 }
 
@@ -33,7 +29,7 @@
 }
 
 .list {
-	--edge-pad: 1rem;
+	--edge-pad: 0;
 	--pill-gap: 0.35rem;
 	display: flex;
 	align-items: center;

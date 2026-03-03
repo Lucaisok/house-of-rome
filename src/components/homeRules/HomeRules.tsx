@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Clock } from "lucide-react";
+import { Clock, Eye } from "lucide-react";
 import styles from "./HomeRules.module.css";
 import { siteContent } from "@/content/global";
 import { Locale } from "@/lib/i18n";
@@ -35,21 +35,32 @@ export const HomeRules = ({ homeRules, locale }: HomeRulesProps) => {
             <div className={styles.rulesGrid}>
                 {displayRules.map((rule, index) => {
                     const IconComponent = homeRuleIcons[rule.key] || Clock;
-                    const displayText = rule.value ? `${rule.label}: ${rule.value}` : rule.label;
                     return (
                         <div key={`${rule.key}-${index}`} className={styles.ruleItem}>
                             <IconComponent size={20} className={styles.ruleIcon} />
-                            <span>{displayText}</span>
+                            <div className={styles.ruleContent}>
+                                <span className={styles.ruleLabel}>{rule.label}</span>
+                                {rule.value && <span className={styles.ruleValue}>{rule.value}</span>}
+                            </div>
                         </div>
                     );
                 })}
-                <button
-                    type="button"
-                    className={styles.viewAllButton}
+                <div
+                    role="button"
+                    tabIndex={0}
+                    className={`${styles.ruleItem} ${styles.viewAllButton}`}
                     onClick={() => setIsModalOpen(true)}
+                    onKeyDown={(event) => {
+                        if (event.key === "Enter" || event.key === " ") {
+                            event.preventDefault();
+                            setIsModalOpen(true);
+                        }
+                    }}
+                    aria-label={t.viewAll}
                 >
-                    {t.viewAll}
-                </button>
+                    <Eye size={20} className={styles.viewAllIcon} />
+                    <span>{t.viewAll}</span>
+                </div>
             </div>
             <HomeRulesModal
                 isOpen={isModalOpen}

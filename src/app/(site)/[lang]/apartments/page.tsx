@@ -6,6 +6,10 @@ import { Map } from "@/components/apartments/map/Map";
 
 export const generateMetadata = apartmentsMetadata;
 
+export function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "it" }];
+}
+
 const Apartments = async ({
   params,
 }: {

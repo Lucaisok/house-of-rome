@@ -123,6 +123,13 @@ export const siteContent: Record<
                 error: string;
             };
         };
+        book: {
+            title: string;
+            subtitle: string;
+            helpTitle: string;
+            helpText: string;
+            contactButton: string;
+        };
         privacy: {
             title: string;
             intro: string;
@@ -322,6 +329,13 @@ export const siteContent: Record<
                 error: "An error occurred. Please try again.",
             }
         },
+        book: {
+            title: "Book Your Stay",
+            subtitle: "Choose your dates and find the perfect apartment for your Roman adventure.",
+            helpTitle: "Need Help Booking?",
+            helpText: "If you have any questions or need assistance with your booking, our team is here to help. Contact us directly via WhatsApp for immediate support.",
+            contactButton: "Contact Us",
+        },
         privacy: {
             title: "Privacy Policy",
             intro: "We value your privacy. This website uses cookies only for essential functionality and analytics. No personal data is sold or shared with third parties",
@@ -519,6 +533,13 @@ export const siteContent: Record<
                 success: "Grazie per il tuo messaggio! Ti ricontatteremo presto.",
                 error: "Si è verificato un errore. Riprova.",
             }
+        },
+        book: {
+            title: "Prenota il tuo soggiorno",
+            subtitle: "Scegli le tue date e trova l'appartamento perfetto per la tua avventura romana.",
+            helpTitle: "Hai bisogno di aiuto per prenotare?",
+            helpText: "Se hai domande o hai bisogno di assistenza con la tua prenotazione, il nostro team è qui per aiutarti. Contattaci direttamente tramite WhatsApp per un supporto immediato.",
+            contactButton: "Contattaci",
         },
         privacy: {
             title: "Informativa sulla privacy",

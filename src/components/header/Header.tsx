@@ -59,7 +59,7 @@ export const Header = ({ locale }: HeaderProps) => {
                         <Link href={routes.contacts} className={styles.link}>
                             {t.nav.about}
                         </Link>
-                        <NavButton href={routes.contacts} className={styles.cta}>
+                        <NavButton href={routes.book} className={styles.cta}>
                             {t.nav.book}
                         </NavButton>
                     </div>
@@ -96,7 +96,7 @@ export const Header = ({ locale }: HeaderProps) => {
                             <Link href={routes.contacts} className={styles.link}>
                                 {t.nav.about}
                             </Link>
-                            <NavButton href={routes.contacts} className={styles.mobileCta}>
+                            <NavButton href={routes.book} className={styles.mobileCta}>
                                 {t.nav.book}
                             </NavButton>
                         </div>

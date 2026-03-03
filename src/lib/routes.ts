@@ -4,4 +4,5 @@ export const routes = {
     apartment: (slug: string) => `/apartments/${slug}`,
     contacts: "/contacts",
     privacyPolicy: "/privacy-policy",
+    book: "/book"
 } as const;

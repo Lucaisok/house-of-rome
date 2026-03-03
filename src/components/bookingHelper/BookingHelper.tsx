@@ -2,6 +2,8 @@ import styles from "./BookingHelper.module.css";
 import type { Locale } from "@/lib/i18n";
 import { siteContent } from "@/content/global";
 import { formatPrice } from "@/lib/format";
+import Link from "next/link";
+import { routes } from "@/lib/routes";
 
 interface BookingHelperProps {
     startingPrice: number;
@@ -19,7 +21,7 @@ export const BookingHelper = ({ startingPrice, locale }: BookingHelperProps) => 
                     <span className={styles.priceLabel}>{t.startingFrom}</span>
                     <span className={styles.priceValue}>{price} / {t.night}</span>
                 </div>
-                <button className={styles.button}>{t.bookNow}</button>
+                <Link href={routes.book}><div className={styles.button}>{t.bookNow}</div></Link>
             </div>
         </section>
     );

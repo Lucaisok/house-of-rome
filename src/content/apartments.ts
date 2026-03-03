@@ -39,61 +39,74 @@ export type Apartment = {
 
 export const apartments: Apartment[] = [
   {
-    slug: "pretty-vatican-house",
-    name: "Pretty Vatican House",
+    slug: "appartamento-trastevere",
+    name: "Appartamento Trastevere",
     shortDescription: {
-      it: "Appartamento nuovo e confortevole vicino al Vaticano, ideale per 3 persone, con metro Cipro e servizi sotto casa.",
-      en: "New, comfortable apartment near the Vatican, ideal for up to 3 guests, with Cipro metro and services nearby."
+      it: "Accogliente casetta nel cuore di Trastevere, perfetta per una fuga romantica o una vacanza intima a Roma.",
+      en: "Cozy little home in the heart of Trastevere, perfect for a romantic getaway or an intimate vacation in Rome."
     },
     description: {
-      it: `Grazioso e confortevole appartamento di recente realizzazione, a pochi passi dal Vaticano. L’alloggio è nuovo, accogliente e dotato di tutti i comfort.
+      it: `Nel cuore di Trastevere, questa accogliente casetta è un rifugio perfetto per chi cerca un soggiorno intimo e romantico a Roma. Situata in una delle zone più autentiche e affascinanti della città, la casa offre un’atmosfera calda e accogliente, ideale per coppie o viaggiatori solitari che desiderano immergersi nell’anima di Trastevere.
 
-Ideale per fino a 3 persone, perfetto sia per brevi soggiorni che per permanenze più lunghe, come una settimana o più. Lo stadio Olimpico è molto vicino e ben collegato. La metro Cipro (A) è proprio di fronte casa, così come le fermate degli autobus.
+L’appartamento è arredato con cura, combinando elementi tradizionali con tocchi moderni per creare uno spazio confortevole e pieno di charme. La posizione è semplicemente imbattibile: a pochi passi da Piazza Trilussa, Santa Maria in Trastevere e le vie più caratteristiche del quartiere, la casa permette di vivere l’esperienza romana a piedi, scoprendo angoli nascosti, trattorie tipiche e l’atmosfera unica di Trastevere.
 
-Zona ricca di servizi: supermercati, bar e ristoranti sotto casa.
+Una casetta accogliente e romantica, pensata per chi desidera un soggiorno autentico, intimo e centrale, immerso nella magia di Trastevere.`
+      ,
+      en: `In the heart of Trastevere, this cozy little home is a perfect refuge for those seeking an intimate and romantic stay in Rome. Located in one of the most authentic and charming areas of the city, the home offers a warm and welcoming atmosphere, ideal for couples or solo travelers who want to immerse themselves in the soul of Trastevere.
 
-Sarà un piacere accogliervi e farvi sentire come a casa!`,
-      en: `Charming and comfortable apartment, recently built, just steps from the Vatican. The accommodation is new, cozy, and equipped with all comforts. Ideal for up to 3 guests, perfect for both short stays and longer ones, like a week or more. The Olympic Stadium is very close and well connected. The Cipro metro (A) is right in front of the house, as are the bus stops. The area is rich in services: supermarkets, bars, and restaurants right at your doorstep. It will be a pleasure to welcome you and make you feel at home!`
+The apartment is thoughtfully furnished, combining traditional elements with modern touches to create a comfortable and charming space. The location is simply unbeatable: just steps from Piazza Trilussa, Santa Maria in Trastevere, and the most characteristic streets of the neighborhood, the home allows you to experience Rome on foot, discovering hidden corners, typical trattorias, and the unique atmosphere of Trastevere.
+
+A cozy and romantic little home designed for those who want an authentic, intimate, and central stay, immersed in the magic of Trastevere.`
     },
-    guests: 3,
+    guests: 4,
     bedrooms: 1,
-    img_preview: "pretty-vatican/vatican-1.avif",
+    img_preview: "../appartamento_trastevere/trastevere-1.avif",
     beds: 2,
-    size: 0,
     images: [],
-    imagesDir: "pretty-vatican",
-    location: "Vatican Area",
+    imagesDir: "appartamento_trastevere",
+    location: "Trastevere",
     bathrooms: 1,
-    address: "Via Angelo Emo, 25F, 00136 Roma RM, Italy",
+    address: "Via dei Panieri, 14/A, 00153 Roma, Italia",
     amenities: [
       "Pet Friendly",
       "Air Conditioning",
+      "Outdoor Furniture",
       "Hair Dryer",
       "Bedding",
       "Bidet",
-      "Coffee",
+      "Kettle",
+      "Wine Glasses",
+      "Freezer",
+      "Ethernet Connection",
       "Kitchen",
       "Extra Pillows and Blankets",
       "Fire Extinguisher",
+      "Iron",
       "Stove",
+      "Oven",
       "Fridge",
       "Hangers",
+      "Private Entrance",
       "First Aid Kit",
-      "Washer",
-      "Paid Parking On Premises",
+      "Coffee Machine",
+      "Patio or Balcony",
+      "Dishes and Cutlery",
+      "Cleaning Products",
       "Carbon Monoxide Detector",
       "Heating",
       "Body Soap",
-      "Shampoo",
-      "Dedicated Workspace",
-      "Clothing Storage",
+      "Basic Services",
+      "Basic Cooking Services",
+      "Dining Table",
+      "Baking Tray",
       "TV",
-      "Wifi"
+      "Wifi",
+      "Outdoor Dining Area",
     ],
-    lat: 41.906995,
-    lng: 12.44935,
-    highlights: ["City Center", "Recently Renovated"],
-    startingPrice: 100,
+    lat: 41.889992,
+    lng: 12.466727,
+    highlights: ["Terrace", "Vibrant Neighborhood"],
+    startingPrice: 140,
     homeRules: {
       checkIn: "14:00",
       checkOut: "10:00",
@@ -101,7 +114,7 @@ Sarà un piacere accogliervi e farvi sentire come a casa!`,
       smokingAllowed: false,
       petsAllowed: true,
       partiesAllowed: false,
-    },
+    }
   },
   {
     slug: "spanish-steps-apartment-terrace",
@@ -194,6 +207,71 @@ An elegant and welcoming home designed for those who want a refined, central, an
     }
   },
   {
+    slug: "pretty-vatican-house",
+    name: "Pretty Vatican House",
+    shortDescription: {
+      it: "Appartamento nuovo e confortevole vicino al Vaticano, ideale per 3 persone, con metro Cipro e servizi sotto casa.",
+      en: "New, comfortable apartment near the Vatican, ideal for up to 3 guests, with Cipro metro and services nearby."
+    },
+    description: {
+      it: `Grazioso e confortevole appartamento di recente realizzazione, a pochi passi dal Vaticano. L’alloggio è nuovo, accogliente e dotato di tutti i comfort.
+
+Ideale per fino a 3 persone, perfetto sia per brevi soggiorni che per permanenze più lunghe, come una settimana o più. Lo stadio Olimpico è molto vicino e ben collegato. La metro Cipro (A) è proprio di fronte casa, così come le fermate degli autobus.
+
+Zona ricca di servizi: supermercati, bar e ristoranti sotto casa.
+
+Sarà un piacere accogliervi e farvi sentire come a casa!`,
+      en: `Charming and comfortable apartment, recently built, just steps from the Vatican. The accommodation is new, cozy, and equipped with all comforts. Ideal for up to 3 guests, perfect for both short stays and longer ones, like a week or more. The Olympic Stadium is very close and well connected. The Cipro metro (A) is right in front of the house, as are the bus stops. The area is rich in services: supermarkets, bars, and restaurants right at your doorstep. It will be a pleasure to welcome you and make you feel at home!`
+    },
+    guests: 3,
+    bedrooms: 1,
+    img_preview: "pretty-vatican/vatican-1.avif",
+    beds: 2,
+    size: 0,
+    images: [],
+    imagesDir: "pretty-vatican",
+    location: "Vatican Area",
+    bathrooms: 1,
+    address: "Via Angelo Emo, 25F, 00136 Roma RM, Italy",
+    amenities: [
+      "Pet Friendly",
+      "Air Conditioning",
+      "Hair Dryer",
+      "Bedding",
+      "Bidet",
+      "Coffee",
+      "Kitchen",
+      "Extra Pillows and Blankets",
+      "Fire Extinguisher",
+      "Stove",
+      "Fridge",
+      "Hangers",
+      "First Aid Kit",
+      "Washer",
+      "Paid Parking On Premises",
+      "Carbon Monoxide Detector",
+      "Heating",
+      "Body Soap",
+      "Shampoo",
+      "Dedicated Workspace",
+      "Clothing Storage",
+      "TV",
+      "Wifi"
+    ],
+    lat: 41.906995,
+    lng: 12.44935,
+    highlights: ["City Center", "Recently Renovated"],
+    startingPrice: 100,
+    homeRules: {
+      checkIn: "14:00",
+      checkOut: "10:00",
+      selfCheckin: true,
+      smokingAllowed: false,
+      petsAllowed: true,
+      partiesAllowed: false,
+    },
+  },
+  {
     slug: "trastevere-experience",
     name: "Trastevere Experience",
     shortDescription: {
@@ -257,84 +335,6 @@ A modern and welcoming home designed for those who want an authentic, comfortabl
     highlights: ["Historic Building", "Vibrant Neighborhood"],
     startingPrice: 150,
     imagesDir: "trastevere_experience",
-    homeRules: {
-      checkIn: "14:00",
-      checkOut: "10:00",
-      selfCheckin: true,
-      smokingAllowed: false,
-      petsAllowed: true,
-      partiesAllowed: false,
-    }
-  },
-  {
-    slug: "appartamento-trastevere",
-    name: "Appartamento Trastevere",
-    shortDescription: {
-      it: "Accogliente casetta nel cuore di Trastevere, perfetta per una fuga romantica o una vacanza intima a Roma.",
-      en: "Cozy little home in the heart of Trastevere, perfect for a romantic getaway or an intimate vacation in Rome."
-    },
-    description: {
-      it: `Nel cuore di Trastevere, questa accogliente casetta è un rifugio perfetto per chi cerca un soggiorno intimo e romantico a Roma. Situata in una delle zone più autentiche e affascinanti della città, la casa offre un’atmosfera calda e accogliente, ideale per coppie o viaggiatori solitari che desiderano immergersi nell’anima di Trastevere.
-
-L’appartamento è arredato con cura, combinando elementi tradizionali con tocchi moderni per creare uno spazio confortevole e pieno di charme. La posizione è semplicemente imbattibile: a pochi passi da Piazza Trilussa, Santa Maria in Trastevere e le vie più caratteristiche del quartiere, la casa permette di vivere l’esperienza romana a piedi, scoprendo angoli nascosti, trattorie tipiche e l’atmosfera unica di Trastevere.
-
-Una casetta accogliente e romantica, pensata per chi desidera un soggiorno autentico, intimo e centrale, immerso nella magia di Trastevere.`
-      ,
-      en: `In the heart of Trastevere, this cozy little home is a perfect refuge for those seeking an intimate and romantic stay in Rome. Located in one of the most authentic and charming areas of the city, the home offers a warm and welcoming atmosphere, ideal for couples or solo travelers who want to immerse themselves in the soul of Trastevere.
-
-The apartment is thoughtfully furnished, combining traditional elements with modern touches to create a comfortable and charming space. The location is simply unbeatable: just steps from Piazza Trilussa, Santa Maria in Trastevere, and the most characteristic streets of the neighborhood, the home allows you to experience Rome on foot, discovering hidden corners, typical trattorias, and the unique atmosphere of Trastevere.
-
-A cozy and romantic little home designed for those who want an authentic, intimate, and central stay, immersed in the magic of Trastevere.`
-    },
-    guests: 4,
-    bedrooms: 1,
-    img_preview: "../appartamento_trastevere/trastevere-1.avif",
-    beds: 2,
-    images: [],
-    imagesDir: "appartamento_trastevere",
-    location: "Trastevere",
-    bathrooms: 1,
-    address: "Via dei Panieri, 14/A, 00153 Roma, Italia",
-    amenities: [
-      "Pet Friendly",
-      "Air Conditioning",
-      "Outdoor Furniture",
-      "Hair Dryer",
-      "Bedding",
-      "Bidet",
-      "Kettle",
-      "Wine Glasses",
-      "Freezer",
-      "Ethernet Connection",
-      "Kitchen",
-      "Extra Pillows and Blankets",
-      "Fire Extinguisher",
-      "Iron",
-      "Stove",
-      "Oven",
-      "Fridge",
-      "Hangers",
-      "Private Entrance",
-      "First Aid Kit",
-      "Coffee Machine",
-      "Patio or Balcony",
-      "Dishes and Cutlery",
-      "Cleaning Products",
-      "Carbon Monoxide Detector",
-      "Heating",
-      "Body Soap",
-      "Basic Services",
-      "Basic Cooking Services",
-      "Dining Table",
-      "Baking Tray",
-      "TV",
-      "Wifi",
-      "Outdoor Dining Area",
-    ],
-    lat: 41.889992,
-    lng: 12.466727,
-    highlights: ["Terrace", "Vibrant Neighborhood"],
-    startingPrice: 140,
     homeRules: {
       checkIn: "14:00",
       checkOut: "10:00",

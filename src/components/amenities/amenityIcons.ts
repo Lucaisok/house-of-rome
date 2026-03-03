@@ -24,6 +24,7 @@ import {
     Sparkles,
     Calendar,
     Briefcase,
+    Car,
     Shirt as ShirtIcon,
     SunDim,
     type LucideIcon,
@@ -84,4 +85,6 @@ export const amenityIcons: Record<Amenity, LucideIcon> = {
     "Clothing Storage": ShirtIcon,
     "Clothes Drying Rack": Shirt,
     "Blackout Curtains": SunDim,
+    "Paid Parking On Premises": Car,
+    Dishwasher: UtensilsCrossed,
 };

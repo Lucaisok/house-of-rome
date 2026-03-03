@@ -215,6 +215,8 @@ export const siteContent: Record<
                 "Clothing Storage": "Clothing Storage",
                 "Clothes Drying Rack": "Clothes Drying Rack",
                 "Blackout Curtains": "Blackout Curtains",
+                "Paid Parking On Premises": "Paid parking on premises",
+                "Dishwasher": "Dishwasher",
             },
             highlightNames: {
                 "City Center": "City Center",
@@ -420,6 +422,8 @@ export const siteContent: Record<
                 "Clothing Storage": "Spazio per conservare l'abbigliamento",
                 "Clothes Drying Rack": "Stendibiancheria per abiti",
                 "Blackout Curtains": "Tende oscuranti",
+                "Paid Parking On Premises": "Parcheggio a pagamento in loco",
+                "Dishwasher": "Lavastoviglie",
             },
             highlightNames: {
                 "City Center": "Centro città",

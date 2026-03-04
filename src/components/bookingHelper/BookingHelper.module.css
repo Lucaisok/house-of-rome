@@ -7,7 +7,7 @@
     background: #ffffff;
     border-top: 1px solid #e5e5e5;
     padding: 0.75rem 1.25rem;
-    display: visible;
+    display: block;
     /* justify-content: space-between; */
 }
 
@@ -54,7 +54,7 @@
     background: #222222;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
     .bar {
         padding: 1rem 1.5rem;
         display: none;

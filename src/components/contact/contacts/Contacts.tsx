@@ -5,15 +5,14 @@ import { siteContent } from '@/content/global';
 import { LocaleProp } from '@/app/(site)/[lang]/page';
 import { InfoBox } from '../infoBox/InfoBox';
 
-export const phoneNumber = '+39 391 2345678'; // to be finalized with actual number (format: country code + number, no + or spaces)
+export const phoneNumber = '+393206158544'; // to be finalized with actual number (format: country code + number, no + or spaces)
 export const email = 'houseofrome2024@gmail.com';
 
 export const Contacts = ({ locale }: LocaleProp) => {
     const t = siteContent[locale].contact.contacts;
 
     const handleWhatsApp = () => {
-        // Replace with actual WhatsApp number
-        const whatsappFormattedPhoneNumber = '393912345678'; // Format: country code + number (no + or spaces) - to be finalized with actual number
+        const whatsappFormattedPhoneNumber = '393206158544'; // Format: country code + number (no + or spaces) - to be finalized with actual number
         const message = t.whatsApp.message;
         window.open(`https://wa.me/${whatsappFormattedPhoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
     };
@@ -64,7 +63,7 @@ export const Contacts = ({ locale }: LocaleProp) => {
                             href={`tel:${phoneNumber}`}
                             className={styles.link}
                         >
-                            {phoneNumber}
+                            {"+39 320 6158544"}
                         </a>
                     </div>
                 </div>

@@ -29,7 +29,7 @@ export function Footer({ locale }: LocaleProp) {
                             {t.footer.paragraph}
                         </p>
                     </div>
-                    <div>
+                    <div className={styles.quickLinks}>
                         <h4 className={styles.sectionTitle}>{t.footer.quickLinks}</h4>
                         <ul className={styles.list}>
                             <li>
@@ -54,19 +54,19 @@ export function Footer({ locale }: LocaleProp) {
                         <ul className={styles.list}>
                             <li className={styles.contactItem}>
                                 <MapPin size={18} className={styles.iconTop} />
-                                <span>{t.footer.address}</span>
+                                <span>{"Via dei Panieri, 14/A, 00153 Roma, Italia"}</span>
                             </li>
                             <li className={styles.contactItem}>
                                 <Phone size={18} className={styles.icon} />
                                 {/* Note: The phone number is hardcoded for demonstration purposes. In a real application, it should come from the content or configuration. */}
-                                <a href="tel:+39061234567" className={styles.link}>
-                                    {t.footer.phone}
+                                <a href="tel:+393206158544" className={styles.link}>
+                                    {"+39 320 6158544"}
                                 </a>
                             </li>
                             <li className={styles.contactItem}>
                                 <Mail size={18} className={styles.icon} />
-                                <a href="mailto:info@houseofrome.com" className={styles.link}>
-                                    {t.footer.email}
+                                <a href="mailto:houseofrome2024@gmail.com" className={styles.link}>
+                                    {"houseofrome2024@gmail.com"}
                                 </a>
                             </li>
                         </ul>

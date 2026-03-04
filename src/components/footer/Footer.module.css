@@ -1,8 +1,8 @@
 .footer {
   background: #ffffff;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
   padding: 1rem 1.5rem;
   margin-top: 2.5rem;
   /* Add more space above footer on mobile */
@@ -24,14 +24,18 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 2rem;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
   text-align: center;
   justify-items: center;
 }
 
 .brand {
   grid-column: 1 / -1;
+}
+
+.quickLinks {
+  display: none;
 }
 
 
@@ -45,7 +49,7 @@
 
 .brandDescription {
   color: #666666;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .socials {
@@ -124,10 +128,19 @@
 }
 
 @media (min-width: 768px) {
+  .quickLinks {
+    display: block;
+  }
+
   .grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
     text-align: left;
     justify-items: start;
+  }
+
+  .brandDescription {
+    margin-bottom: 1.5rem;
   }
 
   .brand {

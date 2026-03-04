@@ -1,17 +1,23 @@
 .section {
-	width: 100%;
-	padding: 0 1rem 0;
+	--pill-gap: 0.35rem;
+	--section-gap: var(--pill-gap);
+	width: 100vw;
+	padding: 0;
+	margin-bottom: var(--section-gap);
 }
 
 @media (min-width: 640px) {
 	.section {
-		padding: 0 0 0.5rem;
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
 	}
 }
 
 @media (min-width: 1024px) {
 	.section {
-		padding: 0 0 0.5rem;
+		padding: 0;
 	}
 }
 
@@ -29,8 +35,7 @@
 }
 
 .list {
-	--edge-pad: 0;
-	--pill-gap: 0.35rem;
+	--edge-pad: 1rem;
 	display: flex;
 	align-items: center;
 	gap: var(--pill-gap);

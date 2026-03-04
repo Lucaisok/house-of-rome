@@ -1,6 +1,7 @@
 import { CookieBanner } from "@/components/CookieBanner";
 import { Footer } from "@/components/footer/Footer";
 import { Header } from "@/components/header/Header";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { assertLocale } from "@/lib/i18n";
 import { siteLayoutMetadata } from "@/lib/seo/siteLayout.ts/metadata";
 
@@ -24,6 +25,7 @@ export default async function LangLayout({
     <>
       <Header locale={locale} />
       <>
+        <ScrollToTop />
         {children}
         <CookieBanner locale={locale} />
       </>

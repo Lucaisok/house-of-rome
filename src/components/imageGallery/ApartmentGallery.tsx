@@ -94,6 +94,7 @@ export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
 
   return (
     <>
+      {/* Mobile/Tablet: Single Image View */}
       <div className={styles.gallerySingle}>
         <div
           className={`${styles.mainImage} ${styles.imageWrap}`}
@@ -120,6 +121,47 @@ export function ApartmentGallery({ apartment, locale }: ApartmentPageParams) {
               <circle cx="12" cy="12" r="3.2" stroke="currentColor" strokeWidth="1.7" fill="none" />
             </svg>
             {t.viewGallery}
+          </div>
+        </div>
+      </div>
+
+      {/* Desktop: Grid View */}
+      <div className={styles.galleryGrid}>
+        <div className={styles.gridContainer}>
+          {/* Left: Large image */}
+          <div
+            className={`${styles.gridLarge} ${styles.imageWrap}`}
+            onClick={() => openLightbox(0)}
+          >
+            <img
+              src={galleryImages[0]}
+              alt={`${apartmentName} - View 1`}
+              className={styles.image}
+            />
+            <div className={styles.viewPill}>
+              <svg className={styles.viewPillIcon} width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 12C3.5 7 8 4 12 4s8.5 3 11 8c-2.5 5-7 8-11 8s-8.5-3-11-8z" stroke="currentColor" strokeWidth="1.7" fill="none" />
+                <circle cx="12" cy="12" r="3.2" stroke="currentColor" strokeWidth="1.7" fill="none" />
+              </svg>
+              {t.viewGallery}
+            </div>
+          </div>
+
+          {/* Right: 2x2 Grid */}
+          <div className={styles.gridSmallContainer}>
+            {galleryImages.slice(1, 5).map((image, index) => (
+              <div
+                key={image}
+                className={`${styles.gridSmall} ${styles.imageWrap}`}
+                onClick={() => openLightbox(index + 1)}
+              >
+                <img
+                  src={image}
+                  alt={`${apartmentName} - View ${index + 2}`}
+                  className={styles.image}
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

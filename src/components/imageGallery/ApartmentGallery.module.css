@@ -41,6 +41,12 @@
     width: 100%;
 }
 
+@media (min-width: 1024px) {
+    .gallerySingle {
+        display: none;
+    }
+}
+
 @media (max-width: 639px) {
     .gallerySingle {
         flex: 1 1 auto;
@@ -49,12 +55,56 @@
     }
 }
 
+/* Desktop Grid Layout */
+.galleryGrid {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .galleryGrid {
+        display: block;
+        width: 100%;
+    }
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0.75rem;
+    height: clamp(550px, 75vh, 900px);
+    max-height: clamp(550px, 75vh, 900px);
+    align-items: stretch;
+}
+
+.gridLarge {
+    cursor: pointer;
+    overflow: hidden;
+    height: 100%;
+    max-height: clamp(550px, 75vh, 900px);
+}
+
+.gridSmallContainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+    height: 100%;
+    max-height: clamp(550px, 75vh, 900px);
+}
+
+.gridSmall {
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    max-height: 100%;
+}
+
 
 .mainImage {
     cursor: pointer;
     overflow: hidden;
-    height: 78vh;
-    min-height: 240px;
+    height: 400px;
 }
 
 @media (max-width: 639px) {
@@ -65,8 +115,17 @@
     }
 }
 
+@media (min-width: 640px) and (max-width: 1023px) {
+    .mainImage {
+        height: 450px;
+    }
+}
+
 .imageWrap {
     position: relative;
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
 }
 
 .viewPill {
@@ -103,30 +162,30 @@
 }
 
 @media (min-width: 1024px) {
-
     .viewPill {
-        left: max(2rem, calc((100vw - 80rem) / 2));
+        left: 1.5rem;
     }
 
     .heroArrowLeft {
-        left: 2.2rem;
+        display: none;
     }
 
     .heroArrowRight {
-        right: 2.2rem;
+        display: none;
+    }
+
+    .imageWrap:hover .image {
+        transform: scale(1.05);
     }
 }
 
 .image {
     width: 100%;
     height: 100%;
+    max-height: 100%;
     object-fit: cover;
     object-position: center 70%;
-    transition: transform 0.5s ease;
-}
-
-.imageWrap:hover .image {
-    transform: scale(1.05);
+    display: block;
 }
 
 

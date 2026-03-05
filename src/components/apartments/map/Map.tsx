@@ -1,8 +1,15 @@
+"use client";
+
 import { LocaleProp } from "@/app/(site)/[lang]/page";
 import styles from "./Map.module.css";
+import dynamic from "next/dynamic";
 
 import { siteContent } from "@/content/global";
-import { GeneralMap } from "./GeneralMap";
+
+const GeneralMap = dynamic(() => import("./GeneralMap").then(mod => ({ default: mod.GeneralMap })), {
+    ssr: false,
+    loading: () => <div style={{ minHeight: '400px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#737373' }}>Loading map...</div>
+});
 
 export const Map = ({ locale }: LocaleProp) => {
     const { exploreLocationsTitle, exploreLocationsDescription } = siteContent[locale].apartments;
@@ -19,7 +26,6 @@ export const Map = ({ locale }: LocaleProp) => {
                     </p>
                 </div>
                 <div className={styles.mapBox}>
-                    {/* Map with apartment pins */}
                     <GeneralMap />
                 </div>
             </div>

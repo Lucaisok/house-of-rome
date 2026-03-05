@@ -271,7 +271,7 @@ export const siteContent: Record<
         callToAction: {
             title: "Ready to Experience Rome?",
             description: "Book your stay with us and discover the beauty of the Eternal City from the comfort of your own elegant apartment.",
-            viewApartments: "Browse Apartments",
+            viewApartments: "Book now",
             contactUs: "Get in Touch",
         },
         footer: {

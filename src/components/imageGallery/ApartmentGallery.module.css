@@ -184,8 +184,24 @@
     height: 100%;
     max-height: 100%;
     object-fit: cover;
-    object-position: center 70%;
+    object-position: center 60%;
     display: block;
+}
+
+@media (max-width: 639px) {
+    .mainImage .image {
+        animation: panLeftRight 20s linear infinite alternate;
+    }
+}
+
+@keyframes panLeftRight {
+    from {
+        object-position: 1% center;
+    }
+
+    to {
+        object-position: 99% center;
+    }
 }
 
 

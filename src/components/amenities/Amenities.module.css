@@ -53,8 +53,8 @@
 
 .viewAllIcon {
     color: #6b7c99;
-    width: 20px;
-    height: 20px;
+    width: 24px;
+    height: 24px;
     display: block;
     flex-shrink: 0;
     transition: color 0.2s ease;

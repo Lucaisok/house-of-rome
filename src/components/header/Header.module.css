@@ -69,6 +69,7 @@
   background: transparent;
   border-bottom: none;
   padding: 0 1rem;
+  will-change: background, backdrop-filter;
 }
 
 @media (min-width: 640px) {
@@ -88,7 +89,8 @@
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  /* animation: mobileNavFadeIn 500ms ease-in; */
+  animation: mobileNavFadeIn 400ms ease-in-out;
+  transition: background 400ms ease-in-out, backdrop-filter 400ms ease-in-out;
 }
 
 .nav {

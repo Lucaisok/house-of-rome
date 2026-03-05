@@ -25,30 +25,32 @@ export const BookPage = async ({
     return (
         <main>
             <div className={styles.container}>
-                <div className={styles.header}>
-                    <h1 className={styles.title}>
-                        {t.book.title}
-                    </h1>
-                    <p className={styles.subtitle}>
-                        {t.book.subtitle}
-                    </p>
+                <div className={styles.desktop}>
+                    <div className={styles.header}>
+                        <h1 className={styles.title}>
+                            {t.book.title}
+                        </h1>
+                        <p className={styles.subtitle}>
+                            {t.book.subtitle}
+                        </p>
+                    </div>
                 </div>
-
                 <div className={styles.widgetSection}>
                     <WidgetIframe src={url ?? ""} />
                 </div>
-
-                <div className={styles.helpSection}>
-                    <h3 className={styles.helpTitle}>{t.book.helpTitle}</h3>
-                    <p className={styles.helpText}>
-                        {t.book.helpText}
-                    </p>
-                    <a
-                        href={routes.contacts}
-                        className={styles.button}
-                    >
-                        {t.book.contactButton}
-                    </a>
+                <div className={styles.desktop}>
+                    <div className={styles.helpSection}>
+                        <h3 className={styles.helpTitle}>{t.book.helpTitle}</h3>
+                        <p className={styles.helpText}>
+                            {t.book.helpText}
+                        </p>
+                        <a
+                            href={routes.contacts}
+                            className={styles.button}
+                        >
+                            {t.book.contactButton}
+                        </a>
+                    </div>
                 </div>
             </div>
         </main>

@@ -5,9 +5,15 @@
     box-sizing: border-box;
 }
 
+.desktop {
+    display: block;
+}
+
 @media (min-width: 768px) {
     .container {
         padding: 6rem 1rem 0;
+        height: auto;
+        overflow: visible;
     }
 }
 
@@ -43,6 +49,27 @@
     margin-bottom: 3rem;
     width: 100%;
     box-sizing: border-box;
+    margin: 0;
+}
+
+@media (max-width: 767px) {
+
+    .desktop {
+        display: none;
+    }
+
+    .widgetSection {
+        height: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .container {
+        height: 100vh;
+        padding: 5rem 0 0;
+        overflow: hidden;
+        max-width: 100vw;
+    }
 }
 
 .widgetSection :global(iframe) {

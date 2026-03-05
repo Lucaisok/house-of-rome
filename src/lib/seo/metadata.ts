@@ -64,7 +64,7 @@ export const makePageMetadata = (args: {
   const siteUrl = getSiteUrl();
   const ogImage = args.image
     ? new URL(args.image, siteUrl).toString()
-    : new URL("/og-default.svg", siteUrl).toString();
+    : new URL("/og-default.png", siteUrl).toString();
 
   return {
     title: args.title,

@@ -66,7 +66,6 @@ export const InfoPills = ({ apartment, locale }: ApartmentPageParams) => {
                     {visibleInfos.map((info, index) => (
                         <div
                             key={info.key}
-                            className={index === 2 ? styles.hideOnMobile : undefined}
                         >
                             <Pill icon={info.icon} label={info.label} />
                         </div>

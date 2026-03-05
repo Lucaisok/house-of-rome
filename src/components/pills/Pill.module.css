@@ -3,13 +3,20 @@
     align-items: center;
     justify-content: flex-start;
     gap: 0.75rem;
-    color: #525252;
-    border: 1.4px solid #cecece;
+    color: #171717;
+    border: 2px solid var(--accent-color-soft);
     padding: 0.4rem 0.7rem;
     border-radius: 12px;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
     white-space: nowrap;
+}
+
+@media (max-width: 639px) {
+    .pill {
+        width: 100%;
+        justify-content: flex-start;
+    }
 }
 
 @media (max-width: 600px) {
@@ -22,17 +29,17 @@
 
 .icon {
     color: #525252;
-    background: #f2f2f2;
+    background: var(--accent-color-soft);
     border-radius: 999px;
     padding: 0.4rem;
     box-sizing: content-box;
-    border: 1px solid var(--accent-color-soft);
+    border: 2px solid var(--accent-color-soft);
 }
 
 .pillHighlight {
     /* background: #e9f6e0; */
     color: #334155;
-    border-color: #71cf5b;
+    border-color: #6b7c99;
 }
 
 @keyframes pillShine {

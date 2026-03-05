@@ -37,7 +37,7 @@ export const HomeRules = ({ homeRules, locale }: HomeRulesProps) => {
                     const IconComponent = homeRuleIcons[rule.key] || Clock;
                     return (
                         <div key={`${rule.key}-${index}`} className={styles.ruleItem}>
-                            <IconComponent size={20} className={styles.ruleIcon} />
+                            <IconComponent size={24} className={styles.ruleIcon} />
                             <div className={styles.ruleContent}>
                                 <span className={styles.ruleLabel}>{rule.label}</span>
                                 {rule.value && <span className={styles.ruleValue}>{rule.value}</span>}
@@ -58,7 +58,7 @@ export const HomeRules = ({ homeRules, locale }: HomeRulesProps) => {
                     }}
                     aria-label={t.viewAll}
                 >
-                    <Eye size={20} className={styles.viewAllIcon} />
+                    <Eye size={24} className={styles.viewAllIcon} />
                     <span>{t.viewAll}</span>
                 </div>
             </div>

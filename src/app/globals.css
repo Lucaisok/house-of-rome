@@ -28,8 +28,10 @@ body {
 :root {
   --font-body: var(--font-nunito);
   --font-display: var(--font-play);
-  --accent-color: #1eb52b;
-  --accent-color-soft: #e6f9e7;
+  --accent-color: #6b7c99;
+  --accent-color-soft: #eef1f7;
+  --accent-color-green: #5cb85c;
+  --accent-color-soft-green: #e9f6e0;
   /* Examples:
      --font-body: var(--font-playfair);
      --font-display: var(--font-nunito);

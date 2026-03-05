@@ -35,12 +35,21 @@
 
 .list {
 	--edge-pad: 1rem;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 0.5rem;
+	align-items: stretch;
+	padding: 0 var(--edge-pad);
+}
+
+.list>div {
 	display: flex;
-	align-items: center;
-	gap: var(--pill-gap);
-	overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
-	padding-bottom: 0.25rem;
+}
+
+.list>div>div,
+.list>button>div {
+	width: 100%;
+	color: #334155
 }
 
 .hideOnMobile {
@@ -73,42 +82,15 @@
 	display: none;
 }
 
-.list::before {
-	content: "";
-	flex: 0 0 var(--edge-pad);
-}
-
-.list::after {
-	content: "";
-	flex: 0 0 var(--edge-pad);
-}
-
-
 @media (min-width: 640px) {
 	.list {
 		--edge-pad: 0;
-	}
-
-	.list::before {
-		display: none;
-	}
-
-	.list::after {
-		display: none;
-	}
-
-	.list {
+		display: flex;
+		align-items: center;
+		gap: var(--pill-gap);
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+		padding: 0;
 		flex-wrap: wrap;
-		overflow-x: visible;
-		padding-bottom: 0;
-	}
-}
-
-@media (min-width: 1024px) {
-	.list {
-		--edge-pad: 0;
-		flex-wrap: wrap;
-		overflow-x: visible;
-		padding-bottom: 0;
 	}
 }

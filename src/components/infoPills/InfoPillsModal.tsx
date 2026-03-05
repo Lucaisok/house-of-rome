@@ -70,7 +70,7 @@ export const InfoPillsModal = ({ isOpen, title, infos, highlights, onClose }: In
                         const Icon = highlight.icon;
                         return (
                             <div key={highlight.key} className={`${styles.item} ${styles.itemHighlight}`}>
-                                <Icon size={20} className={styles.icon} />
+                                <Icon size={24} className={styles.icon} />
                                 <span>{highlight.label}</span>
                             </div>
                         );
@@ -80,7 +80,7 @@ export const InfoPillsModal = ({ isOpen, title, infos, highlights, onClose }: In
                         const Icon = info.icon;
                         return (
                             <div key={info.key} className={styles.item}>
-                                <Icon size={20} className={styles.icon} />
+                                <Icon size={24} className={styles.icon} />
                                 <span>{info.label}</span>
                             </div>
                         );

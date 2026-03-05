@@ -32,23 +32,17 @@
 }
 
 .mapTitle {
-    font-size: 2.2rem;
+    font-size: 1.375rem;
     color: #171717;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-weight: 700;
     letter-spacing: -0.02em;
     line-height: 1.1;
 }
 
-@media (min-width: 640px) {
-    .mapTitle {
-        font-size: 2.8rem;
-    }
-}
-
 .mapDescription {
     font-size: 1.1rem;
-    color: #666;
+    color: #737373;
     max-width: 32rem;
     margin-left: auto;
     margin-right: auto;

@@ -32,7 +32,7 @@ export const Amenities = ({ amenities, title, locale }: AmenitiesProps) => {
                     const translatedName = t.amenityNames[amenity] || amenity;
                     return (
                         <div key={amenity} className={styles.amenityItem}>
-                            <IconComponent size={20} className={styles.amenityIcon} />
+                            <IconComponent size={24} className={styles.amenityIcon} />
                             <span>{translatedName}</span>
                         </div>
                     );
@@ -50,7 +50,7 @@ export const Amenities = ({ amenities, title, locale }: AmenitiesProps) => {
                     }}
                     aria-label={t.viewAll}
                 >
-                    <Eye size={20} className={styles.viewAllIcon} />
+                    <Eye size={24} className={styles.viewAllIcon} />
                     <span>{t.viewAll}</span>
                 </div>
             </div>

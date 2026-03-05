@@ -88,9 +88,17 @@ export const HomeRulesModal = ({ isOpen, homeRules, onClose, locale }: HomeRules
                 <div className={styles.grid}>
                     {rules.map((rule, index) => {
                         const IconComponent = homeRuleIcons[rule.key] || Clock;
+                        const isTimingRule =
+                            rule.key === "checkIn" ||
+                            rule.key === "checkOut" ||
+                            rule.key === "selfCheckin";
+
                         return (
-                            <div key={`${rule.key}-${index}`} className={styles.item}>
-                                <IconComponent size={20} className={styles.icon} />
+                            <div
+                                key={`${rule.key}-${index}`}
+                                className={`${styles.item} ${isTimingRule ? styles.itemSoftAccent : ""}`}
+                            >
+                                <IconComponent size={24} className={styles.icon} />
                                 <div className={styles.content}>
                                     <p className={styles.label}>{rule.label}</p>
                                     {rule.value && <p className={styles.value}>{rule.value}</p>}

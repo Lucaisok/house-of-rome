@@ -10,10 +10,10 @@
 }
 
 .heading {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    color: #262626;
-    margin-bottom: 1rem;
+    color: #334155;
+    margin-bottom: 1.5rem;
 }
 
 .amenitiesGrid {
@@ -26,15 +26,20 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: #404040;
+    color: #334155;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 .amenityIcon {
-    color: #737373;
+    color: #6b7c99;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
 }
 
 .viewServicesButton {
-    color: #404040;
+    color: #334155;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
@@ -43,18 +48,14 @@
 }
 
 .viewServicesButton:hover {
-    color: #171717;
+    color: #334155;
 }
 
 .viewAllIcon {
-    color: #737373;
+    color: #6b7c99;
     width: 20px;
     height: 20px;
     display: block;
     flex-shrink: 0;
     transition: color 0.2s ease;
-}
-
-.viewServicesButton:hover .viewAllIcon {
-    color: #171717;
 }

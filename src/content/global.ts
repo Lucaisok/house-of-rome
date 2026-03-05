@@ -28,6 +28,7 @@ export const siteContent: Record<
             petsNotAllowed: string;
             partiesAllowed: string;
             partiesNotAllowed: string;
+            allApartments: string;
         },
         home: {
             title: string;
@@ -38,6 +39,7 @@ export const siteContent: Record<
             apartments: string;
             about: string;
             book: string;
+            privacyPolicy: string;
         };
         hero: {
             firstLine: string;
@@ -150,6 +152,7 @@ export const siteContent: Record<
 > = {
     en: {
         global: {
+            allApartments: "All Apartments",
             rome: "Rome",
             sqm: "sqm",
             aboutThisPlace: "About this place",
@@ -246,6 +249,7 @@ export const siteContent: Record<
             apartments: "Apartments",
             about: "Contacts",
             book: "Book Now",
+            privacyPolicy: "Privacy Policy",
         },
         hero: {
             firstLine: "Your Home in the",
@@ -357,6 +361,7 @@ export const siteContent: Record<
     },
     it: {
         global: {
+            allApartments: "Gli appartamenti",
             rome: "Roma",
             sqm: "mq",
             aboutThisPlace: "Informazioni",
@@ -453,6 +458,7 @@ export const siteContent: Record<
             apartments: "Appartamenti",
             about: "Contatti",
             book: "Prenota Ora",
+            privacyPolicy: "Privacy Policy",
         },
         hero: {
             firstLine: "La tua casa nella",

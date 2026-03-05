@@ -13,8 +13,7 @@ export const Pill = ({ icon: Icon, label, variant = "default", iconStrokeWidth =
     {
         itemClass: variant === "highlight" ? `${styles.pill} ${styles.pillHighlight}` : styles.pill,
         iconClass: variant === "highlight" ? `${styles.icon} ${styles.iconHighlight}` : styles.icon,
-        textColor: "#525252",
-        iconSize: 18,
+        iconSize: 22,
         stroke: iconStrokeWidth
     };
 
@@ -22,7 +21,7 @@ export const Pill = ({ icon: Icon, label, variant = "default", iconStrokeWidth =
     return (
         <div className={pillStyle.itemClass}>
             <Icon size={pillStyle.iconSize} className={pillStyle.iconClass} strokeWidth={pillStyle.stroke} />
-            <span style={{ color: pillStyle.textColor }}>{label}</span>
+            <span >{label}</span>
         </div>
     );
 };

@@ -150,18 +150,25 @@
   color: #f5f5f5;
 }
 
+.linkActive {
+  color: #ffffff;
+  font-weight: 600;
+}
+
 .cta {
   padding: 0.6rem 1.6rem;
   background: #171717;
   color: #ffffff;
   text-decoration: none;
+  border: 1px solid #171717;
   transition: background 0.2s ease;
   font-size: 1.05rem;
   white-space: nowrap;
 }
 
 .cta:hover {
-  background: #222222;
+  background: #171717;
+  color: #ffffff;
 }
 
 .mobileOnly {
@@ -221,6 +228,14 @@
     opacity: 0.9;
   }
 
+  .linkActive {
+    color: #171717;
+    font-weight: 400;
+    background: transparent;
+    border: 1px solid #171717;
+    padding: 0.4rem 1.4rem;
+  }
+
   .mobileButton {
     color: #171717;
     background: #f5f5f5;
@@ -236,6 +251,90 @@
     display: inline-flex;
     color: #171717;
     font-weight: 400;
+  }
+
+  .desktopDropdown {
+    position: relative;
+  }
+
+  .apartmentsToggleDesktop {
+    background: transparent;
+    border: none;
+    color: #171717;
+    cursor: pointer;
+    padding: 0.6rem 1.6rem;
+    font-size: 1.05rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.18s, color 0.2s;
+    box-sizing: border-box;
+  }
+
+  .apartmentsToggleDesktop:hover {
+    color: #f5f5f5;
+    background: rgba(0, 0, 0, 1);
+    opacity: 0.9;
+  }
+
+  .apartmentsToggleDesktopActive {
+    color: #171717;
+    background: transparent;
+    border: 1px solid #171717;
+    padding: 0.4rem 1.4rem;
+  }
+
+  .desktopApartmentsList {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    min-width: 220px;
+    margin-top: 0.25rem;
+    animation: dropdownFadeIn 200ms ease-in-out;
+    z-index: 100;
+  }
+
+  .desktopApartmentLink {
+    display: block;
+    color: #171717;
+    text-decoration: none;
+    padding: 0.65rem 1.25rem;
+    font-size: 1rem;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .desktopApartmentLink:hover {
+    background: #f5f5f5;
+    color: #000000;
+  }
+
+  .desktopApartmentLinkActive {
+    font-weight: 600;
+  }
+
+  .desktopApartmentLinkAll {
+    display: block;
+    color: #171717;
+    text-decoration: none;
+    padding: 0.65rem 1.25rem;
+    font-size: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+    transition: background 0.15s ease, color 0.15s ease;
+  }
+
+  .desktopApartmentLinkAll:hover {
+    background: #f5f5f5;
+    color: #000000;
+  }
+
+  .desktopApartmentLinkAllActive {
+    font-weight: 600;
   }
 }
 
@@ -265,15 +364,130 @@
   }
 }
 
+.mobileNavGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 400px) {
+  .mobileNavGrid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 .mobileList {
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
 
-.mobileLangWrap {
+.mobileTopRow {
+  position: relative;
   display: flex;
+  align-items: center;
   justify-content: flex-start;
+}
+
+.mobileHomeLink {
+  display: inline-flex;
+  width: fit-content;
+  flex: 0 0 auto;
+}
+
+.apartmentsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.apartmentsToggle {
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0;
+  font-size: 1.05rem;
+  font-weight: 400;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  transition: color 0.2s ease;
+}
+
+.apartmentsToggle:hover {
+  color: #f5f5f5;
+}
+
+.apartmentsToggleActive {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.apartmentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  padding-left: 0.5rem;
+  animation: dropdownFadeIn 300ms ease-in-out;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.apartmentLink {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.apartmentLink:hover {
+  color: #ffffff;
+}
+
+.apartmentLinkActive {
+  font-weight: 600;
+}
+
+.apartmentLinkAll {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  transition: color 0.2s ease;
+}
+
+.apartmentLinkAll:hover {
+  color: #ffffff;
+}
+
+.apartmentLinkAllActive {
+  font-weight: 600;
+}
+
+.mobileLangWrap {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: flex-end;
 }
 
 .mobileCta {

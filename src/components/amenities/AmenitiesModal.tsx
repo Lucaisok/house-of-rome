@@ -64,7 +64,7 @@ export const AmenitiesModal = ({ isOpen, amenities, onClose, locale }: Amenities
                         const translatedName = t.amenityNames[amenity] || amenity;
                         return (
                             <div key={amenity} className={styles.item}>
-                                <IconComponent size={20} className={styles.icon} />
+                                <IconComponent size={24} className={styles.icon} />
                                 <span>{translatedName}</span>
                             </div>
                         );

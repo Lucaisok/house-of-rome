@@ -10,10 +10,10 @@
 }
 
 .heading {
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     font-weight: 600;
-    color: #262626;
-    margin-bottom: 1rem;
+    color: #334155;
+    margin-bottom: 1.5rem;
 }
 
 .rulesGrid {
@@ -26,12 +26,17 @@
     display: flex;
     align-items: flex-start;
     gap: 0.75rem;
-    color: #404040;
+    color: #334155;
+    font-weight: 500;
 }
 
 .ruleIcon {
-    color: #737373;
+    /* color: #6b7c99; */
+    color: #5cb85c;
     margin-top: 0.125rem;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
 }
 
 .ruleContent {
@@ -42,16 +47,19 @@
 
 .ruleLabel {
     line-height: 1.2;
+    font-size: 0.95rem;
+    color: #334155;
 }
 
 .ruleValue {
     font-weight: 600;
-    color: #262626;
+    color: #334155;
     line-height: 1.2;
+    font-size: 1.05rem;
 }
 
 .viewAllButton {
-    color: #404040;
+    color: #334155;
     text-decoration: underline;
     text-decoration-thickness: 2px;
     text-underline-offset: 2px;
@@ -59,20 +67,21 @@
     cursor: pointer;
 }
 
-.viewAllButton:hover {
-    color: #171717;
-}
+/* .viewAllButton:hover {
+    color: #5cb85c;
+} */
 
 .viewAllIcon {
-    color: #737373;
-    width: 20px;
-    height: 20px;
+    color: #6b7c99;
+    width: 24px;
+    height: 24px;
     display: block;
     flex-shrink: 0;
     margin-top: 0.125rem;
     transition: color 0.2s ease;
 }
 
+/* 
 .viewAllButton:hover .viewAllIcon {
-    color: #171717;
-}
+    color: #5cb85c;
+} */

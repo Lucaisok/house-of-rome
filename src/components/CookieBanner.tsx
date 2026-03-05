@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import styles from "./CookieBanner.module.css";
 import { siteContent } from "@/content/global";
 import { LocaleProp } from "@/app/(site)/[lang]/page";
+import Link from "next/link";
+import { routes } from "@/lib/routes";
 
 export const CookieBanner = ({ locale }: LocaleProp) => {
     const t = siteContent[locale].cookieBanner;
@@ -24,7 +26,9 @@ export const CookieBanner = ({ locale }: LocaleProp) => {
         <div className={styles.banner}>
             <div className={styles.text}>
                 {t.message} {" "}
-                <a href="/privacy-policy" className={styles.link}>{t.learnMore}</a>.
+                <Link href={routes.privacyPolicy} className={styles.link}>
+                    {t.learnMore}
+                </Link>
             </div>
             <button className={styles.button} onClick={acceptCookies}>
                 {t.accept}

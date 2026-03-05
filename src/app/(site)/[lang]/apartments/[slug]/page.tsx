@@ -1,7 +1,13 @@
 import styles from "./page.module.css";
 import { Apartment, getApartmentBySlug } from "@/content/apartments";
 import { apartmentMetadata } from "@/lib/seo/apartment/metadata";
+import { generateApartmentStructuredData } from "@/lib/seo/apartment/structuredData";
 import { assertLocale, Locale } from "@/lib/i18n";
+import {
+  generateBreadcrumbStructuredData,
+  getApartmentBreadcrumbs,
+} from "@/lib/seo/breadcrumbs";
+import { Breadcrumb } from "@/components/breadcrumb/Breadcrumb";
 import { BasicInfo } from "@/components/basicInfo/BasicInfo";
 import { ApartmentDescription } from "@/components/apartmentDescription/ApartmentDescription";
 import { AddressAndMapSection } from "@/components/addressAndMap/AddressAndMap";
@@ -45,8 +51,37 @@ const ApartmentPage = async ({
     }
   }
 
+  const structuredData = generateApartmentStructuredData({ apartment, locale });
+  const breadcrumbs = getApartmentBreadcrumbs({
+    locale,
+    apartmentName: apartment.name,
+    apartmentSlug: apartment.slug,
+  });
+  const breadcrumbStructuredData = generateBreadcrumbStructuredData({
+    locale,
+    breadcrumbs,
+  });
+
   return (
     <main className={styles.page}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbStructuredData),
+        }}
+      />
+      <div className={styles.contentInset}>
+        <Breadcrumb
+          items={breadcrumbs.map((item, idx) => ({
+            ...item,
+            isCurrent: idx === breadcrumbs.length - 1,
+          }))}
+        />
+      </div>
       <section className={styles.heroStack}>
         <ImageGallery apartment={apartment} locale={locale} />
       </section>

@@ -2,7 +2,16 @@ import type { Metadata } from "next";
 import { Locale } from "../i18n";
 
 export const getSiteUrl = () => {
-  return process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+  // Environment variable override
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return process.env.NEXT_PUBLIC_SITE_URL;
+  }
+
+  if (process.env.NODE_ENV === "production") {
+    return "https://houseofrome.org";
+  }
+
+  return "http://localhost:3000";
 };
 
 export const stripEnPrefix = (pathname: string) => {
@@ -50,8 +59,12 @@ export const makePageMetadata = (args: {
   publicPath: string; // "/" | "/it" | "/apartments" | "/it/apartments" ...
   title: string;
   description: string;
+  image?: string; // Optional OG image path
 }): Metadata => {
   const siteUrl = getSiteUrl();
+  const ogImage = args.image
+    ? new URL(args.image, siteUrl).toString()
+    : new URL("/og-default.svg", siteUrl).toString();
 
   return {
     title: args.title,
@@ -67,6 +80,20 @@ export const makePageMetadata = (args: {
       locale: ogLocale(args.lang),
       type: "website",
       url: new URL(args.publicPath, siteUrl).toString(),
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt: args.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: args.title,
+      description: args.description,
+      images: [ogImage],
     },
   };
 };

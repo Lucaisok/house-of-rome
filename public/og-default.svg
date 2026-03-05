@@ -1,0 +1,42 @@
+<svg width="1200" height="630" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- Black overlay at 30% opacity -->
+    <rect id="overlay" width="1200" height="630" fill="rgba(0, 0, 0, 0.3)"/>
+  </defs>
+  
+  <!-- Background image (hero.jpeg) -->
+  <image xlink:href="/hero.jpeg" width="1200" height="630" preserveAspectRatio="xMidYMid slice"/>
+  
+  <!-- 30% black overlay -->
+  <use xlink:href="#overlay"/>
+  
+  <!-- Accent line at top -->
+  <rect width="1200" height="4" fill="#d4a574" opacity="0.8"/>
+  
+  <!-- Main text: House of Rome -->
+  <text 
+    x="600" 
+    y="280" 
+    font-size="80" 
+    font-weight="500" 
+    fill="white" 
+    text-anchor="middle" 
+    font-family="Arial, sans-serif"
+    letter-spacing="-0.02em"
+  >
+    House of Rome
+  </text>
+  
+  <!-- Subtitle -->
+  <text 
+    x="600" 
+    y="350" 
+    font-size="28" 
+    fill="rgba(255, 255, 255, 0.95)" 
+    text-anchor="middle" 
+    font-family="Arial, sans-serif"
+    font-weight="300"
+  >
+    Curated Apartments in Rome
+  </text>
+</svg>

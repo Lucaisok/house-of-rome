@@ -235,7 +235,7 @@
     font-weight: 400;
     background: transparent;
     border: 1px solid #171717;
-    padding: 0.4rem 1.4rem;
+    padding: 0.6rem 1.6rem;
   }
 
   .mobileButton {
@@ -257,6 +257,7 @@
 
   .desktopDropdown {
     position: relative;
+
   }
 
   .apartmentsToggleDesktop {
@@ -284,7 +285,7 @@
     color: #171717;
     background: transparent;
     border: 1px solid #171717;
-    padding: 0.4rem 1.4rem;
+    padding: 0.6rem 1.6rem;
   }
 
   .desktopApartmentsList {

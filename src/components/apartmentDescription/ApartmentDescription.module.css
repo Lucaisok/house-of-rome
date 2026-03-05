@@ -96,6 +96,8 @@
     background: none;
     color: #525252;
     font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.4;
     cursor: pointer;
 }
 

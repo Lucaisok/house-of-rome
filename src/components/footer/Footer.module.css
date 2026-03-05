@@ -5,7 +5,32 @@
   margin-right: 0;
   padding: 1rem 1.5rem;
   margin-top: 2.5rem;
+  position: relative;
+  overflow: hidden;
   /* Add more space above footer on mobile */
+}
+
+/* Mobile: Logo background with transparency */
+@media (max-width: 639px) {
+  .footer::before {
+    content: "";
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 400px;
+    background: url("/logo.svg") no-repeat center;
+    background-size: contain;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .footer>* {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 @media (min-width: 640px) {
@@ -25,7 +50,7 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 0.3rem;
   text-align: center;
   justify-items: center;
 }

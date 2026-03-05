@@ -7,7 +7,6 @@ import {
   generateBreadcrumbStructuredData,
   getApartmentBreadcrumbs,
 } from "@/lib/seo/breadcrumbs";
-import { Breadcrumb } from "@/components/breadcrumb/Breadcrumb";
 import { BasicInfo } from "@/components/basicInfo/BasicInfo";
 import { ApartmentDescription } from "@/components/apartmentDescription/ApartmentDescription";
 import { AddressAndMapSection } from "@/components/addressAndMap/AddressAndMap";
@@ -74,14 +73,6 @@ const ApartmentPage = async ({
           __html: JSON.stringify(breadcrumbStructuredData),
         }}
       />
-      <div className={styles.contentInset}>
-        <Breadcrumb
-          items={breadcrumbs.map((item, idx) => ({
-            ...item,
-            isCurrent: idx === breadcrumbs.length - 1,
-          }))}
-        />
-      </div>
       <section className={styles.heroStack}>
         <ImageGallery apartment={apartment} locale={locale} />
       </section>

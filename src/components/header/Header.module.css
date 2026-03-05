@@ -265,7 +265,7 @@
     border: none;
     color: #171717;
     cursor: pointer;
-    padding: 0.6rem 1.6rem;
+    padding: 0.75rem 1.75rem;
     font-size: 1.05rem;
     font-weight: 400;
     display: flex;
@@ -285,7 +285,7 @@
     color: #171717;
     background: transparent;
     border: 1px solid #171717;
-    padding: 0.6rem 1.6rem;
+    padding: 0.75rem 1.75rem;
   }
 
   .desktopApartmentsList {

@@ -254,7 +254,7 @@ export const siteContent: Record<
         hero: {
             firstLine: "Your Home in the",
             secondLine: "Eternal City",
-            thirdLine: "Experience authentic Roman living in our carefully curated collection of elegant apartments",
+            thirdLine: "Experience authentic Roman living in our carefully curated collection of apartments",
             viewApartments: "View Apartments",
             contactUs: "Contact Us",
         },
@@ -265,12 +265,12 @@ export const siteContent: Record<
         },
         featuredApartments: {
             title: "Our Apartments",
-            description: "Each apartment has been carefully selected and designed to offer you an unforgettable stay in Rome",
+            description: "Explore our central Rome short-stay apartments: private entire homes, pet-friendly options, and free cancellation.",
             cta: "View All Apartments",
         },
         callToAction: {
             title: "Ready to Experience Rome?",
-            description: "Book your stay with us and discover the beauty of the Eternal City from the comfort of your own elegant apartment.",
+            description: "Book your stay with us and discover the beauty of the Eternal City from the comfort of your own apartment.",
             viewApartments: "Book now",
             contactUs: "Get in Touch",
         },
@@ -280,7 +280,7 @@ export const siteContent: Record<
             phone: "Phone",
             email: "Email",
             followUs: "Follow Us",
-            paragraph: "Providing exceptional short-term apartment rentals in Rome since 2020. Your comfort and satisfaction are our top priorities.",
+            paragraph: "We provide exceptional apartments for your stay in Rome. Comfort and customer satisfaction are our top priorities.",
             quickLinks: "Quick Links",
         },
         apartmentCard: {
@@ -463,7 +463,7 @@ export const siteContent: Record<
         hero: {
             firstLine: "La tua casa nella",
             secondLine: "Città Eterna",
-            thirdLine: "Vivi l'autentica esperienza romana nella nostra collezione accuratamente selezionata di eleganti appartamenti",
+            thirdLine: "Vivi l'autentica esperienza romana nella nostra collezione di appartamenti accuratamente selezionati",
             viewApartments: "Vedi Appartamenti",
             contactUs: "Contattaci",
         },
@@ -479,7 +479,7 @@ export const siteContent: Record<
         },
         callToAction: {
             title: "Pronto a vivere Roma?",
-            description: "Prenota il tuo soggiorno con noi e scopri la bellezza della Città Eterna dal comfort del tuo elegante appartamento.",
+            description: "Prenota il tuo soggiorno con noi e scopri la bellezza della Città Eterna dal comfort del tuo appartamento.",
             viewApartments: "Prenota un appartamento",
             contactUs: "Contattaci",
         },
@@ -489,7 +489,7 @@ export const siteContent: Record<
             phone: "Telefono",
             email: "Email",
             followUs: "Seguici",
-            paragraph: "Fornendo eccezionali affitti di appartamenti a breve termine a Roma dal 2020. Il tuo comfort e la tua soddisfazione sono le nostre massime priorità.",
+            paragraph: "Forniamo appartamenti eccezionali per il tuo soggiorno a Roma. Comfort e soddisfazione del cliente sono le nostre massime priorità.",
             quickLinks: "Link",
         },
         apartmentCard: {
@@ -511,7 +511,7 @@ export const siteContent: Record<
             exploreLocationsTitle: "Esplora le nostre location",
             exploreLocationsDescription: "Tutti i nostri appartamenti sono strategicamente situati nei quartieri più iconici di Roma, assicurandoti di essere sempre vicino ai tesori della città.",
             title: "I nostri appartamenti",
-            description: "Scopri la nostra collezione accuratamente selezionata di quattro appartamenti eccezionali nei quartieri più desiderabili di Roma. Ogni residenza offre un mix unico di autentico fascino romano e comfort moderno, perfettamente posizionata per esplorare la città eterna.",
+            description: "Scopri la nostra collezione di appartamenti nei quartieri più desiderabili di Roma. Ogni residenza offre un mix unico di fascino e comfort moderno, perfettamente posizionata per esplorare al meglio la città.",
         },
         contact: {
             header: {
@@ -519,8 +519,8 @@ export const siteContent: Record<
                 description: "Siamo qui per aiutarti a pianificare il tuo soggiorno perfetto a Roma. Contattaci per qualsiasi domanda sui nostri appartamenti o per effettuare una prenotazione."
             },
             infoBox: {
-                title: "Pianificando la tua visita?",
-                firstParagraph: "Il nostro team è dedicato a rendere indimenticabile la tua vacanza romana. Che tu abbia bisogno di consigli sui ristoranti, aiuto con i trasporti o domande sui nostri appartamenti, siamo qui per assisterti.",
+                title: "Stai pianificando la tua visita?",
+                firstParagraph: "Il nostro team ti aiuterà a rendere indimenticabile la tua vacanza romana. Che tu abbia bisogno di consigli sui ristoranti, aiuto con i trasporti o domande sui nostri appartamenti, siamo qui per assisterti.",
                 secondParagraph: "Per una risposta più rapida, ti consigliamo di contattarci tramite WhatsApp. Siamo disponibili 7 giorni su 7 per rispondere alle tue domande."
             },
             contacts: {
@@ -546,7 +546,7 @@ export const siteContent: Record<
         },
         book: {
             title: "Prenota il tuo soggiorno",
-            subtitle: "Scegli le tue date e trova l'appartamento perfetto per la tua avventura romana.",
+            subtitle: "Scegli le tue date e trova l'appartamento perfetto per la tua vacanza romana.",
             helpTitle: "Hai bisogno di aiuto per prenotare?",
             helpText: "Se hai domande o hai bisogno di assistenza con la tua prenotazione, il nostro team è qui per aiutarti. Contattaci direttamente tramite WhatsApp per un supporto immediato.",
             contactButton: "Contattaci",

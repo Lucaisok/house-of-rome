@@ -5,7 +5,6 @@ import { HeaderSection } from "@/components/contact/headerSection/HeaderSection"
 import { assertLocale } from "@/lib/i18n";
 import { contactsMetadata } from "@/lib/seo/contacts/metadata";
 import { generateContactsStructuredData } from "@/lib/seo/contacts/structuredData";
-import { Breadcrumb } from "@/components/breadcrumb/Breadcrumb";
 import {
   generateBreadcrumbStructuredData,
   getContactsBreadcrumbs,
@@ -44,12 +43,6 @@ export const ContactsPage = async ({
       <HeaderSection locale={locale} />
       <section className={styles.section}>
         <div className={styles.container}>
-          <Breadcrumb
-            items={breadcrumbs.map((item, idx) => ({
-              ...item,
-              isCurrent: idx === breadcrumbs.length - 1,
-            }))}
-          />
           <div className={styles.grid}>
             <Contacts locale={locale} />
             <Form locale={locale} />

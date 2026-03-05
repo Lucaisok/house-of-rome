@@ -33,11 +33,6 @@ export function Footer({ locale }: LocaleProp) {
                         <h4 className={styles.sectionTitle}>{t.footer.quickLinks}</h4>
                         <ul className={styles.list}>
                             <li>
-                                <Link href={routes.home} className={styles.link}>
-                                    {t.nav.home}
-                                </Link>
-                            </li>
-                            <li>
                                 <Link href={routes.apartments} className={styles.link}>
                                     {t.nav.apartments}
                                 </Link>
@@ -45,6 +40,11 @@ export function Footer({ locale }: LocaleProp) {
                             <li>
                                 <Link href={routes.contacts} className={styles.link}>
                                     {t.nav.about}
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={routes.privacyPolicy} className={styles.link}>
+                                    {"Privacy Policy"}
                                 </Link>
                             </li>
                         </ul>

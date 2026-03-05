@@ -17,7 +17,7 @@ export function Footer({ locale }: LocaleProp) {
 
     return (
         <footer className={styles.footer}
-            style={{ paddingBottom: isMobile && isApartmentPage ? '5rem' : '2rem' }}
+            style={{ paddingBottom: isMobile && isApartmentPage ? '5rem' : '1rem' }}
         >
             <div className={styles.container}>
                 <div className={styles.grid}>

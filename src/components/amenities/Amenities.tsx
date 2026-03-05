@@ -21,7 +21,9 @@ export const Amenities = ({ amenities, title, locale }: AmenitiesProps) => {
 
     if (!amenities.length) return null;
 
-    const visibleAmenities = amenities.slice(0, 7);
+    const hiddenAmenities = ["Bidet", "Fire Alarm"];
+    const filteredAmenities = amenities.filter(amenity => !hiddenAmenities.includes(amenity));
+    const visibleAmenities = filteredAmenities.slice(0, 7);
 
     return (
         <div className={styles.sectionBlock}>

@@ -25,6 +25,7 @@
     /* background: #40a369; */
     border-color: var(--accent-color);
 }
+
 .iconHighlight {
     color: var(--accent-color);
     background: var(--accent-color-soft);

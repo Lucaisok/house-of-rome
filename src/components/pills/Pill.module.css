@@ -4,12 +4,13 @@
     justify-content: flex-start;
     gap: 0.75rem;
     color: #171717;
-    border: 2px solid var(--accent-color-soft);
+    border: 1px solid var(--accent-color);
     padding: 0.4rem 0.7rem;
     border-radius: 12px;
     font-size: 1rem;
     font-weight: 600;
     white-space: nowrap;
+    /* background-color: var(--accent-color-so); */
 }
 
 @media (max-width: 639px) {
@@ -28,18 +29,18 @@
 }
 
 .icon {
-    color: #525252;
-    background: var(--accent-color-soft);
+    color: var(--accent-color);
+    background: var(--accent-color-soft-green);
     border-radius: 999px;
     padding: 0.4rem;
     box-sizing: content-box;
-    border: 2px solid var(--accent-color-soft);
+    border: 2px solid var(--accent-color-soft-green);
 }
 
 .pillHighlight {
     /* background: #e9f6e0; */
     color: #334155;
-    border-color: #6b7c99;
+    /* background-color: var(--accent-color-soft); */
 }
 
 @keyframes pillShine {
@@ -58,7 +59,6 @@
 
 .iconHighlight {
     color: #334155;
-    background: #e9f6e0;
     border: 1px solid #e9f6e0;
 
 }

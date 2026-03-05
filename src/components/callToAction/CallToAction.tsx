@@ -15,10 +15,10 @@ export function CallToAction({ locale }: LocaleProp) {
                     {t.description}
                 </p>
                 <div className={styles.actions}>
-                    <NavButton href={routes.apartments} className={styles.primaryButton}>
+                    <NavButton href={routes.book} className={styles.primaryButton}>
                         {t.viewApartments}
                     </NavButton>
-                    <NavButton href={routes.book} className={styles.secondaryButton}>
+                    <NavButton href={routes.contacts} className={styles.secondaryButton}>
                         {t.contactUs}
                     </NavButton>
                 </div>

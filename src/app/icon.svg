@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32" height="32" viewBox="35 60 130 80" xmlns="http://www.w3.org/2000/svg">
+  <text
+    x="100"
+    y="130"
+    font-size="96"
+    font-family="Playfair Display, serif"
+    font-weight="600"
+    fill="#000000"
+    text-anchor="middle"
+  >
+    <tspan>H</tspan>
+    <tspan dx="-38">R</tspan>
+  </text>
+</svg>

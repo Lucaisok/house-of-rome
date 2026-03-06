@@ -195,7 +195,7 @@ An elegant and welcoming home designed for those who want a refined, central, an
     lat: 41.90488,
     lng: 12.48624,
     highlights: ["Terrace", "City Center"],
-    startingPrice: 120,
+    startingPrice: 147,
     imagesDir: "spanish_steps",
     homeRules: {
       checkIn: "14:00",

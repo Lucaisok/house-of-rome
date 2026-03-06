@@ -30,11 +30,11 @@ export const InfoPills = ({ apartment, locale }: ApartmentPageParams) => {
             icon: Bath,
             label: `${apartment.bathrooms} ${apartment.bathrooms > 1 ? t.Bathrooms : t.Bathroom}`,
         },
-        {
+        ...(apartment.size ? [{
             key: "size",
             icon: Maximize,
             label: `${apartment.size} ${g.sqm}`,
-        },
+        }] : []),
     ];
 
     const highlights = apartment.highlights.map((highlight, index) => ({

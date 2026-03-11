@@ -3,16 +3,17 @@ import { Bath, MapPin, Users, Ruler, BedDouble } from "lucide-react";
 import Link from "next/link";
 import styles from "./Card.module.css";
 import { siteContent } from "@/content/global";
-import { routes } from "@/lib/routes";
+import { localizedRoutes } from "@/lib/routes";
 import { normalizeImagePath } from "@/lib/utils/utils";
 import { Highlights } from "@/components/cardHighlights/Higlights";
 
 export const Card = ({ apartment, locale }: ApartmentPageParams) => {
     const shortDescription = apartment.shortDescription[locale];
     const t = siteContent[locale].apartmentCard;
+    const r = localizedRoutes(locale);
 
     return (
-        <Link href={routes.apartment(apartment.slug)} className={styles.card}>
+        <Link href={r.apartment(apartment.slug)} className={styles.card}>
             <div className={styles.cardImageWrapper}>
                 <img
                     src={normalizeImagePath(apartment.img_preview)}

@@ -2,7 +2,7 @@
 import { assertLocale } from "@/lib/i18n";
 import { bookMetadata } from "@/lib/seo/book/metadata";
 import styles from "./page.module.css";
-import { routes } from "@/lib/routes";
+import { localizedRoutes } from "@/lib/routes";
 import { siteContent } from "@/content/global";
 import WidgetIframe from "@/components/WidgetIframe";
 import { mapWidgetURL } from "@/lib/utils/utils";
@@ -45,7 +45,7 @@ export const BookPage = async ({
                             {t.book.helpText}
                         </p>
                         <a
-                            href={routes.contacts}
+                            href={localizedRoutes(locale).contacts}
                             className={styles.button}
                         >
                             {t.book.contactButton}

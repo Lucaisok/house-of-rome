@@ -1,11 +1,12 @@
 import styles from "./Hero.module.css";
 import { siteContent } from "@/content/global";
 import { NavButton } from "../navButton/NavButton";
-import { routes } from "@/lib/routes";
+import { localizedRoutes } from "@/lib/routes";
 import { LocaleProp } from "@/app/(site)/[lang]/page";
 
 export function Hero({ locale }: LocaleProp) {
     const content = siteContent[locale].hero;
+    const r = localizedRoutes(locale);
 
     return (
         <section className={styles.hero}>
@@ -30,10 +31,10 @@ export function Hero({ locale }: LocaleProp) {
                             {content.thirdLine}
                         </p>
                         <div className={styles.actions}>
-                            <NavButton href={routes.apartments} className={styles.primaryButton}>
+                            <NavButton href={r.apartments} className={styles.primaryButton}>
                                 {content.viewApartments}
                             </NavButton>
-                            <NavButton href={routes.contacts} className={styles.secondaryButton}>
+                            <NavButton href={r.contacts} className={styles.secondaryButton}>
                                 {content.contactUs}
                             </NavButton>
                         </div>

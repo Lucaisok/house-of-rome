@@ -1,11 +1,12 @@
 import styles from "./CallToAction.module.css";
 import { NavButton } from "../navButton/NavButton";
 import { siteContent } from "@/content/global";
-import { routes } from "@/lib/routes";
+import { localizedRoutes } from "@/lib/routes";
 import { LocaleProp } from "@/app/(site)/[lang]/page";
 
 export function CallToAction({ locale }: LocaleProp) {
     const t = siteContent[locale].callToAction;
+    const r = localizedRoutes(locale);
 
     return (
         <section className={styles.section}>
@@ -15,10 +16,10 @@ export function CallToAction({ locale }: LocaleProp) {
                     {t.description}
                 </p>
                 <div className={styles.actions}>
-                    <NavButton href={routes.book} className={styles.primaryButton}>
+                    <NavButton href={r.book} className={styles.primaryButton}>
                         {t.viewApartments}
                     </NavButton>
-                    <NavButton href={routes.contacts} className={styles.secondaryButton}>
+                    <NavButton href={r.contacts} className={styles.secondaryButton}>
                         {t.contactUs}
                     </NavButton>
                 </div>

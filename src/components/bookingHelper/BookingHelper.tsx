@@ -3,7 +3,7 @@ import type { Locale } from "@/lib/i18n";
 import { siteContent } from "@/content/global";
 import { formatPrice } from "@/lib/format";
 import Link from "next/link";
-import { routes } from "@/lib/routes";
+import { localizedRoutes } from "@/lib/routes";
 
 interface BookingHelperProps {
     startingPrice: number;
@@ -14,7 +14,8 @@ interface BookingHelperProps {
 export const BookingHelper = ({ startingPrice, locale, slug }: BookingHelperProps) => {
     const t = siteContent[locale].apartmentCard;
     const price = formatPrice(startingPrice, locale);
-    const bookingUrl = `${routes.book}?apt=${slug}`;
+    const r = localizedRoutes(locale);
+    const bookingUrl = `${r.book}?apt=${slug}`;
 
     return (
         <section className={styles.bar}>

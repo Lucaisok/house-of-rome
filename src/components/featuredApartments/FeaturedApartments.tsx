@@ -1,8 +1,6 @@
-import { NavButton } from "../navButton/NavButton";
 import styles from "./FeaturedApartments.module.css";
 import { siteContent } from "@/content/global";
 import { apartments } from "@/content/apartments";
-import { routes } from "@/lib/routes";
 import { LocaleProp } from "@/app/(site)/[lang]/page";
 import { Card } from "../apartments/card/Card";
 

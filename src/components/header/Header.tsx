@@ -8,7 +8,7 @@ import styles from "./Header.module.css";
 import { siteContent } from "@/content/global";
 import { Locale } from "@/lib/i18n";
 import { NavButton } from "../navButton/NavButton";
-import { routes } from "@/lib/routes";
+import { localizedRoutes } from "@/lib/routes";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import { apartments } from "@/content/apartments";
 
@@ -18,6 +18,7 @@ interface HeaderProps {
 
 export const Header = ({ locale }: HeaderProps) => {
     const t = siteContent[locale];
+    const r = localizedRoutes(locale);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [apartmentsOpen, setApartmentsOpen] = useState(false);
     const pathname = usePathname();
@@ -67,14 +68,14 @@ export const Header = ({ locale }: HeaderProps) => {
                 <div className={styles.row}>
                     {/* Desktop Layout */}
                     <div className={styles.logoWrap}>
-                        <Link href={routes.home} className={styles.logo}>
+                        <Link href={r.home} className={styles.logo}>
                             <Home className={styles.logoIcon} aria-hidden="true" style={{ color: '#171717' }} />
                             <span className={styles.logoText}>{t.home.title}</span>
                         </Link>
                     </div>
                     <div className={styles.desktopNav}>
                         <LanguageSwitch />
-                        <Link href={routes.contacts} className={`${styles.link} ${isContactsPage ? styles.linkActive : ''}`}>
+                        <Link href={r.contacts} className={`${styles.link} ${isContactsPage ? styles.linkActive : ''}`}>
                             {t.nav.about}
                         </Link>
                         <div
@@ -89,7 +90,7 @@ export const Header = ({ locale }: HeaderProps) => {
                             {apartmentsOpen && (
                                 <div className={styles.desktopApartmentsList}>
                                     <Link
-                                        href={routes.apartments}
+                                        href={r.apartments}
                                         className={`${styles.desktopApartmentLinkAll} ${isApartmentsListingPage ? styles.desktopApartmentLinkAllActive : ''}`}
                                     >
                                         All Apartments
@@ -97,7 +98,7 @@ export const Header = ({ locale }: HeaderProps) => {
                                     {apartments.map(apt => (
                                         <Link
                                             key={apt.slug}
-                                            href={routes.apartment(apt.slug)}
+                                            href={r.apartment(apt.slug)}
                                             className={`${styles.desktopApartmentLink} ${currentApartmentSlug === apt.slug ? styles.desktopApartmentLinkActive : ''}`}
                                         >
                                             {apt.name}
@@ -106,13 +107,13 @@ export const Header = ({ locale }: HeaderProps) => {
                                 </div>
                             )}
                         </div>
-                        <NavButton href={routes.book} className={styles.cta}>
+                        <NavButton href={r.book} className={styles.cta}>
                             {t.nav.book}
                         </NavButton>
                     </div>
                     {/* Mobile Layout: Home icon, title, burger */}
                     <div className={styles.mobileHeaderRow}>
-                        <Link href={routes.home} className={styles.logo} aria-label={t.home.title}>
+                        <Link href={r.home} className={styles.logo} aria-label={t.home.title}>
                             <Home className={styles.logoIcon} aria-hidden="true" style={{ color: isHomeOrApartment ? '#fff' : '#171717' }} />
                         </Link>
                         {mobileMenuOpen ? (
@@ -136,17 +137,17 @@ export const Header = ({ locale }: HeaderProps) => {
                         <div className={styles.mobileNavGrid}>
                             <div className={styles.mobileList}>
                                 <div className={styles.mobileTopRow}>
-                                    <Link href={routes.home} className={`${styles.link} ${styles.mobileHomeLink} ${isHomePage ? styles.linkActive : ''}`}>
+                                    <Link href={r.home} className={`${styles.link} ${styles.mobileHomeLink} ${isHomePage ? styles.linkActive : ''}`}>
                                         {t.nav.home}
                                     </Link>
                                     <div className={styles.mobileLangWrap}>
                                         <LanguageSwitch />
                                     </div>
                                 </div>
-                                <Link href={routes.contacts} className={`${styles.link} ${isContactsPage ? styles.linkActive : ''}`}>
+                                <Link href={r.contacts} className={`${styles.link} ${isContactsPage ? styles.linkActive : ''}`}>
                                     {t.nav.about}
                                 </Link>
-                                <Link href={routes.privacyPolicy} className={styles.link}>
+                                <Link href={r.privacyPolicy} className={styles.link}>
                                     {t.nav.privacyPolicy}
                                 </Link>
                                 <div className={styles.apartmentsSection}>
@@ -160,7 +161,7 @@ export const Header = ({ locale }: HeaderProps) => {
                                     {apartmentsOpen && (
                                         <div className={styles.apartmentsList}>
                                             <Link
-                                                href={routes.apartments}
+                                                href={r.apartments}
                                                 className={`${styles.apartmentLinkAll} ${isApartmentsListingPage ? styles.apartmentLinkAllActive : ''}`}
                                             >
                                                 {t.global.allApartments}
@@ -168,7 +169,7 @@ export const Header = ({ locale }: HeaderProps) => {
                                             {apartments.map(apt => (
                                                 <Link
                                                     key={apt.slug}
-                                                    href={routes.apartment(apt.slug)}
+                                                    href={r.apartment(apt.slug)}
                                                     className={`${styles.apartmentLink} ${currentApartmentSlug === apt.slug ? styles.apartmentLinkActive : ''}`}
                                                 >
                                                     {apt.name}
@@ -177,7 +178,7 @@ export const Header = ({ locale }: HeaderProps) => {
                                         </div>
                                     )}
                                 </div>
-                                <NavButton href={routes.book} className={styles.mobileCta}>
+                                <NavButton href={r.book} className={styles.mobileCta}>
                                     {t.nav.book}
                                 </NavButton>
                             </div>

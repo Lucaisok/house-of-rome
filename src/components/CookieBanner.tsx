@@ -4,10 +4,11 @@ import styles from "./CookieBanner.module.css";
 import { siteContent } from "@/content/global";
 import { LocaleProp } from "@/app/(site)/[lang]/page";
 import Link from "next/link";
-import { routes } from "@/lib/routes";
+import { localizedRoutes } from "@/lib/routes";
 
 export const CookieBanner = ({ locale }: LocaleProp) => {
     const t = siteContent[locale].cookieBanner;
+    const r = localizedRoutes(locale);
     const [visible, setVisible] = useState(false);
 
     useEffect(() => {
@@ -26,7 +27,7 @@ export const CookieBanner = ({ locale }: LocaleProp) => {
         <div className={styles.banner}>
             <div className={styles.text}>
                 {t.message} {" "}
-                <Link href={routes.privacyPolicy} className={styles.link}>
+                <Link href={r.privacyPolicy} className={styles.link}>
                     {t.learnMore}
                 </Link>
             </div>

@@ -4,12 +4,13 @@ import Link from "next/link";
 import styles from "./Footer.module.css";
 import { LocaleProp } from "@/app/(site)/[lang]/page";
 import { siteContent } from "@/content/global";
-import { routes } from "@/lib/routes";
+import { localizedRoutes } from "@/lib/routes";
 import { usePathname } from "next/navigation";
 import { useIsMobile } from "@/hooks/useIsMobile";
 
 export function Footer({ locale }: LocaleProp) {
     const t = siteContent[locale];
+    const r = localizedRoutes(locale);
     const pathname = usePathname();
     // Accept /, /it, /en, etc. as home, and also apartments/[slug] pages
     const isApartmentPage = /^\/(|[a-zA-Z-]{2,5})\/apartments\/[\w-]+$/.test(pathname);
@@ -33,17 +34,17 @@ export function Footer({ locale }: LocaleProp) {
                         <h4 className={styles.sectionTitle}>{t.footer.quickLinks}</h4>
                         <ul className={styles.list}>
                             <li>
-                                <Link href={routes.apartments} className={styles.link}>
+                                <Link href={r.apartments} className={styles.link}>
                                     {t.nav.apartments}
                                 </Link>
                             </li>
                             <li>
-                                <Link href={routes.contacts} className={styles.link}>
+                                <Link href={r.contacts} className={styles.link}>
                                     {t.nav.about}
                                 </Link>
                             </li>
                             <li>
-                                <Link href={routes.privacyPolicy} className={styles.link}>
+                                <Link href={r.privacyPolicy} className={styles.link}>
                                     {"Privacy Policy"}
                                 </Link>
                             </li>

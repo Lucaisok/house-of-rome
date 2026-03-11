@@ -9,7 +9,8 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "deploy": "npm run build && pm2 restart houseofrome"
   },
   "dependencies": {
     "leaflet": "^1.9.4",

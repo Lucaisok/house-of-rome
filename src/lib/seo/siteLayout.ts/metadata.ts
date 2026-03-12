@@ -14,13 +14,13 @@ export const siteLayoutMetadata = async ({
 
     const title =
         lang === "it"
-            ? "House of Rome – Appartamenti a Roma"
-            : "House of Rome – Apartments in Rome";
+            ? "Appartamenti in Affitto a Roma | House of Rome"
+            : "Holiday Apartments for Rent in Rome | House of Rome";
 
     const description =
         lang === "it"
-            ? "Appartamenti curati a Roma. Prenotazioni online e disponibilità aggiornate."
-            : "Curated apartments in Rome. Online booking and up-to-date availability.";
+            ? "Affitta un appartamento vacanze a Roma con House of Rome. Quattro affitti brevi nel centro storico, a Trastevere e vicino al Vaticano. Prenota direttamente al miglior prezzo."
+            : "Rent a holiday apartment in Rome with House of Rome. Four fully equipped short-stay rentals in Trastevere and the city centre. Book direct for the best rates.";
 
     // We need the current pathname to build canonical/alternates,
     // but layout-level generateMetadata doesn't receive pathname.

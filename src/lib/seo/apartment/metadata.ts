@@ -15,12 +15,15 @@ export const apartmentMetadata = async ({
 
   const publicPath = lang === "it" ? `/it/apartments/${slug}` : `/apartments/${slug}`;
 
-  const title = `${aptName} | House of Rome`;
+  const title =
+    lang === "it"
+      ? `${aptName} – Appartamento in Affitto a Roma | House of Rome`
+      : `${aptName} – Holiday Apartment for Rent in Rome | House of Rome`;
 
   const description =
     lang === "it"
-      ? `Scopri ${aptName}, appartamento a Roma firmato House of Rome. Verifica disponibilità e prenota online.`
-      : `${aptName} is a fully equipped apartment in Rome by House of Rome. Check availability and book online.`;
+      ? `Affitta ${aptName}, appartamento per vacanze a Roma${apt?.guests ? ` fino a ${apt.guests} ospiti` : ""}. Verifica disponibilità e prenota direttamente con House of Rome al miglior prezzo.`
+      : `Rent ${aptName}, a holiday apartment in Rome by House of Rome${apt?.guests ? ` sleeping up to ${apt.guests} guests` : ""}. Check availability and book direct for the best rate.`;
 
   // Use apartment preview image for Open Graph
   // Convert relative public path to absolute path for OG image

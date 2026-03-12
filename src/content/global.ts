@@ -260,12 +260,12 @@ export const siteContent: Record<
         },
         welcome: {
             title: "Welcome to House of Rome",
-            description: "We offer a curated selection of four exceptional apartments in the heart of Rome. Each property has been thoughtfully designed to provide the perfect blend of modern comfort and timeless Italian elegance.",
+            description: "We offer a curated selection of four holiday apartments for rent in the heart of Rome. Each property has been thoughtfully designed to provide the perfect blend of modern comfort and timeless Italian elegance.",
             secondDescription: "Whether you're here for a romantic getaway, a family vacation, or exploring the city's rich history, our apartments offer the ideal base for your Roman adventure.",
         },
         featuredApartments: {
             title: "Our Apartments",
-            description: "Explore our central Rome short-stay apartments: private entire homes, pet-friendly options, and free cancellation.",
+            description: "Explore our central Rome holiday apartments for rent: private entire homes, short-stay rentals, pet-friendly options, and free cancellation.",
             cta: "View All Apartments",
         },
         callToAction: {
@@ -280,7 +280,7 @@ export const siteContent: Record<
             phone: "Phone",
             email: "Email",
             followUs: "Follow Us",
-            paragraph: "We provide exceptional apartments for your stay in Rome. Comfort and customer satisfaction are our top priorities.",
+            paragraph: "Holiday apartments for rent in Rome. Comfort, central locations and direct booking for the best rates.",
             quickLinks: "Quick Links",
         },
         apartmentCard: {
@@ -300,9 +300,9 @@ export const siteContent: Record<
         },
         apartments: {
             exploreLocationsTitle: "Explore Our Locations",
-            exploreLocationsDescription: "All of our apartments are strategically located throughout Rome's most iconic neighborhoods, ensuring you're never far from the city's treasures.",
+            exploreLocationsDescription: "All of our apartments are strategically located throughout Rome's most iconic neighbourhoods, ensuring you're never far from the city's treasures.",
             title: "Our Apartments",
-            description: "Discover our carefully curated collection of four exceptional apartments in Rome's most desirable neighborhoods. Each residence offers a unique blend of authentic Roman charm and modern comfort, perfectly positioned to explore the eternal city.",
+            description: "Discover our four holiday apartments for rent in Rome's most desirable neighbourhoods. Each residence offers a unique blend of authentic Roman charm and modern comfort, perfectly positioned to explore the eternal city.",
         },
         contact: {
             header: {
@@ -469,12 +469,12 @@ export const siteContent: Record<
         },
         welcome: {
             title: "Benvenuto a Roma",
-            description: "Offriamo una selezione curata di quattro appartamenti eccezionali nel cuore di Roma. Ogni struttura è stata progettata con attenzione per offrire il perfetto equilibrio tra comfort moderno ed eleganza italiana senza tempo.",
-            secondDescription: "Che tu sia qui per una fuga romantica, una vacanza in famiglia o per esplorare la ricca storia della città, i nostri appartamenti offrono la base ideale per la tua avventura romana.",
+            description: "Offriamo una selezione di quattro appartamenti in affitto breve nel cuore di Roma. Ogni struttura è stata progettata per offrire il perfetto equilibrio tra comfort moderno ed eleganza italiana senza tempo.",
+            secondDescription: "Che tu sia qui per una fuga romantica, una vacanza in famiglia o per esplorare la ricca storia della città, i nostri appartamenti vacanze offrono la base ideale per la tua avventura romana.",
         },
         featuredApartments: {
             title: "I nostri appartamenti",
-            description: "Ogni appartamento è stato accuratamente selezionato e progettato per offrirti un soggiorno indimenticabile a Roma",
+            description: "Esplora i nostri appartamenti in affitt nel coentro storico di Roma: case intere, soggiorni brevi, opzioni pet-friendly e cancellazione gratuita.",
             cta: "Vedi gli appartamenti",
         },
         callToAction: {
@@ -509,9 +509,9 @@ export const siteContent: Record<
         },
         apartments: {
             exploreLocationsTitle: "Esplora le nostre location",
-            exploreLocationsDescription: "Tutti i nostri appartamenti sono strategicamente situati nei quartieri più iconici di Roma, assicurandoti di essere sempre vicino ai tesori della città.",
+            exploreLocationsDescription: "Tutti i nostri appartamenti in affitto sono strategicamente situati nei quartieri più iconici di Roma, assicurandoti di essere sempre vicino ai tesori della città.",
             title: "I nostri appartamenti",
-            description: "Scopri la nostra collezione di appartamenti nei quartieri più desiderabili di Roma. Ogni residenza offre un mix unico di fascino e comfort moderno, perfettamente posizionata per esplorare al meglio la città.",
+            description: "Scopri i nostri quattro appartamenti in affitto breve nei quartieri più desiderabili di Roma. Ogni residenza offre un mix di fascino e comfort moderno, perfettamente posizionata per esplorare al meglio la città eterna.",
         },
         contact: {
             header: {

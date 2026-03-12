@@ -14,13 +14,13 @@ export const contactsMetadata = async ({
 
   const title =
     lang === "it"
-      ? "Contatti | House of Rome"
-      : "Contacts | House of Rome";
+      ? "Contatti – Appartamenti in Affitto a Roma | House of Rome"
+      : "Contact Us – Apartment Rentals in Rome | House of Rome";
 
   const description =
     lang === "it"
-      ? "Scopri House of Rome, la nostra filosofia di ospitalità e come contattarci per informazioni e prenotazioni."
-      : "Learn more about House of Rome, our apartments, and how to contact us. Location, philosophy, and direct booking information.";
+      ? "Pianifica il tuo affitto vacanze a Roma con House of Rome. Contattaci per disponibilità, prezzi e consigli sugli appartamenti. Supporto 7 giorni su 7 via WhatsApp."
+      : "Plan your Rome holiday rental with House of Rome. Contact us for availability, pricing and apartment recommendations. 7-day support via WhatsApp.";
 
   return makePageMetadata({ lang, publicPath, title, description });
 };

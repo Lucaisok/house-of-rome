@@ -5,7 +5,7 @@ import { makePageMetadata } from "../metadata";
 export const homeMetadata = async ({
   params,
 }: {
-  params: Promise<{ lang: string }>;
+  params: Promise<{ lang: string; }>;
 }): Promise<Metadata> => {
   const { lang: raw } = await params;
   const lang = assertLocale(raw);
@@ -15,13 +15,13 @@ export const homeMetadata = async ({
 
   const title =
     lang === "it"
-      ? "House of Rome – Appartamenti a Roma"
-      : "House of Rome – Apartments in Rome";
+      ? "Appartamenti in Affitto a Roma | House of Rome"
+      : "Holiday Apartments for Rent in Rome | House of Rome";
 
   const description =
     lang === "it"
-      ? "Appartamenti curati a Roma. Prenotazioni online e disponibilità aggiornate."
-      : "Curated apartments in Rome. Online booking and up-to-date availability.";
+      ? "Affitta un appartamento vacanze a Roma con House of Rome. Quattro affitti brevi nel centro storico, a Trastevere e vicino al Vaticano. Prenota direttamente al miglior prezzo."
+      : "Rent a holiday apartment in Rome with House of Rome. Four fully equipped short-stay rentals in Trastevere and the city centre. Book direct for the best rates.";
 
   return makePageMetadata({ lang, publicPath, title, description });
 };

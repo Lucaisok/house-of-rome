@@ -10,7 +10,7 @@ export const bookMetadata = async ({
     const { lang: raw } = await params;
     const lang = assertLocale(raw);
 
-    const publicPath = lang === "it" ? "/it/book" : "/book";
+    const publicPath = lang === "it" ? "/it/book" : "/en/book";
 
     const title =
         lang === "it"

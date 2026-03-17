@@ -10,7 +10,7 @@ export const contactsMetadata = async ({
   const { lang: raw } = await params;
   const lang = assertLocale(raw);
 
-  const publicPath = lang === "it" ? "/it/contacts" : "/contacts";
+  const publicPath = lang === "it" ? "/it/contacts" : "/en/contacts";
 
   const title =
     lang === "it"

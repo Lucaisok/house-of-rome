@@ -13,7 +13,7 @@ export const apartmentMetadata = async ({
   const apt = getApartmentBySlug(slug);
   const aptName = apt?.name ?? slug; // fallback only
 
-  const publicPath = lang === "it" ? `/it/apartments/${slug}` : `/apartments/${slug}`;
+  const publicPath = lang === "it" ? `/it/apartments/${slug}` : `/en/apartments/${slug}`;
 
   const title =
     lang === "it"

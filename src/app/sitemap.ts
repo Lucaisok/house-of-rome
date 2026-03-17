@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // Add home, apartments, contacts, privacy for both locales
     locales.forEach(locale => {
-        const prefix = locale === 'en' ? '' : `/${locale}`;
+        const prefix = `/${locale}`;
 
         staticPages.push(
             {
@@ -58,7 +58,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     apartments.forEach(apt => {
         locales.forEach(locale => {
-            const prefix = locale === 'en' ? '' : `/${locale}`;
+            const prefix = `/${locale}`;
             apartmentPages.push({
                 url: `${baseUrl}${prefix}/apartments/${apt.slug}`,
                 lastModified: new Date(),

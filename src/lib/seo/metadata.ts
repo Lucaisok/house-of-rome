@@ -15,9 +15,12 @@ export const getSiteUrl = () => {
 };
 
 export const stripEnPrefix = (pathname: string) => {
-  // internal routes use /en/..., but public canonical should NOT
-  if (pathname === "/en") return "/";
-  if (pathname.startsWith("/en/")) return pathname.replace(/^\/en/, "");
+  // Keep backwards compatibility for callers that still pass non-prefixed paths.
+  // Canonical/public URLs for this project are locale-prefixed.
+  if (pathname === "/") return "/en";
+  if (!pathname.startsWith("/en/") && !pathname.startsWith("/it/") && pathname !== "/it") {
+    return `/en${pathname.startsWith("/") ? pathname : `/${pathname}`}`;
+  }
   return pathname;
 };
 
@@ -27,20 +30,29 @@ export const toPublicPath = (pathname: string, lang: Locale) => {
   // keep /it prefix
   if (pathname === "/it") return "/it";
   if (pathname.startsWith("/it/")) return pathname;
-  // if called with non-it path, force it
-  return `/it${stripEnPrefix(pathname)}`;
+  // If called with /en path, swap locale segment.
+  if (pathname === "/en") return "/it";
+  if (pathname.startsWith("/en/")) return pathname.replace(/^\/en/, "/it");
+  // if called with non-prefixed path, force /it
+  return `/it${pathname.startsWith("/") ? pathname : `/${pathname}`}`;
 };
 
 export const buildLanguageAlternates = (publicPath: string) => {
   const siteUrl = getSiteUrl();
 
-  const enPath = publicPath.startsWith("/it")
-    ? publicPath.replace(/^\/it/, "") || "/"
-    : publicPath;
+  const normalized = publicPath === "/" ? "/en" : publicPath;
 
-  const itPath = publicPath.startsWith("/it")
-    ? publicPath
-    : `/it${publicPath === "/" ? "" : publicPath}`;
+  const enPath = normalized.startsWith("/it")
+    ? normalized.replace(/^\/it/, "/en")
+    : normalized.startsWith("/en")
+      ? normalized
+      : `/en${normalized}`;
+
+  const itPath = normalized.startsWith("/it")
+    ? normalized
+    : normalized.startsWith("/en")
+      ? normalized.replace(/^\/en/, "/it")
+      : `/it${normalized}`;
 
   return {
     languages: {

@@ -39,10 +39,10 @@ export function getApartmentBreadcrumbs({
     const homeLabel = locale === "it" ? "Home" : "Home";
     const apartmentsLabel = locale === "it" ? "Appartamenti" : "Apartments";
 
-    const basePath = locale === "it" ? "/it" : "";
+    const basePath = locale === "it" ? "/it" : "/en";
 
     return [
-        { name: homeLabel, path: basePath || "/" },
+        { name: homeLabel, path: basePath },
         { name: apartmentsLabel, path: `${basePath}/apartments` },
         { name: apartmentName, path: `${basePath}/apartments/${apartmentSlug}` },
     ];
@@ -53,10 +53,10 @@ export function getContactsBreadcrumbs(locale: "en" | "it"): BreadcrumbItem[] {
     const homeLabel = locale === "it" ? "Home" : "Home";
     const contactsLabel = locale === "it" ? "Contatti" : "Contacts";
 
-    const basePath = locale === "it" ? "/it" : "";
+    const basePath = locale === "it" ? "/it" : "/en";
 
     return [
-        { name: homeLabel, path: basePath || "/" },
+        { name: homeLabel, path: basePath },
         { name: contactsLabel, path: `${basePath}/contacts` },
     ];
 }

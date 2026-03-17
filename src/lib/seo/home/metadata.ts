@@ -11,7 +11,7 @@ export const homeMetadata = async ({
   const lang = assertLocale(raw);
 
   // Public path for Home:
-  const publicPath = lang === "it" ? "/it" : "/";
+  const publicPath = lang === "it" ? "/it" : "/en";
 
   const title =
     lang === "it"

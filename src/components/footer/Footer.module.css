@@ -1,3 +1,18 @@
+.socialsBlock {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .socialsBlock {
+    align-items: flex-start;
+    margin-top: 0;
+  }
+}
+
 .footer {
   background: #ffffff;
   width: 100%;

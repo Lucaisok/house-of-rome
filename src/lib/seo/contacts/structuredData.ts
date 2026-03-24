@@ -23,8 +23,7 @@ export function generateContactsStructuredData({ locale }: { locale: "en" | "it"
             addressCountry: "IT",
         },
         sameAs: [
-            "https://www.facebook.com/houseofrome", // Update if exists
-            "https://www.instagram.com/houseofrome", // Update if exists
+            "https://www.instagram.com/houseofrome2024/",
         ],
         image: `${siteUrl}/og-default.jpg`,
         priceRange: "€€€",

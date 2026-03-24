@@ -1,5 +1,6 @@
 "use client";
 import { Mail, Phone, MessageCircle } from 'lucide-react';
+import { InstagramIcon } from '@/components/InstagramIcon';
 import styles from './Contacts.module.css';
 import { siteContent } from '@/content/global';
 import { LocaleProp } from '@/app/(site)/[lang]/page';
@@ -64,6 +65,22 @@ export const Contacts = ({ locale }: LocaleProp) => {
                             className={styles.link}
                         >
                             {"+39 320 6158544"}
+                        </a>
+                    </div>
+                </div>
+                <div className={styles.section}>
+                    <div className={styles.iconBox}>
+                        <InstagramIcon size={20} className={styles.iconWhite} />
+                    </div>
+                    <div>
+                        <h3 className={styles.sectionTitle}>Instagram</h3>
+                        <a
+                            href="https://www.instagram.com/houseofrome2024/"
+                            className={styles.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            @houseofrome2024
                         </a>
                     </div>
                 </div>

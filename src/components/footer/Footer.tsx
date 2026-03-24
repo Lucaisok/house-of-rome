@@ -1,5 +1,6 @@
 "use client";
 import { Mail, Phone, MapPin } from "lucide-react";
+import { InstagramIcon } from "@/components/InstagramIcon";
 import Link from "next/link";
 import styles from "./Footer.module.css";
 import { LocaleProp } from "@/app/(site)/[lang]/page";
@@ -71,6 +72,21 @@ export function Footer({ locale }: LocaleProp) {
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                </div>
+
+                <div className={styles.socialsBlock}>
+                    <h4 className={styles.sectionTitle}>{t.footer.followUs || "Follow us"}</h4>
+                    <div className={styles.socials}>
+                        <a
+                            href="https://www.instagram.com/houseofrome2024/"
+                            className={styles.socialLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Instagram"
+                        >
+                            <InstagramIcon size={20} />
+                        </a>
                     </div>
                 </div>
 

@@ -1,8 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# House of Rome
+
+> Modern, SEO-optimized website for luxury apartments in Rome, built with Next.js, TypeScript, and React.
+
+---
+
+## Overview
+
+House of Rome is a bilingual (English/Italian) web application for showcasing and booking high-end apartments in Rome. The project features a modern UI, dynamic apartment pages, advanced SEO, and accessibility best practices.
+
+---
+
+## Features
+
+- **Next.js 16, React 19, TypeScript**
+- **Bilingual**: English and Italian locales
+- **Dynamic apartment pages** with custom Open Graph images
+- **SEO-optimized**: Structured data (Schema.org), dynamic sitemap, OG/Twitter meta tags
+- **Responsive design**: Mobile-first, accessible components
+- **Interactive maps**: Leaflet integration for apartment locations
+- **Reusable UI components**: Hero, Gallery, Amenities, Contact, etc.
+- **Custom Breadcrumbs**: Accessible, visually styled, with JSON-LD schema
+- **Automated formatting/linting**: Prettier, ESLint, TypeScript strict mode
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
@@ -14,23 +50,73 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to view the site.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Project Structure
 
-## Learn More
+- `src/app/` — App directory (Next.js routing, layouts, pages)
+- `src/components/` — Reusable UI components (breadcrumbs, hero, gallery, etc.)
+- `src/content/` — Static content (apartment and global data)
+- `src/lib/` — Utilities (i18n, SEO, formatting, routes)
+- `public/` — Static assets (images, OG images, robots.txt, etc.)
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## SEO Implementation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Default OG Image**: `/public/og-default.svg` (1200x630 SVG)
+- **Custom OG Images**: Each apartment page uses a unique preview image
+- **Breadcrumbs**: Accessible, styled, with JSON-LD structured data
+- **Structured Data**: Full Schema.org for apartments and business info
+- **Dynamic Sitemap**: `/sitemap.xml` includes all static and dynamic pages in both locales
 
-## Deploy on Vercel
+### SEO Testing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. **Google Rich Results Test**: [Rich Results Test](https://search.google.com/test/rich-results)
+2. **Facebook Sharing Debugger**: [Facebook Debugger](https://developers.facebook.com/tools/debug/)
+3. **Twitter Card Validator**: [Twitter Validator](https://cards-dev.twitter.com/validator)
+4. **Sitemap**: [http://localhost:3000/sitemap.xml](http://localhost:3000/sitemap.xml)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Deployment
+
+You can deploy this app to any Node.js server or use Vercel for seamless deployment:
+
+```bash
+npm run build
+npm start
+# or use the included PM2 script:
+npm run deploy
+```
+
+---
+
+## Scripts
+
+- `dev` — Start development server
+- `build` — Build for production
+- `start` — Start production server
+- `lint` — Run ESLint
+- `typecheck` — Run TypeScript type checks
+- `format` — Format code with Prettier
+
+---
+
+## Tech Stack
+
+- [Next.js 16](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Leaflet](https://leafletjs.com/) & [React-Leaflet](https://react-leaflet.js.org/)
+- [Lucide React Icons](https://lucide.dev/)
+- [Prettier](https://prettier.io/), [ESLint](https://eslint.org/)
+
+---
+
+## License
+
+This project is private and not intended for redistribution.
+
